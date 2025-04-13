@@ -36,7 +36,7 @@ const rooms = [
 const RoomsSection = () => {
     return (
         <section className="bg-[#1c2128] text-[#f8f8f3] py-24" id="rooms">
-            <div className="container max-w-[1200px] mx-auto px-4">
+            <div className="container max-w-[1200px] mx-auto px-4 mb-12">
                 <div className="mb-12">
                     <div className="text-3xl mb-2 text-[#c1a37b]">Yıldız Hotel</div>
                     <h2 className="text-6xl text-[#f8f8f3]">Rooms & Suites</h2>

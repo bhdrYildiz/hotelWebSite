@@ -1,6 +1,6 @@
 const AboutSection = () => {
     return (
-        <section className="py-36 bg-[#1f2c42]">
+        <section className="py-36 bg-[#2a323f]">
             <div className="container max-w-[1200px] mx-auto px-4 grid md:grid-cols-2 gap-12">
                 {/* Metin Kısmı */}
                 <div className="text-[#c1a37b] mt-4">

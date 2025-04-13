@@ -1,11 +1,11 @@
 const Footer = () => {
     return (
         <footer className="bg-[#1c2128] text-[#f8f8f3] py-12 px-6">
-            <div className="container max-w-[1200px] mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="container max-w-[1180px] mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-16">
                 {/* About Hotel */}
                 <div>
                     <h2 className="text-[#f8f8f3] text-2xl font-semibold mb-4">About Hotel</h2>
-                    <p className="text-gray-400 mb-6">
+                    <p className="text-gray-400 mb-6 space-y-2">
                         Welcome to Vie Cappadocia, where you step into a place that stands just beneath the majestic and breathtaking formation of Ortahisar Castle, the tallest fairy chimney in Cappadocia, offering a historical and authentic view.
                     </p>
                     <button className="flex items-center gap-2 bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded">
@@ -15,8 +15,8 @@ const Footer = () => {
                 </div>
 
                 {/* Explore */}
-                <div>
-                    <h2 className="text-[#f8f8f3] text-2xl font-semibold mb-4">Explore</h2>
+                <div className="flex flex-col justify-center items-center">
+                    <h2 className="text-[#f8f8f3] text-2xl font-semibold mb-4 mr-8">Explore</h2>
                     <ul className="space-y-2 text-gray-400">
                         <li><a href="#" className="hover:text-[#f8f8f3]">Home</a></li>
                         <li><a href="#" className="hover:text-[#f8f8f3]">Rooms & Suites</a></li>
@@ -30,8 +30,8 @@ const Footer = () => {
                 </div>
 
                 {/* Contact */}
-                <div>
-                    <h2 className="text-gray-400 text-2xl font-semibold mb-4">Contact</h2>
+                <div className="flex flex-col ml-8">
+                    <h2 className="text-[#f8f8f3] text-2xl font-semibold mb-4">Contact</h2>
                     <address className="not-italic text-gray-400 mb-4">
                         Ortahisar Beld. Yeni Mah. Ali Reis Sok. No. 43<br />
                         50650 Ürgüp/Nevşehir
