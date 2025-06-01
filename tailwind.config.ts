@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        slide: "slide 2.5s linear infinite",
+      },
       colors: {
         primary: "#1f2c42", // Ana renk, örneğin metin veya arka plan
         secondary: "#c1a37b", // Buton veya öne çıkarılacak alanlar

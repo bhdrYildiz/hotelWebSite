@@ -7,6 +7,8 @@ import AboutSection from "./components/AboutSection";
 import RoomsSection from "./components/RoomsSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import Footer from "./components/Footer";
+import CallToActionBanner from "./components/CallToActionBanner";
+import ToursSection from "./components/ToursSection";
 
 const Home: NextPage = () => {
   return (
@@ -21,7 +23,14 @@ const Home: NextPage = () => {
           <Slider />
           <AboutSection />
           <RoomsSection />
+          <div
+            className="relative h-[500px] bg-fixed bg-center bg-cover"
+            style={{ backgroundImage: "url('/images/slider1.jpeg')" }}
+          >
+          </div>
           <TestimonialsSection />
+          <ToursSection />
+          <CallToActionBanner />
           <Footer />
         </section>
         {/* Diğer sayfa bölümlerini ekleyebilirsiniz: Hakkımızda, Odalar, Galeri vs. */}

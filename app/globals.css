@@ -10,10 +10,92 @@
 #1f2c42
 #c1a37b
 #f8f8f3
-*/ 
+*/
 
 /* Global stiller */
 body {
   /* next/font ile tanımladığınız fontları kullanıyoruz */
   font-family: var(--font-cormorant);
+}
+.custom-swiper .swiper-pagination-bullet {
+  background-color: #d1d5db; /* pasif olanlar için gri */
+  opacity: 1;
+}
+
+.custom-swiper .swiper-pagination-bullet-active {
+  background-color: #b99365; /* aktif olan için özel renk */
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes slide-up-loop {
+  0%,
+  10% {
+    transform: translateY(0%);
+  }
+  20%,
+  30% {
+    transform: translateY(-100%);
+  }
+  40%,
+  50% {
+    transform: translateY(-200%);
+  }
+  60%,
+  100% {
+    transform: translateY(-200%); /* Beklesin Art'ta */
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up-loop 32s ease-in-out infinite;
+}
+
+.animate-typewriter {
+  animation: typewriter 2.5s steps(30, end) 1 forwards;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  /*border-right: 2px solid white; */
+}
+
+.animate-slide-down {
+  animation: slideDown 1s ease-out both;
+}
+
+.animate-slide-left {
+  animation: slideLeft 1s 0.3s ease-out both;
+}
+
+.animate-typewriter {
+  animation: typewriter 2.5s steps(30, end) both;
+  white-space: nowrap;
+  overflow: hidden;
 }

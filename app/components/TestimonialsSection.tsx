@@ -1,198 +1,139 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { useRef, useState } from 'react';
+import { useState } from "react";
+import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
-const testimonials = [
+const reviews = [
     {
-        name: 'Kadir Tara Bilen',
-        review: "I'm a photographer in the region, I chose it for a 1-day holiday with my wife...",
-        role: 'Guest review',
-        avatar: '/icons/man.png' // public klasörüne eklenecek
+        name: "Orhan Şahin",
+        date: "24 April 2024",
+        avatar: "/icons/man.png",
+        rating: 5,
+        text:
+            "An enjoyable holiday\nYou receive hospitality and attention from the moment you enter the hotel. The rooms are large, spacious and clean. You feel comfortable in the room built inside the rock. The hotel's breakfast was excellent. You eat with a pleasant view of Ürgüp. Another important feature of the hotel is that it is within walking distance of local attractions. Highly recommended for families and solo travelers alike.",
     },
     {
-        name: 'Kaasdasdasdasdaas!',
-        review: "I'm a photographer in the region, I casdadasdasdasdasdasdahose it for a 1-day holiday with my wife...",
-        role: 'Guest review',
-        avatar: '/icons/woman.png' // public klasörüne eklenecek
+        name: "Ömer Y",
+        date: "1 April 2024",
+        avatar: "/icons/woman.png",
+        rating: 5,
+        text:
+            "It's like an extraordinary fairy tale. It is in the best location, within walking distance of the market, restaurants, and cafes. You wake up to a panoramic view and sleep in complete silence. The design of the rooms blends perfectly with the cave ambiance.",
     },
     {
-        name: 'Kaasdasdadasdasdasn',
-        review: "I'm a photographer in the adsadasdasdas, I chose it for a 1-day holiday with my wife...",
-        role: 'Guest review',
-        avatar: '/icons/woman.png' // public klasörüne eklenecek
+        name: "Orhan Şahin",
+        date: "24 May 2023",
+        avatar: "/icons/woman.png",
+        rating: 5,
+        text:
+            "Urgup bölgesi kalınacak bir yer. Urgup bölgesinde merkeze yakın temiz ve yöresel bir otel bulmak zor olabilir ama burası kesinlikle beklentileri karşılıyor. Güler yüzlü personeli ve temiz odalarıyla rahat bir tatil geçirdik.",
     },
     {
-        name: 'Kaasdasdadasdasdasn',
-        review: "I'm a photographer in the adsadasdasdas, I chose it for a 1-day holiday with my wife...",
-        role: 'Guest review',
-        avatar: '/icons/man.png' // public klasörüne eklenecek
+        name: "Orhan Şahin",
+        date: "24 May 2023",
+        avatar: "/icons/woman.png",
+        rating: 5,
+        text:
+            "Urgup bölgesi kalınacak bir yer. Urgup bölgesinde merkeze yakın temiz ve yöresel bir otel bulmak zor olabilir ama burası kesinlikle beklentileri karşılıyor. Güler yüzlü personeli ve temiz odalarıyla rahat bir tatil geçirdik.",
     },
     {
-        name: 'Kaasdasdadasdasdasn',
-        review: "I'm a photographer in the adsadasdasdas, I chose it for a 1-day holiday with my wife...",
-        role: 'Guest review',
-        avatar: '/icons/man.png' // public klasörüne eklenecek
+        name: "Orhan Şahin",
+        date: "24 May 2023",
+        avatar: "/icons/woman.png",
+        rating: 5,
+        text:
+            "Urgup bölgesi kalınacak bir yer. Urgup bölgesinde merkeze yakın temiz ve yöresel bir otel bulmak zor olabilir ama burası kesinlikle beklentileri karşılıyor. Güler yüzlü personeli ve temiz odalarıyla rahat bir tatil geçirdik.",
     },
-    // Diğer slider item’larını buraya ekleyebilirsin
 ];
-export default function TestimonialsSection() {
-    const sliderRef = useRef<HTMLDivElement>(null);
-    const [isDown, setIsDown] = useState(false);
-    const [startX, setStartX] = useState(0);
-    const [scrollLeft, setScrollLeft] = useState(0);
 
-    const handleMouseDown = (e: React.MouseEvent) => {
-        const slider = sliderRef.current;
-        if (!slider) return;
-
-        setIsDown(true);
-        setStartX(e.pageX - slider.offsetLeft);
-        setScrollLeft(slider.scrollLeft);
-    };
-
-    const handleMouseLeave = () => setIsDown(false);
-    const handleMouseUp = () => setIsDown(false);
-
-    const handleMouseMove = (e: React.MouseEvent) => {
-        const slider = sliderRef.current;
-        if (!isDown || !slider) return;
-        e.preventDefault();
-
-        const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 1.5; // hız ayarı
-        slider.scrollLeft = scrollLeft - walk;
-    };
-    const [activeIndex, setActiveIndex] = useState(0);
-
-    const scrollToIndex = (index: number) => {
-        const slider = sliderRef.current;
-        if (!slider) return;
-        const width = slider.offsetWidth;
-        slider.scrollTo({
-            left: width * index,
-            behavior: 'smooth',
-        });
-        setActiveIndex(index);
-    };
+export default function CustomerReviews() {
+    const [expanded, setExpanded] = useState<number | null>(null);
 
     return (
-        <section className="relative w-full h-[150vh] text-[#f8f8f3] overflow-hidden">
-            {/* Background image */}
-            <Image
-                src="/images/slide3.jpg"
-                alt="spa"
-                fill
-                quality={100}
-                className="object-cover pointer-events-none"
-            />
-
-            {/* Top shadow from center */}
-            <div
-                className="absolute w-full h-1/2 z-10 pointer-events-none"
-                style={{
-                    top: '50%',
-                    background: 'linear-gradient(to top, rgba(0,0,0,0.6), transparent)',
-                }}
-            />
-
-            {/* Content */}
-            <div className="container max-w-[1200px] mt-32 mx-auto px-4 z-20 flex flex-col">
-                <p className="text-xs z-20 tracking-widest text-[#1d1811] uppercase mb-2">Testimonials</p>
-                <h2 className="text-3xl z-20 md:text-4xl font-semibold mb-6">What Guest's Say?</h2>
-
-                {/* Slider with drag to scroll */}
-                <div
-                    ref={sliderRef}
-                    onMouseDown={handleMouseDown}
-                    onMouseLeave={handleMouseLeave}
-                    onMouseUp={handleMouseUp}
-                    onMouseMove={handleMouseMove}
-                    className="flex gap-6 overflow-x-auto cursor-grab active:cursor-grabbing select-none scrollbar-hide pb-4"
-                    style={{
-                        WebkitOverflowScrolling: 'touch',
-                        scrollbarWidth: 'none',
-                        msOverflowStyle: 'none',
-                    }}
-                >
-                    {testimonials.map((item, i) => (
-                        <div key={i} className="min-w-[90%] md:min-w-[60%] bg-black/50 p-6 rounded-m shadow-lg backdrop-blur-sm">
-                            <p className="text-sm md:text-base text-[#c1a37b] mb-4">{item.review}</p>
-                            <div className="flex items-center gap-4">
-                                <Image
-                                    src={item.avatar}
-                                    alt={item.name}
-                                    width={48}
-                                    height={48}
-                                    className="rounded-full"
-                                />
-                                <div>
-                                    <p className="font-bold">{item.name}</p>
-                                    <p className="text-xs text-[#f8f8f3]">{item.role}</p>
-                                    <p className="text-[#c1a37b] text-sm mt-1">★★★★★</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    ))}
-                </div>
-                {/* Dot navigation */}
-                <div className="flex justify-center gap-2 mt-4 z-20">
-                    {testimonials.map((_, index) => (
-                        <button
-                            key={index}
-                            onClick={() => scrollToIndex(index)}
-                            className={`w-3 h-3 rounded-full transition-colors ${index === activeIndex ? 'bg-[#c1a37b]' : 'bg-white/40'
-                                }`}
-                        />
-                    ))}
-                </div>
-            </div>
-
-
-            <div className="container max-w-[1168px] mt-32 mx-auto px-6 z-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-black/50 backdrop-blur-md p-12">
-
-                {/* Sol Bilgi Alanı */}
-                <div className="space-y-6 text-[#f8f8f3]">
-                    <h2 className="text-3xl md:text-4xl font-light leading-snug">
-                        Rezervasyon detayları ve fiyatlar hakkında bilgilendirme için bizimle iletişime geçebilirsiniz.
+        <section className="bg-white py-16" id="reviews">
+            <div className="container max-w-[1200px] h-[500px] mt-8 mx-auto text-center flex flex-col">
+                <div className="flex flex-col">
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+                        CUSTOMER REVIEWS
                     </h2>
-                    <div className="text-lg space-y-2">
-                        <p className="font-medium">Rezervasyon</p>
-                        <div className="flex flex-col text-xl space-y-1">
-                            <span>+90 384 551 22 22</span>
-                            <span>+90 546 699 77 77</span>
-                        </div>
+                    <p className="text-gray-500 mb-10">
+                        What our guests are saying about us
+                    </p>
+                    <div className="mb-8">
+                        <a
+                            href="https://www.tripadvisor.com.tr/Hotel_Review-g297989-d3161070-Reviews-Yildiz_Hotel-Urgup_Cappadocia.html#REVIEWS"
+                            className="border border-[#d9b464] p-2 rounded-md cursor-pointer 
+                   text-gray-700 bg-white
+                   hover:bg-blue-600 hover:text-amber-50 hover:text-xl
+                   transition-all duration-300 ease-in-out"
+                        >
+                            See all reviews
+                        </a>
                     </div>
                 </div>
-
-                {/* Sağ Form Alanı */}
-                <div className="relative z-10 bg-[#1b1b1b] p-8 rounded-lg shadow-lg w-full max-w-lg mx-auto text-[#f8f8f3]">
-                    <p className="text-sm text-[#c1a37b] tracking-widest uppercase mb-2">YILDIZ HOTEL</p>
-                    <h3 className="text-3xl font-light mb-6">İletişim Formu</h3>
-                    <form className="space-y-4 z-10">
-                        <input
-                            type="text"
-                            placeholder="Adınız Soyadınız"
-                            className="w-full bg-[#2a2a2a] text-[#f8f8f3] px-4 py-3 rounded-md focus:outline-none"
-                        />
-                        <input
-                            type="tel"
-                            placeholder="Telefon Numaranız"
-                            className="w-full bg-[#2a2a2a] text-[#f8f8f3] px-4 py-3 rounded-md focus:outline-none"
-                        />
-                        <textarea
-                            placeholder="Mesajınız"
-                            rows={4}
-                            className="w-full bg-[#2a2a2a] text-[#f8f8f3] px-4 py-3 rounded-md focus:outline-none"
-                        ></textarea>
-                        <button
-                            type="submit"
-                            className="w-full bg-[#c1a37b] text-[#2a2a2a] font-semibold tracking-wider py-3 rounded-md hover:bg-[#b38f65] transition-colors"
+                <div className="flex flex-col md:flex-row justify-between gap-6 items-start">
+                    {/* Review Slider */}
+                    <div className="relative w-full flex justify-center">
+                        {/* Swiper içerik */}
+                        <Swiper
+                            spaceBetween={16}
+                            slidesPerView={1.1}
+                            navigation={{
+                                nextEl: ".custom-next",
+                                prevEl: ".custom-prev",
+                            }}
+                            modules={[Navigation]}
+                            breakpoints={{
+                                768: { slidesPerView: 3 },
+                            }}
+                            className="w-full max-w-[1000px]"
                         >
-                            FORMU GÖNDER
-                        </button>
-                    </form>
+                            {reviews.map((review, index) => (
+                                <SwiperSlide key={index}>
+                                    <div className="bg-neutral-300 rounded-lg shadow-md p-4 h-auto text-left max-w-xs w-full flex flex-col">
+                                        {/* avatar + isim */}
+                                        <div className="flex items-center gap-3 mb-2">
+                                            <Image src={review.avatar} alt={review.name} width={40} height={40} className="rounded-full" />
+                                            <div>
+                                                <p className="font-semibold text-sm">{review.name}</p>
+                                                <p className="text-xs text-gray-400">{review.date}</p>
+                                            </div>
+                                            <Image src="/icons/tripLogo.svg" alt="Tripadvisor" width={20} height={20} className="ml-auto" />
+                                        </div>
+                                        {/* stars */}
+                                        <div className="flex gap-1 mb-2">
+                                            {[...Array(review.rating)].map((_, i) => (
+                                                <Image key={i} src="/icons/tripDot.svg" alt="star" width={18} height={18} />
+                                            ))}
+                                        </div>
+                                        {/* text */}
+                                        <p className={`text-sm text-gray-700 leading-relaxed ${expanded === index ? "" : "line-clamp-4"}`}>
+                                            {review.text}
+                                        </p>
+                                        <button
+                                            className="text-xs text-gray-500 hover:underline mt-2 self-start cursor-pointer"
+                                            onClick={() => setExpanded(expanded === index ? null : index)}
+                                        >
+                                            {expanded === index ? "Hide" : "Read more"}
+                                        </button>
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+
+
+                        {/* CUSTOM NAVIGATION BUTTONS */}
+                        <div className="custom-prev absolute left-6 top-1/2 transform -translate-y-1/2 cursor-pointer z-10 text-gray-700 text-5xl">
+                            ❮
+                        </div>
+                        <div className="custom-next absolute right-6 top-1/2 transform -translate-y-1/2 cursor-pointer z-10 text-gray-700 text-5xl">
+                            ❯
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
