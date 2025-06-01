@@ -6,6 +6,13 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: "1rem",
+      screens: {
+        xl: "1200px", // Header ile birebir uyumlu
+      },
+    },
     extend: {
       animation: {
         slide: "slide 2.5s linear infinite",

@@ -7,19 +7,19 @@ const tours = [
     {
         title: "Hot Air Balloon Flight",
         description: "Greet the sunrise from the sky with panoramic views of Cappadocia.",
-        img: "/images/slider1.jpeg",
+        img: "/images/balon.png",
         link: "/tours/balloon",
     },
     {
         title: "ATV Safari Tour",
         description: "Ride through valleys and dusty trails with high adrenaline.",
-        img: "/images/room5.jpg",
+        img: "/images/atv.jpg",
         link: "/tours/atv",
     },
     {
         title: "Horse Riding Tour",
         description: "Explore Cappadocia's natural wonders on horseback.",
-        img: "/images/slider2.jpeg",
+        img: "/images/at1.jpg",
         link: "/tours/horse",
     },
 ];

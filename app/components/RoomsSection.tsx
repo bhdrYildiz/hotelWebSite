@@ -56,13 +56,19 @@ const RoomsSection = () => {
     return (
         <section className="bg-[#f8f4f2] py-16" id="rooms">
             <div className="container max-w-[1200px] mx-auto px-4 text-center">
-                <div className="mb-12">
+                <div className="mb-8">
                     <h3 className="text-[#b99365] font-serif text-3xl">YILDIZ OTEL</h3>
-                    <h2 className="text-4xl font-semibold mt-2">KEMER PALACE ROOMS</h2>
+                    <h2 className="text-4xl font-semibold mt-4">KEMER PALACE ROOMS</h2>
                     <p className="text-gray-600 mt-4 max-w-xl mx-auto">
                         Discover the enchanting beauty of Cappadocia from the comfort of Kemer Palace.
                     </p>
-                </div>
+                    <a
+                        href="/rooms"
+                        className="border mt-4 rounded-sm bg-amber-50 hover:bg-amber-300 px-4 py-2 inline-block hover:text-xl
+                   transition-all duration-300 ease-in-out"
+                    >
+                        See all rooms
+                    </a>                </div>
 
                 <Swiper
                     spaceBetween={30}
@@ -77,8 +83,8 @@ const RoomsSection = () => {
                 >
                     {rooms.map((room, index) => (
                         <SwiperSlide key={index}>
-                            <div className="bg-white shadow-md rounded-md overflow-hidden group relative mb-16">
-                                <div className="w-full h-82 relative overflow-hidden">
+                            <div className="bg-white shadow-md overflow-hidden group relative mb-16">
+                                <div className="w-full h-96 relative overflow-hidden cursor-pointer">
                                     <Image
                                         src={room.image}
                                         alt={room.name}
@@ -101,7 +107,11 @@ const RoomsSection = () => {
                                     <div className="border-t pt-4 flex justify-between text-sm text-gray-600">
                                         <div className="flex items-center gap-2">
                                             <img src="/icons/bed.png" alt="bed" className="w-4 h-4" />
-                                            {room.bed}
+                                            <img src="/icons/bath.png" alt="bed" className="w-4 h-4" />
+                                            <img src="/icons/breakfast.png" alt="bed" className="w-4 h-4" />
+                                            <img src="/icons/towel.png" alt="bed" className="w-4 h-4" />
+                                            <img src="/icons/wifi.png" alt="bed" className="w-4 h-4" />
+                                            <img src="/icons/balcony.png" alt="bed" className="w-4 h-4" />
                                         </div>
                                         <div>{room.size}</div>
                                     </div>

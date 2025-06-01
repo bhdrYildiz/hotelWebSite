@@ -1,71 +1,59 @@
-const Footer = () => {
+// components/Footer.tsx
+
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaInstagram, FaTripadvisor, FaWhatsapp } from 'react-icons/fa';
+
+export default function Footer() {
     return (
-        <footer className="bg-[#1c2128] text-[#f8f8f3] py-12 px-6">
-            <div className="container max-w-[1180px] mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-16">
-                {/* About Hotel */}
-                <div>
-                    <h2 className="text-[#f8f8f3] text-2xl font-semibold mb-4">About Hotel</h2>
-                    <p className="text-gray-400 mb-6 space-y-2">
-                        Welcome to Vie Cappadocia, where you step into a place that stands just beneath the majestic and breathtaking formation of Ortahisar Castle, the tallest fairy chimney in Cappadocia, offering a historical and authentic view.
+        <footer className="bg-white text-gray-700 py-12 border-t">
+            <div className="w-full max-w-[1200px] mx-auto mt-4 px-4 grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-10 place-items-start md:place-items-start">
+                {/* Sol Sütun */}
+                <div className="text-center md:text-left ml-12">
+                    <img src="/images/logo.png" alt="Asuwari Suites Logo" className="mb-4 h-24 mx-auto md:mx-0" />
+                    <p className="text-sm">
+                        Arriving at the entrance of Asuwari Suites, you realise that this unique place offers a boutique experience that activates the senses.
                     </p>
-                    <button className="flex items-center gap-2 bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded">
-                        <span>English</span>
-                        <span className="text-lg">🌐</span>
-                    </button>
                 </div>
 
-                {/* Explore */}
-                <div className="flex flex-col justify-center items-center">
-                    <h2 className="text-[#f8f8f3] text-2xl font-semibold mb-4 mr-8">Explore</h2>
-                    <ul className="space-y-2 text-gray-400">
-                        <li><a href="#" className="hover:text-[#f8f8f3]">Home</a></li>
-                        <li><a href="#" className="hover:text-[#f8f8f3]">Rooms & Suites</a></li>
-                        <li><a href="#" className="hover:text-[#f8f8f3]">About Hotel</a></li>
-                        <li><a href="#" className="hover:text-[#f8f8f3]">Contact</a></li>
-                        <li><a href="#" className="hover:text-[#f8f8f3]">Privacy Policy</a></li>
-                        <li><a href="#" className="hover:text-[#f8f8f3]">Terms Of Use</a></li>
-                        <li><a href="#" className="hover:text-[#f8f8f3]">Cookie Policy</a></li>
-                        <li><a href="#" className="hover:text-[#f8f8f3]">Data Processing</a></li>
+                {/* Orta Sütun */}
+                <div className="text-center md:text-left ml-32">
+                    <h3 className="font-bold mb-4 uppercase text-xl">Useful Links</h3>
+                    <ul className="space-y-2 text-sm">
+                        <li><a href="/" className="hover:underline">Home</a></li>
+                        <li><a href="/about" className="hover:underline">About us</a></li>
+                        <li><a href="/rooms" className="hover:underline">Rooms</a></li>
+                        <li><a href="/toursandactivities" className="hover:underline">Tours And Activities</a></li>
+                        <li><a href="/blog" className="hover:underline">Blog</a></li>
+                        <li><a href="/contact" className="hover:underline">Contact Us</a></li>
                     </ul>
                 </div>
 
-                {/* Contact */}
-                <div className="flex flex-col ml-8">
-                    <h2 className="text-[#f8f8f3] text-2xl font-semibold mb-4">Contact</h2>
-                    <address className="not-italic text-gray-400 mb-4">
-                        Ortahisar Beld. Yeni Mah. Ali Reis Sok. No. 43<br />
-                        50650 Ürgüp/Nevşehir
-                    </address>
-                    <div className="mb-2 flex items-center gap-2">
-                        📅 <span>Book Now</span>
+                {/* Sağ Sütun */}
+                <div className="text-center font-bold md:text-left ml-24 text-xl">
+                    <h3 className="font-bold mb-4 uppercase">Contact Us</h3>
+                    <div className="space-y-2 text-sm">
+                        <p className="flex justify-center md:justify-start items-center gap-2">
+                            <FaMapMarkerAlt /> Kavaklıönü, Atatürk Blv. No:61, 50400 Ürgüp/Nevşehir
+                        </p>
+                        <p className="flex justify-center md:justify-start items-center gap-2">
+                            <FaPhoneAlt /> +90 530 389 7163
+                        </p>
+                        <p className="flex justify-center md:justify-start items-center gap-2">
+                            <FaEnvelope /> info@yildizhotel.com
+                        </p>
                     </div>
-                    <div className="mb-2 flex items-center gap-2">
-                        📞 <a href="tel:5435207677" className="hover:text-[#f8f8f3]">543 520 7677</a>
-                    </div>
-                    <div className="mb-4 flex items-center gap-2">
-                        ✉️ <a href="mailto:hello@viehotel.com.tr" className="hover:text-[#f8f8f3]">hello@viehotel.com.tr</a>
-                    </div>
-                    <div className="flex gap-4 text-2xl">
-                        <a href="#"><span>🟢</span></a>
-                        <a href="#"><span>📷</span></a>
-                        <a href="#"><span>📘</span></a>
+                    <div className="flex justify-center md:justify-start gap-4 mt-4 text-xl">
+                        <FaFacebookF className="cursor-pointer hover:text-gray-900" />
+                        <FaInstagram className="cursor-pointer hover:text-gray-900" />
+                        <FaTripadvisor className="cursor-pointer hover:text-gray-900" />
+                        <FaWhatsapp className="cursor-pointer hover:text-gray-900" />
                     </div>
                 </div>
             </div>
 
-            {/* Bottom */}
-            <div className="border-t border-gray-700 mt-12 pt-6 text-center text-gray-500 text-sm">
-                © Copyright 2023 by <span className="text-[#f8f8f3] font-semibold">Yıldız Hotel Cappadocia</span>
-            </div>
-
-            {/* Scroll to Top */}
-            <div className="fixed bottom-4 right-4">
-                <a href="#" className="bg-[#222] text-[#f8f8f3] p-4 rounded-full hover:bg-[#333] transition-all">
-                    ↑
-                </a>
+            {/* Alt Kısım */}
+            <div className="mt-10 text-center text-sm text-gray-500">
+                Copyright © Yıldız Otel Cappadocia 2025
             </div>
         </footer>
     );
-};
-
-export default Footer;
+}

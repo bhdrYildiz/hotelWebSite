@@ -3,7 +3,7 @@ export default function CallToActionBanner() {
     return (
         <section
             className="relative h-[400px] bg-fixed bg-center bg-cover flex items-center justify-center text-white text-center"
-            style={{ backgroundImage: "url('/images/slider2.jpeg')" }}
+            style={{ backgroundImage: "url('/images/banner.jpg')" }}
         >
             <div className="bg-black/50 absolute inset-0 z-0"></div>
             <div className="relative z-10 px-6">

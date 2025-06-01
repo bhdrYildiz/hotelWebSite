@@ -2,6 +2,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Cormorant_Infant, Cormorant_SC } from "next/font/google";
+import WhatsappButton from "./components/WhatsappButton";
+import ScrollToTop from "./components/ScrollToTop";
 
 const cormorantInfant = Cormorant_Infant({
   subsets: ["latin"],
@@ -28,7 +30,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${cormorantInfant.variable} ${cormorantSC.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <WhatsappButton />
+        <ScrollToTop />
+      </body>
     </html>
   );
 }
