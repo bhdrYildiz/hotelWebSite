@@ -1,6 +1,6 @@
 // layout.tsx
+import "./global.css";
 import type { Metadata } from "next";
-import "./globals.css";
 import { Cormorant_Infant, Cormorant_SC } from "next/font/google";
 import WhatsappButton from "./components/WhatsappButton";
 import ScrollToTop from "./components/ScrollToTop";

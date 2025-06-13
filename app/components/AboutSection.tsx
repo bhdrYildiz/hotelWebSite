@@ -17,20 +17,19 @@ const imageVariants = {
 
 const AboutSection = () => {
     return (
-        <section className="relative py-24 bg-white overflow-hidden z-10">
+        <section className="relative py-24 bg-[#f8f8f3] overflow-hidden z-10 font-cormorant">
             {/* Sağ arka plan görseli */}
             <div
-                className="absolute inset-y-0 right-12 top-24 w-full md:w-3/4 h-3/4 bg-cover bg-center opacity-10"
+                className="absolute inset-y-0 right-12 top-24 w-full md:w-3/4 h-3/4 bg-center opacity-10"
                 style={{ backgroundImage: "url('/images/balon.png')" }}
             />
 
-            <div className="container max-w-[1200px] mx-auto px-4 grid md:grid-cols-2 gap-12 items-center relative z-20">
-                {/* Sol Alan */}
+            <div className="container max-w-[1200px] min-h-[500px] md:min-h-[600px] mx-auto px-4 grid md:grid-cols-2 gap-12 items-center relative z-20">
+                {/* Sol Alan - Görseller */}
                 <div className="flex flex-col gap-6">
                     <div className="grid grid-cols-2 gap-4">
-                        {/* Görseller sıralı animasyon */}
                         <motion.div
-                            className="col-span-2 overflow-hidden rounded-md"
+                            className="col-span-2 overflow-hidden"
                             custom={0}
                             initial="hidden"
                             whileInView="visible"
@@ -84,13 +83,13 @@ const AboutSection = () => {
                     transition={{ duration: 1.2, ease: 'easeOut' }}
                     viewport={{ once: true }}
                 >
-                    <h4 className="text-sm font-semibold text-gray-500 uppercase mb-2">
+                    <h4 className="text-sm font-semibold text-[#b99365] uppercase mb-2 tracking-wider">
                         YILDIZ OTEL CAPPADOCIA
                     </h4>
-                    <h2 className="text-4xl md:text-5xl font-bold text-[#09163a] leading-tight mb-6">
+                    <h2 className="text-4xl md:text-5xl font-bold text-[#1f2c42] leading-tight mb-6">
                         Discover Our <br /> Underground
                     </h2>
-                    <p className="text-gray-600 text-base leading-relaxed mb-6">
+                    <p className="text-base leading-relaxed text-[#111827] mb-6">
                         Welcome to a hidden realm of extraordinary accommodations where luxury,
                         comfort, and adventure converge. Our underground hotels offer an unparalleled
                         escape from the ordinary, inviting you to explore a subterranean world of
@@ -98,7 +97,7 @@ const AboutSection = () => {
                     </p>
                     <a
                         href="/booking"
-                        className="bg-yellow-400 hover:bg-yellow-500 text-white px-6 py-3 font-semibold text-sm rounded-md transition"
+                        className="bg-[#c1a37b] hover:bg-[#b99365] hover:text-[#1f2c42] text-white px-6 py-3 font-semibold text-sm rounded-md transition"
                     >
                         Book Now
                     </a>

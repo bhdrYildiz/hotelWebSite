@@ -18,9 +18,13 @@ module.exports = {
         slide: "slide 2.5s linear infinite",
       },
       colors: {
-        primary: "#1f2c42", // Ana renk, örneğin metin veya arka plan
-        secondary: "#c1a37b", // Buton veya öne çıkarılacak alanlar
-        light: "#f8f8f3", // Açık ton, örneğin arka plan
+        //Tanım	Hex Kodu	Açıklama
+        //Primary	#1f2c42	Başlık, header, footer
+        //Secondary	#c1a37b	Butonlar, hover efektleri
+        //Accent	#b99365	İkonlar, aktif link, detay
+        //Light	#f8f8f3	Arka plan, açık alanlar
+        //Dark	#111827	Yazı ya da koyu arka planlar
+        //footer #e2e2e2
       },
       fontFamily: {
         // Daha sonra fontları yükleyeceğimiz adımlarla ilişkilendiriyoruz.

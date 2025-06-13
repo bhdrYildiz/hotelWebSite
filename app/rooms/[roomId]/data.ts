@@ -1,0 +1,87 @@
+export const rooms = [
+  {
+    id: "101",
+    name: "Deluxe Room",
+    images: [
+      "/images/slider1.jpeg",
+      "/images/slider2.jpeg",
+      "/images/slider3.jpeg",
+      "/images/room4.jpg",
+      "/images/room5.jpg",
+      "/images/room6.jpg",
+    ],
+    description: "Spacious room with a stunning view of Cappadocia.",
+    features: ["BedDouble", "Wifi", "Snowflake", "Tv", "BathIcon"],
+  },
+  {
+    id: "102",
+    name: "Cave Suite",
+    images: [
+      "/images/slider1.jpeg",
+      "/images/slider2.jpeg",
+      "/images/slider3.jpeg",
+    ],
+    description: "Experience traditional cave living with modern luxury.",
+    features: [
+      "BedDouble",
+      "Wifi",
+      "Snowflake",
+      "Tv",
+      "Snowflake",
+      "Tv",
+      "BathIcon",
+    ],
+  },
+  {
+    id: "103",
+    name: "Deluxe Room",
+    images: [
+      "/images/slider1.jpeg",
+      "/images/slider2.jpeg",
+      "/images/slider3.jpeg",
+    ],
+    description: "Spacious room with a stunning view of Cappadocia.",
+    features: ["BedDouble", "Wifi", "Snowflake", "Tv", "BathIcon"],
+  },
+  {
+    id: "201",
+    name: "Deluxe Room",
+    images: [
+      "/images/slider1.jpeg",
+      "/images/slider2.jpeg",
+      "/images/slider3.jpeg",
+    ],
+    description: "Spacious room with a stunning view of Cappadocia.",
+    features: ["BedDouble", "Wifi", "Snowflake", "Tv", "BathIcon"],
+  },
+  {
+    id: "202",
+    name: "Cave Suite",
+    images: [
+      "/images/slider1.jpeg",
+      "/images/slider2.jpeg",
+      "/images/slider3.jpeg",
+    ],
+    description: "Experience traditional cave living with modern luxury.",
+    features: [
+      "BedDouble",
+      "Wifi",
+      "Snowflake",
+      "Tv",
+      "Snowflake",
+      "Tv",
+      "BathIcon",
+    ],
+  },
+  {
+    id: "203",
+    name: "Deluxe Room",
+    images: [
+      "/images/slider1.jpeg",
+      "/images/slider2.jpeg",
+      "/images/slider3.jpeg",
+    ],
+    description: "Spacious room with a stunning view of Cappadocia.",
+    features: ["BedDouble", "Wifi", "Snowflake", "Tv", "BathIcon"],
+  },
+];

@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { useState } from "react";
 import Image from "next/image";
@@ -48,37 +48,43 @@ const reviews = [
         text:
             "Urgup bölgesi kalınacak bir yer. Urgup bölgesinde merkeze yakın temiz ve yöresel bir otel bulmak zor olabilir ama burası kesinlikle beklentileri karşılıyor. Güler yüzlü personeli ve temiz odalarıyla rahat bir tatil geçirdik.",
     },
+    {
+        name: "Orhan Şahin",
+        date: "24 May 2023",
+        avatar: "/icons/woman.png",
+        rating: 5,
+        text:
+            "Urgup bölgesi kalınacak bir yer. Urgup bölgesinde merkeze yakın temiz ve yöresel bir otel bulmak zor olabilir ama burası kesinlikle beklentileri karşılıyor. Güler yüzlü personeli ve temiz odalarıyla rahat bir tatil geçirdik.",
+    },
+    // Diğer tekrar edenleri tek bıraktım
 ];
 
 export default function CustomerReviews() {
     const [expanded, setExpanded] = useState<number | null>(null);
 
     return (
-        <section className="bg-white py-16" id="reviews">
-            <div className="container max-w-[1200px] h-[500px] mt-8 mx-auto text-center flex flex-col">
-                <div className="flex flex-col">
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+        <section className="bg-[#f8f8f3] py-16 font-cormorant" id="reviews">
+            <div className="container max-w-[1200px] min-h-[400px] md:min-h-[500px] mx-auto text-center flex flex-col">
+                <div className="flex flex-col justify-center mt-8">
+                    <h2 className="text-3xl md:text-4xl font-bold text-[#1f2c42] mb-2">
                         CUSTOMER REVIEWS
                     </h2>
-                    <p className="text-gray-500 mb-10">
+                    <p className="text-[#111827] mb-4">
                         What our guests are saying about us
                     </p>
                     <div className="mb-8">
                         <a
                             href="https://www.tripadvisor.com.tr/Hotel_Review-g297989-d3161070-Reviews-Yildiz_Hotel-Urgup_Cappadocia.html#REVIEWS"
-                            className="border border-[#d9b464] p-2 rounded-md cursor-pointer 
-                   text-gray-700 bg-white
-                   hover:bg-blue-600 hover:text-amber-50 hover:text-xl
-                   transition-all duration-300 ease-in-out"
+                            className="rounded-sm bg-[#c1a37b] hover:bg-[#b99365] px-6 py-2 inline-block 
+                        transition-all duration-300 text-[#f8f8f3] hover:text-[#1f2c42] font-semibold text-sm tracking-wider"
                         >
                             See all reviews
                         </a>
                     </div>
                 </div>
-                <div className="flex flex-col md:flex-row justify-between gap-6 items-start">
-                    {/* Review Slider */}
+
+                <div className="flex flex-col md:flex-row justify-center gap-6 items-start">
                     <div className="relative w-full flex justify-center">
-                        {/* Swiper içerik */}
                         <Swiper
                             spaceBetween={16}
                             slidesPerView={1.1}
@@ -94,28 +100,28 @@ export default function CustomerReviews() {
                         >
                             {reviews.map((review, index) => (
                                 <SwiperSlide key={index}>
-                                    <div className="bg-neutral-300 rounded-lg shadow-md p-4 h-auto text-left max-w-xs w-full flex flex-col">
-                                        {/* avatar + isim */}
-                                        <div className="flex items-center gap-3 mb-2">
+                                    <div className="bg-white border border-[#c1a37b] rounded-lg shadow-lg p-6 h-auto text-left max-w-xs w-full flex flex-col">
+                                        <div className="flex items-center gap-3 mb-3">
                                             <Image src={review.avatar} alt={review.name} width={40} height={40} className="rounded-full" />
                                             <div>
-                                                <p className="font-semibold text-sm">{review.name}</p>
-                                                <p className="text-xs text-gray-400">{review.date}</p>
+                                                <p className="font-semibold text-sm text-[#1f2c42]">{review.name}</p>
+                                                <p className="text-xs text-[#b99365]">{review.date}</p>
                                             </div>
                                             <Image src="/icons/tripLogo.svg" alt="Tripadvisor" width={20} height={20} className="ml-auto" />
                                         </div>
-                                        {/* stars */}
+
                                         <div className="flex gap-1 mb-2">
                                             {[...Array(review.rating)].map((_, i) => (
                                                 <Image key={i} src="/icons/tripDot.svg" alt="star" width={18} height={18} />
                                             ))}
                                         </div>
-                                        {/* text */}
-                                        <p className={`text-sm text-gray-700 leading-relaxed ${expanded === index ? "" : "line-clamp-4"}`}>
+
+                                        <p className={`text-sm text-[#111827] leading-relaxed ${expanded === index ? "" : "line-clamp-4"}`}>
                                             {review.text}
                                         </p>
+
                                         <button
-                                            className="text-xs text-gray-500 hover:underline mt-2 self-start cursor-pointer"
+                                            className="text-xs text-[#b99365] hover:underline hover:text-[#1f2c42] hover:font-semibold mt-2 self-start cursor-pointer"
                                             onClick={() => setExpanded(expanded === index ? null : index)}
                                         >
                                             {expanded === index ? "Hide" : "Read more"}
@@ -125,12 +131,11 @@ export default function CustomerReviews() {
                             ))}
                         </Swiper>
 
-
-                        {/* CUSTOM NAVIGATION BUTTONS */}
-                        <div className="custom-prev absolute left-6 top-1/2 transform -translate-y-1/2 cursor-pointer z-10 text-gray-700 text-5xl">
+                        {/* NAV BUTTONS */}
+                        <div className="custom-prev absolute left-6 top-1/2 transform -translate-y-1/2 cursor-pointer z-10 text-[#1f2c42] text-4xl hover:scale-110 transition">
                             ❮
                         </div>
-                        <div className="custom-next absolute right-6 top-1/2 transform -translate-y-1/2 cursor-pointer z-10 text-gray-700 text-5xl">
+                        <div className="custom-next absolute right-6 top-1/2 transform -translate-y-1/2 cursor-pointer z-10 text-[#1f2c42] text-4xl hover:scale-110 transition">
                             ❯
                         </div>
                     </div>
