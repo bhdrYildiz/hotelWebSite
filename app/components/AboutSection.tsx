@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const imageVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -37,7 +38,7 @@ const AboutSection = () => {
                             variants={imageVariants}
                         >
                             <img
-                                src="/images/slider2.jpeg"
+                                src="/images/bahce/bahce2.jpg"
                                 alt="pool"
                                 className="shadow-lg w-5/6 h-[250px] object-cover"
                             />
@@ -52,7 +53,7 @@ const AboutSection = () => {
                             variants={imageVariants}
                         >
                             <img
-                                src="/images/room5.jpg"
+                                src="/images/bahce/bahce10.jpg"
                                 alt="room"
                                 className="shadow-lg w-full h-[230px] object-cover"
                             />
@@ -95,12 +96,13 @@ const AboutSection = () => {
                         escape from the ordinary, inviting you to explore a subterranean world of
                         wonders.
                     </p>
-                    <a
-                        href="/booking"
-                        className="bg-[#c1a37b] hover:bg-[#b99365] hover:text-[#1f2c42] text-white px-6 py-3 font-semibold text-sm rounded-md transition"
+                    <Link
+                        href="/contact"
+                        className="font-cormorant rounded-sm bg-[#c1a37b] hover:bg-[#b99365] px-6 py-2 inline-block 
+                        transition-all duration-300 text-[#f8f8f3] hover:text-[#1f2c42] font-semibold text-sm tracking-wider"
                     >
                         Book Now
-                    </a>
+                    </Link>
                 </motion.div>
             </div>
         </section>

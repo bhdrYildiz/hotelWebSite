@@ -15,32 +15,32 @@ const tours = [
     {
         id: 'underground-city',
         title: 'Underground City Tour',
-        description: 'Explore the mysterious underground cities carved deep into the rock.',
-        image: '/images/atv.jpg',
+        description: 'Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.',
+        image: '/images/turlar/tur12.jpg',
     },
     {
         id: 'atv-sunset',
         title: 'ATV Sunset Safari',
-        description: 'Ride through the valleys of Cappadocia during the golden hour.',
+        description: 'Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.',
         image: '/images/atv.jpg',
     },
     {
         id: 'horseback-riding',
         title: 'Horseback Riding Adventure',
-        description: 'Discover hidden valleys and fairy chimneys on horseback with local guides.',
+        description: 'Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.',
         image: '/images/at1.jpg',
     },
     {
         id: 'green-tour',
         title: 'Green Tour',
-        description: 'A day trip to explore the lush Ihlara Valley and Derinkuyu Underground City.',
-        image: '/images/balon.png',
+        description: 'Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.',
+        image: '/images/turlar/tur32.jpg',
     },
     {
         id: 'red-tour',
         title: 'Red Tour',
-        description: 'Visit the most iconic sights in northern Cappadocia including Goreme Open Air Museum.',
-        image: '/images/balon.png',
+        description: 'Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.',
+        image: '/images/turlar/tur22.jpg',
     },
 ];
 
@@ -60,11 +60,9 @@ const ToursPage = () => {
                 </section>
                 <section className="max-w-[1200px] mx-auto px-6 py-20 space-y-24">
                     {tours.map((tour, index) => (
-
-
                         <div
                             key={tour.id}
-                            className={`flex flex-col lg:flex-row items-center gap-12 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}
+                            className={`flex flex-col lg:flex-row items-center gap-10 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}
                         >
                             {/* Text Content */}
                             <div className="basis-1/2 text-start ml-2 space-y-4">

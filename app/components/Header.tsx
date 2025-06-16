@@ -39,7 +39,7 @@ const Header = () => {
 
                 {/* Book Online Button */}
                 <Link
-                    href="/booking"
+                    href="/contact"
                     className="hidden md:flex items-center gap-2 bg-[#c1a37b] hover:bg-[#b99365] hover:text-[#1f2c42] text-[#f8f8f3] px-5 py-2 rounded-sm font-semibold text-sm font-cormorant transition-all duration-300"
                 >
                     <CalendarDays size={16} />

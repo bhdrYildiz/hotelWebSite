@@ -25,7 +25,7 @@ const Home: NextPage = () => {
           <RoomsSection />
           <div
             className="relative h-[500px] bg-fixed bg-center bg-cover"
-            style={{ backgroundImage: "url('/images/slider1.jpeg')" }}
+            style={{ backgroundImage: "url('/images/bahce/bahce3.jpg')" }}
           >
           </div>
           <TestimonialsSection />

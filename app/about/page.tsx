@@ -135,7 +135,7 @@ const AboutPage = () => {
                         {services.map((s, i) => (
                             <div
                                 key={i}
-                                className="bg-[#e2e2e2] backdrop-blur-md p-6 rounded-xl shadow-inner text-center border border-[#f8f8f3]/30 hover:scale-105 transition-all duration-300 flex flex-col items-center justify-center"
+                                className="bg-[#e2e2e2]/40 backdrop-blur-md p-6 rounded-xl shadow-inner text-center border border-[#f8f8f3]/30 hover:scale-105 transition-all duration-300 flex flex-col items-center justify-center"
                             >
                                 <div className="text-[#1f2c42] mb-3">{s.icon}</div>
                                 <p className="text-[#c1a37b] text-sm font-semibold">{s.label}</p>

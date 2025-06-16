@@ -26,6 +26,16 @@ body {
 .custom-swiper .swiper-pagination-bullet-active {
   background-color: #b99365; /* aktif olan için özel renk */
 }
+
+/* Scrollbar'ı tamamen kaldırmak için */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 @keyframes slideDown {
   from {
     opacity: 0;

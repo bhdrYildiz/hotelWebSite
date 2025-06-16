@@ -54,7 +54,7 @@ const RoomsPage = () => {
                                             </span>
                                         ))}
                                     </div>
-                                    <Link href={`/rooms/${101 + index * 100}`}>
+                                    <Link key={room.id} href={`/rooms/${room.id}`}>
                                         <button className="mt-2 px-10 py-2 bg-[#1f2c42] text-[#f8f8f3] relative overflow-hidden z-0 group cursor-pointer">
                                             <span className="relative z-10">View Details</span>
                                             <span className="absolute inset-0 bg-[#b99365] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>

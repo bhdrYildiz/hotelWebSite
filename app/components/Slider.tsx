@@ -4,19 +4,19 @@ import { useEffect, useState } from "react";
 
 const slides = [
     {
-        image: "/images/slider1.jpeg",
+        image: "/images/bahce/bahce1.jpg",
         topText: "MODERN & SPACIOUS ROOMS",
         middleText: "Sophisticated Experiences",
         bottomText: "Inspired by Cappadocia",
     },
     {
-        image: "/images/slider2.jpeg",
+        image: "/images/bahce/bahce6.jpg",
         topText: "PANORAMIC VIEWS",
         middleText: "Breathtaking Mornings",
         bottomText: "Moments that Matter",
     },
     {
-        image: "/images/slider3.jpeg",
+        image: "/images/bahce/bahce7.jpg",
         topText: "UNIQUE ATMOSPHERE",
         middleText: "Feel the Magic",
         bottomText: "A Story in Every Corner",

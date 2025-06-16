@@ -82,7 +82,7 @@ const RoomDetailPage = () => {
                     <h1 className="text-5xl font-bold drop-shadow-md">{room.name}</h1>
                 </section>
 
-                <section className="w-full bg-[#e2e2e2] py-12">
+                <section className="w-full bg-[#e2e2e2]/40 py-12">
                     <Swiper
                         modules={[Navigation, Autoplay]}
                         navigation={{
@@ -135,7 +135,7 @@ const RoomDetailPage = () => {
                         Deluxe Odalarımız, temiz çizgileri ve doğal malzemelerle geçmişle günümüzü harmanlıyor. Odadaki “Tonlar” çevredeki doğal peyzajın niteliklerini yansıtıyor. Her odada 160×200 cm veya 180×200 cm Visco yatak bulunmaktadır. Ayrıca odalarda, genç konuklar için ideal olan ve odada üçüncü bir kişinin konaklayabileceği 80x190cm veya 90x190cm Visco yataklı kanepeler bulunmaktadır. Mermer banyolarda yağmur hissiyatı veren duş başlıklı seramik küvet ve ayarlanabilir el duşu bulunmaktadır. Her oda, yerel cazibeyi korurken, düşünceli tasarım ögeleri ve modern olanaklara sahiptir.
                     </p>
 
-                    <div className="border-t-1 border-t-[#1f2c42] pt-10">
+                    <div className="border-t-1 border-t-gray-300 pt-10">
                         <h3 className="text-3xl font-semibold mb-8">Oda Özellikleri</h3>
                         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                             {amenities.map((item, i) => (

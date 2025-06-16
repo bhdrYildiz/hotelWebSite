@@ -35,11 +35,20 @@ export default function ToursSection() {
                 <p className="text-[#1f2c42] font-cormorant">
                     Unforgettable tours and adventures await you
                 </p>
+                <div className="mt-4 mx-auto block text-center">
+                    <a
+                        href="/tours"
+                        className="relative overflow-hidden inline-block px-6 py-2 bg-[#1f2c42] text-[#f8f8f3] group z-0 cursor-pointer"
+                    >
+                        <span className="relative z-10">Turlara Göz At</span>
+                        <span className="absolute inset-0 bg-[#b99365] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>
+                    </a>
+                </div>
             </div>
 
             <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4">
                 {tours.map((tour, index) => (
-                    <TourCard key={index} tour={tour} />
+                    <TourCard key={index} tour={tour} index={index} />
                 ))}
             </div>
         </section>
@@ -53,16 +62,23 @@ type Tour = {
     link: string;
 };
 
-function TourCard({ tour }: { tour: Tour }) {
-    const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+function TourCard({ tour, index }: { tour: Tour; index: number }) {
+    const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.4 });
 
     return (
         <motion.div
             ref={ref}
             initial={{ opacity: 0, y: 50 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            whileHover={{ scale: 1.06 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            animate={
+                inView
+                    ? {
+                        opacity: 1,
+                        y: 0,
+                        transition: { duration: 0.5, delay: index * 0.1 },
+                    }
+                    : {}
+            } whileHover={{ scale: 1.06 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
             className="overflow-hidden shadow-md border border-[#f8f8f3] cursor-pointer bg-white"
         >
             <div className="w-full h-[420px] relative">
@@ -83,12 +99,13 @@ function TourCard({ tour }: { tour: Tour }) {
                 </p>
                 <a
                     href={tour.link}
-                    className="inline-block rounded-sm bg-[#c1a37b] hover:bg-[#b99365] px-6 py-2 
-                        transition-all duration-300 text-[#f8f8f3] hover:text-[#1f2c42] font-semibold text-sm tracking-wider"
+                    className="relative overflow-hidden inline-block px-6 py-2 bg-[#1f2c42] text-[#f8f8f3] group z-0 cursor-pointer"
                 >
-                    View More →
+                    <span className="relative z-10">View More</span>
+                    <span className="absolute inset-0 bg-[#b99365] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>
                 </a>
             </div>
         </motion.div>
+
     );
 }

@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import { FaStar } from "react-icons/fa";
 
 const reviews = [
     {
@@ -63,7 +64,7 @@ export default function CustomerReviews() {
     const [expanded, setExpanded] = useState<number | null>(null);
 
     return (
-        <section className="bg-[#f8f8f3] py-16 font-cormorant" id="reviews">
+        <section className="bg-[#e2e2e2]/40 py-16 font-cormorant" id="reviews">
             <div className="container max-w-[1200px] min-h-[400px] md:min-h-[500px] mx-auto text-center flex flex-col">
                 <div className="flex flex-col justify-center mt-8">
                     <h2 className="text-3xl md:text-4xl font-bold text-[#1f2c42] mb-2">
@@ -75,10 +76,10 @@ export default function CustomerReviews() {
                     <div className="mb-8">
                         <a
                             href="https://www.tripadvisor.com.tr/Hotel_Review-g297989-d3161070-Reviews-Yildiz_Hotel-Urgup_Cappadocia.html#REVIEWS"
-                            className="rounded-sm bg-[#c1a37b] hover:bg-[#b99365] px-6 py-2 inline-block 
-                        transition-all duration-300 text-[#f8f8f3] hover:text-[#1f2c42] font-semibold text-sm tracking-wider"
+                            className="relative overflow-hidden inline-block px-6 py-2 bg-[#1f2c42] text-[#f8f8f3] group z-0 cursor-pointer"
                         >
-                            See all reviews
+                            <span className="relative z-10">Tüm Yorumları Gör</span>
+                            <span className="absolute inset-0 bg-[#b99365] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>
                         </a>
                     </div>
                 </div>
@@ -100,8 +101,8 @@ export default function CustomerReviews() {
                         >
                             {reviews.map((review, index) => (
                                 <SwiperSlide key={index}>
-                                    <div className="bg-white border border-[#c1a37b] rounded-lg shadow-lg p-6 h-auto text-left max-w-xs w-full flex flex-col">
-                                        <div className="flex items-center gap-3 mb-3">
+                                    <div className="bg-[#f8f8f3] shadow-lg p-6 text-left max-w-xs w-full flex flex-col justify-between font-cormorant">
+                                        <div className="flex items-center gap-2 mb-3">
                                             <Image src={review.avatar} alt={review.name} width={40} height={40} className="rounded-full" />
                                             <div>
                                                 <p className="font-semibold text-sm text-[#1f2c42]">{review.name}</p>
@@ -110,18 +111,18 @@ export default function CustomerReviews() {
                                             <Image src="/icons/tripLogo.svg" alt="Tripadvisor" width={20} height={20} className="ml-auto" />
                                         </div>
 
-                                        <div className="flex gap-1 mb-2">
+                                        <div className="flex gap-1 mb-2 text-[#c1a37b]">
                                             {[...Array(review.rating)].map((_, i) => (
-                                                <Image key={i} src="/icons/tripDot.svg" alt="star" width={18} height={18} />
+                                                <FaStar key={i} size={16} />
                                             ))}
                                         </div>
 
-                                        <p className={`text-sm text-[#111827] leading-relaxed ${expanded === index ? "" : "line-clamp-4"}`}>
+                                        <p className={`text-[#111827] leading-relaxed ${expanded === index ? "" : "line-clamp-4"}`}>
                                             {review.text}
                                         </p>
 
                                         <button
-                                            className="text-xs text-[#b99365] hover:underline hover:text-[#1f2c42] hover:font-semibold mt-2 self-start cursor-pointer"
+                                            className="text-sm text-[#b99365] hover:underline hover:text-[#1f2c42] hover:font-semibold mt-2 self-start cursor-pointer"
                                             onClick={() => setExpanded(expanded === index ? null : index)}
                                         >
                                             {expanded === index ? "Hide" : "Read more"}
@@ -132,10 +133,10 @@ export default function CustomerReviews() {
                         </Swiper>
 
                         {/* NAV BUTTONS */}
-                        <div className="custom-prev absolute left-6 top-1/2 transform -translate-y-1/2 cursor-pointer z-10 text-[#1f2c42] text-4xl hover:scale-110 transition">
+                        <div className="custom-prev absolute left-8 top-1/2 transform -translate-y-1/2 cursor-pointer z-10 text-[#1f2c42] text-4xl hover:scale-110 transition">
                             ❮
                         </div>
-                        <div className="custom-next absolute right-6 top-1/2 transform -translate-y-1/2 cursor-pointer z-10 text-[#1f2c42] text-4xl hover:scale-110 transition">
+                        <div className="custom-next absolute right-8 top-1/2 transform -translate-y-1/2 cursor-pointer z-10 text-[#1f2c42] text-4xl hover:scale-110 transition">
                             ❯
                         </div>
                     </div>
