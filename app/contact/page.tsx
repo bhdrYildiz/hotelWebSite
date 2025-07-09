@@ -15,7 +15,7 @@ export default function ContactPage() {
                     style={{ backgroundImage: "url('/images/banner.jpg')" }}
                 >
                     <h1 className="text-[#1f2c42] text-5xl md:text-6xl font-bold tracking-wide drop-shadow-lg">
-                        About Us
+                        İletişim
                     </h1>
                 </section>
 
@@ -72,7 +72,7 @@ export default function ContactPage() {
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <MapPin size={16} className="text-[#b99365]" />
-                                    <span>Fatih, 12. Cadde No: 3/1, Ürgüp/Nevşehir, Türkiye</span>
+                                    <span>Kavaklıönü, Atatürk Blv. No:61, 50400 Ürgüp/Nevşehir</span>
                                 </div>
                             </div>
                         </div>

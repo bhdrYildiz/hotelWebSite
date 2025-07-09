@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import { FaArrowRight } from "react-icons/fa";
 import Link from "next/link";
-import { rooms } from '../rooms/[roomId]/data';
+import { rooms } from '../data/rooms';
 
 const RoomsSection = () => {
     return (
@@ -19,9 +19,9 @@ const RoomsSection = () => {
                     <Link href="/" className="shrink-0">
                         <img src="/images/logo2.png" alt="Logo" className="h-24 md:h-24 mx-auto block" />
                     </Link>
-                    <h2 className="text-4xl font-bold mt-4 text-[#1f2c42]">KEMER PALACE ROOMS</h2>
+                    <h2 className="text-4xl font-bold mt-4 text-[#1f2c42]">ODALARIMIZ</h2>
                     <p className="text-[#111827] mt-4 max-w-xl mx-auto text-base leading-relaxed">
-                        Discover the enchanting beauty of Cappadocia from the comfort of Kemer Palace.
+                        Kapadokya'nın büyüleyici güzelliğini Yıldız Otel'in konforunda keşfedin.
                     </p>
                 </div>
 
@@ -46,6 +46,7 @@ const RoomsSection = () => {
                                         src={room.images[0]}
                                         alt={room.name}
                                         fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
                                         className="object-cover transform group-hover:scale-110 transition duration-400"
                                     />
                                     <Link href={`/rooms/${room.id}`}>
@@ -54,7 +55,7 @@ const RoomsSection = () => {
         tracking-wide opacity-0 group-hover:opacity-100 hover:bg-[#b99365] hover:text-[#1f2c42] 
         hover:font-bold transition cursor-pointer flex items-center gap-2"
                                         >
-                                            VIEW DETAILS
+                                            DETAYLARI GÖR
                                             <FaArrowRight className="text-sm" />
                                         </button>
                                     </Link>

@@ -4,45 +4,7 @@ import React from 'react';
 import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
 import Link from 'next/link';
-
-const tours = [
-    {
-        id: 'cappadocia-balloon',
-        title: 'Cappadocia Balloon Tour',
-        description: 'Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.',
-        image: '/images/balon.png',
-    },
-    {
-        id: 'underground-city',
-        title: 'Underground City Tour',
-        description: 'Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.',
-        image: '/images/turlar/tur12.jpg',
-    },
-    {
-        id: 'atv-sunset',
-        title: 'ATV Sunset Safari',
-        description: 'Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.',
-        image: '/images/atv.jpg',
-    },
-    {
-        id: 'horseback-riding',
-        title: 'Horseback Riding Adventure',
-        description: 'Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.',
-        image: '/images/at1.jpg',
-    },
-    {
-        id: 'green-tour',
-        title: 'Green Tour',
-        description: 'Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.',
-        image: '/images/turlar/tur32.jpg',
-    },
-    {
-        id: 'red-tour',
-        title: 'Red Tour',
-        description: 'Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.Experience the magical sunrise over Cappadocia with a breathtaking hot air balloon ride.',
-        image: '/images/turlar/tur22.jpg',
-    },
-];
+import { tours } from '../data/tours';
 
 const ToursPage = () => {
     return (
@@ -55,7 +17,7 @@ const ToursPage = () => {
                     style={{ backgroundImage: "url('/images/banner.jpg')" }}
                 >
                     <h1 className="text-[#1f2c42] text-5xl md:text-6xl font-bold tracking-wide drop-shadow-lg">
-                        Tours And Activities
+                        Tur ve Aktiviteler
                     </h1>
                 </section>
                 <section className="max-w-[1200px] mx-auto px-6 py-20 space-y-24">
@@ -72,7 +34,7 @@ const ToursPage = () => {
                                 </p>
                                 <Link href={`/tours/${tour.id}`}>
                                     <button className="mt-2 px-10 py-2 bg-[#b99365] text-[#f8f8f3] relative overflow-hidden z-0 group cursor-pointer">
-                                        <span className="relative z-10">View Tour</span>
+                                        <span className="relative z-10">Turu İncele</span>
                                         <span className="absolute inset-0 bg-[#1f2c42] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>
                                     </button>
                                 </Link>
@@ -83,7 +45,7 @@ const ToursPage = () => {
                                 <img
                                     src={tour.image}
                                     alt={tour.title}
-                                    className="rounded-md shadow-md w-full h-auto object-cover max-w-[550px]"
+                                    className="rounded-md shadow-md w-full h-[740px] object-cover max-w-[550px]"
                                 />
                             </div>
                         </div>

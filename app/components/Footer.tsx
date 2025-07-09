@@ -20,21 +20,21 @@ export default function Footer() {
                         className="h-24 justify-self-start cursor-pointer"
                     />
                     <p className="text-base text-gray-700 max-w-xs mx-auto md:mx-0 font-cormorant">
-                        Arriving at the entrance of Yıldız Otel, you realise that this unique place offers a boutique experience that activates the senses.
+                        Yıldız Otele geldiğinizde bu eşsiz mekanın duyuları harekete geçiren butik bir deneyim sunduğunu fark ediyorsunuz.
                     </p>
                 </div>
 
                 {/* Orta Sütun - Sayfa linkleri */}
                 <div className="text-center md:text-left">
-                    <h3 className="font-bold mb-4 uppercase text-lg text-[#c1a37b] tracking-wide">Useful Links</h3>
+                    <h3 className="font-bold mb-4 uppercase text-lg text-[#c1a37b] tracking-wide">Hızlı Linkler</h3>
                     <ul className="space-y-2 text-base font-medium">
                         {[
-                            { label: "Home", href: "/" },
-                            { label: "About Us", href: "/about" },
-                            { label: "Rooms", href: "/rooms" },
-                            { label: "Tours & Activities", href: "/tours" },
-                            { label: "Blog", href: "/blog" },
-                            { label: "Contact Us", href: "/contact" },
+                            { label: "AnaSayfa", href: "/" },
+                            { label: "Hakkımızda", href: "/about" },
+                            { label: "Odalar", href: "/rooms" },
+                            { label: "Tur ve Aktiviteler", href: "/tours" },
+                            { label: "Galeri", href: "/blog" },
+                            { label: "İletişim", href: "/contact" },
                         ].map((item) => (
                             <li key={item.href}>
                                 <a
@@ -49,19 +49,20 @@ export default function Footer() {
                 </div>
 
                 <div className="text-center md:text-left">
-                    <h3 className="font-bold mb-4 uppercase text-lg text-[#c1a37b] tracking-wide">Rooms</h3>
+                    <h3 className="font-bold mb-4 uppercase text-lg text-[#c1a37b] tracking-wide">Odalar</h3>
                     <ul className="space-y-2 text-base font-medium">
-                        <li><a href="/rooms/deluxe" className="hover:text-[#b99365] transition">Deluxe Room</a></li>
-                        <li><a href="/rooms/cave" className="hover:text-[#b99365] transition">Cave Suite</a></li>
-                        <li><a href="/rooms/stone" className="hover:text-[#b99365] transition">Stone Room</a></li>
-                        <li><a href="/rooms/family" className="hover:text-[#b99365] transition">Family Suite</a></li>
-                        <li><a href="/rooms/terrace" className="hover:text-[#b99365] transition">Terrace Room</a></li>
+                        <li><a href="/rooms/room-301" className="hover:text-[#b99365] transition">Özel Teraslı ve Jakuzili King Suit</a></li>
+                        <li><a href="/rooms/room-105" className="hover:text-[#b99365] transition">Havuzlu King Suit</a></li>
+                        <li><a href="/rooms/room-103" className="hover:text-[#b99365] transition">Jakuzili ve Balkonlu Suit</a></li>
+                        <li><a href="/rooms/room-202" className="hover:text-[#b99365] transition">Deluxe Room 202</a></li>
+                        <li><a href="/rooms/room-203" className="hover:text-[#b99365] transition">Deluxe Room 203</a></li>
+                        <li><a href="/rooms/room-104" className="hover:text-[#b99365] transition">Deluxe Room</a></li>
                     </ul>
                 </div>
 
                 {/* Sağ Sütun - İletişim bilgileri */}
                 <div className="text-center md:text-left">
-                    <h3 className="font-bold mb-4 uppercase text-lg text-[#c1a37b] tracking-wide">Contact Us</h3>
+                    <h3 className="font-bold mb-4 uppercase text-lg text-[#c1a37b] tracking-wide">İletişim</h3>
                     <div className="space-y-4 text-base text-[#1f2c42]">
                         <p className="flex items-center justify-center md:justify-start gap-2">
                             <FaMapMarkerAlt className="text-[#b99365]" />
@@ -79,17 +80,17 @@ export default function Footer() {
 
                     {/* Sosyal medya ikonları */}
                     <div className="flex justify-center md:justify-start gap-4 mt-4 text-xl text-[#b99365]">
-                        <a href="#"><FaFacebookF className="hover:text-[#1f2c42] transition" /></a>
-                        <a href="#"><FaInstagram className="hover:text-[#1f2c42] transition" /></a>
-                        <a href="#"><FaTripadvisor className="hover:text-[#1f2c42] transition" /></a>
-                        <a href="#"><FaWhatsapp className="hover:text-[#1f2c42] transition" /></a>
+                        <a href="/"><FaFacebookF className="hover:text-[#1f2c42] transition" /></a>
+                        <a href="/"><FaInstagram className="hover:text-[#1f2c42] transition" /></a>
+                        <a href="/"><FaTripadvisor className="hover:text-[#1f2c42] transition" /></a>
+                        <a href="/"><FaWhatsapp className="hover:text-[#1f2c42] transition" /></a>
                     </div>
                 </div>
             </div>
 
             {/* Alt Bilgi */}
             <div className="mt-12 border-t border-[#d6d6d6] pt-6 text-center text-xs text-[#1f2c42] font-light tracking-wide">
-                © {new Date().getFullYear()} Yıldız Otel Cappadocia. All rights reserved.
+                © {new Date().getFullYear()} Yıldız Otel Cappadocia.
             </div>
         </footer>
     );

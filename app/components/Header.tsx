@@ -29,12 +29,12 @@ const Header = () => {
 
                 {/* Navbar */}
                 <nav className="hidden md:flex items-center gap-8 text-[#f8f8f3] text-sm md:text-base font-cormorant tracking-wide">
-                    <Link href="/" className="hover:text-[#b99365] hover:font-bold transition-colors">HOME</Link>
-                    <Link href="/about" className="hover:text-[#b99365] hover:font-bold transition-colors">ABOUT US</Link>
-                    <Link href="/rooms" className="hover:text-[#b99365] hover:font-bold transition-colors">ROOMS</Link>
-                    <Link href="/tours" className="hover:text-[#b99365] hover:font-bold transition-colors">TOURS & ACTIVITIES</Link>
-                    <Link href="/blog" className="hover:text-[#b99365] hover:font-bold transition-colors">BLOG</Link>
-                    <Link href="/contact" className="hover:text-[#b99365] hover:font-bold transition-colors">CONTACT US</Link>
+                    <Link href="/" className="hover:text-[#b99365] hover:font-bold transition-colors">ANASAYFA</Link>
+                    <Link href="/about" className="hover:text-[#b99365] hover:font-bold transition-colors">HAKKIMIZDA</Link>
+                    <Link href="/rooms" className="hover:text-[#b99365] hover:font-bold transition-colors">ODALAR</Link>
+                    <Link href="/tours" className="hover:text-[#b99365] hover:font-bold transition-colors">TUR VE AKTİVİTELER</Link>
+                    <Link href="/gallery" className="hover:text-[#b99365] hover:font-bold transition-colors">GALERİ</Link>
+                    <Link href="/contact" className="hover:text-[#b99365] hover:font-bold transition-colors">İLETİŞİM</Link>
                 </nav>
 
                 {/* Book Online Button */}
@@ -43,7 +43,7 @@ const Header = () => {
                     className="hidden md:flex items-center gap-2 bg-[#c1a37b] hover:bg-[#b99365] hover:text-[#1f2c42] text-[#f8f8f3] px-5 py-2 rounded-sm font-semibold text-sm font-cormorant transition-all duration-300"
                 >
                     <CalendarDays size={16} />
-                    BOOK ONLINE
+                    REZERVASYON
                 </Link>
 
                 {/* Mobile Hamburger */}

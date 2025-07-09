@@ -3,37 +3,20 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { tours as allTours } from '@/app/data/tours'
+import type { Tour } from '@/app/data/tours';
 
-const tours = [
-    {
-        title: "Hot Air Balloon Flight",
-        description: "Greet the sunrise from the sky with panoramic views of Cappadocia.",
-        img: "/images/balon.png",
-        link: "/tours/balloon",
-    },
-    {
-        title: "ATV Safari Tour",
-        description: "Ride through valleys and dusty trails with high adrenaline.",
-        img: "/images/atv.jpg",
-        link: "/tours/atv",
-    },
-    {
-        title: "Horse Riding Tour",
-        description: "Explore Cappadocia's natural wonders on horseback.",
-        img: "/images/at1.jpg",
-        link: "/tours/horse",
-    },
-];
+const tours = allTours.slice(0, 3);
 
 export default function ToursSection() {
     return (
         <section className="bg-[#f8f8f3] py-24">
             <div className="container mx-auto px-4 text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-[#1f2c42] mb-2 font-cormorant">
-                    TOURS AND ACTIVITIES
+                    TUR VE AKTİVİTELER
                 </h2>
-                <p className="text-[#1f2c42] font-cormorant">
-                    Unforgettable tours and adventures await you
+                <p className="text-[#1f2c42] text-base font-cormorant">
+                    Unutulmaz turlar ve maceralar sizi bekliyor
                 </p>
                 <div className="mt-4 mx-auto block text-center">
                     <a
@@ -54,13 +37,6 @@ export default function ToursSection() {
         </section>
     );
 }
-
-type Tour = {
-    title: string;
-    description: string;
-    img: string;
-    link: string;
-};
 
 function TourCard({ tour, index }: { tour: Tour; index: number }) {
     const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.4 });
@@ -83,9 +59,10 @@ function TourCard({ tour, index }: { tour: Tour; index: number }) {
         >
             <div className="w-full h-[420px] relative">
                 <Image
-                    src={tour.img}
+                    src={tour.image}
                     alt={tour.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
                     className="object-cover transition-transform duration-500"
                 />
             </div>
@@ -98,14 +75,14 @@ function TourCard({ tour, index }: { tour: Tour; index: number }) {
                     {tour.description}
                 </p>
                 <a
-                    href={tour.link}
+                    href={`/tours/${tour.id}`}
                     className="relative overflow-hidden inline-block px-6 py-2 bg-[#1f2c42] text-[#f8f8f3] group z-0 cursor-pointer"
                 >
-                    <span className="relative z-10">View More</span>
+                    <span className="relative z-10">Detayları Gör</span>
                     <span className="absolute inset-0 bg-[#b99365] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>
                 </a>
             </div>
         </motion.div>
-
     );
 }
+

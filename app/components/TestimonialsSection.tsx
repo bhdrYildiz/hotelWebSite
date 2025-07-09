@@ -10,54 +10,53 @@ import { FaStar } from "react-icons/fa";
 
 const reviews = [
     {
-        name: "Orhan Şahin",
-        date: "24 April 2024",
+        name: "Burcu S.",
+        date: "Eylül 2024",
+        avatar: "/icons/woman.png",
+        rating: 5,
+        text:
+            "ilgi alaka 4 4luk bir otel küçük mutevazi ama herseyiyle yeterli 4 kisilik bir aile olarak 3 gün gecirdik çok memnun kaldık"
+    },
+    {
+        name: "Canan K.",
+        date: "Nisan 2024",
+        avatar: "/icons/woman.png",
+        rating: 5,
+        text:
+            "Otel sahipleri cok guler yuzlu ve otel odalari son derece temiz ve bakimli Ayrica her türlü transferlerinize yardimci oluyorlar merkeze cok yakin fiyat olarakta uygun içiniz rahatlikla tercih edebilirsiniz ozellikle yakujili odalari cok güzel.Tesekkur ediyorum"
+    },
+    {
+        name: "ALİ H.",
+        date: "Kasım 2023",
         avatar: "/icons/man.png",
         rating: 5,
         text:
-            "An enjoyable holiday\nYou receive hospitality and attention from the moment you enter the hotel. The rooms are large, spacious and clean. You feel comfortable in the room built inside the rock. The hotel's breakfast was excellent. You eat with a pleasant view of Ürgüp. Another important feature of the hotel is that it is within walking distance of local attractions. Highly recommended for families and solo travelers alike.",
+            "Otel muhteşem. İlgi alaka harika. Kahvaltılar muhteşem. Mirkan kardeşim her konuda sağolsun yardımcı oldu. Yolunuz düşerse bu güzel aile mekanında kalmanızı tavsiye ederim. Herşey için teşekkür ederim."
     },
     {
-        name: "Ömer Y",
-        date: "1 April 2024",
+        name: "Senem Ç.",
+        date: "Mayıs 2023",
         avatar: "/icons/woman.png",
         rating: 5,
         text:
-            "It's like an extraordinary fairy tale. It is in the best location, within walking distance of the market, restaurants, and cafes. You wake up to a panoramic view and sleep in complete silence. The design of the rooms blends perfectly with the cave ambiance.",
+            "Akşamları Otelimize dönerken evimize dönüyoruz gibi hissettirdikleri için çok teşekkür ederiz. Temiz, güzel bir otel, fiyat kalite performansı çok iyi mutlaka deneyin... Ürgüp merkezine 5 dakika yürüme mesafesinde."
     },
     {
-        name: "Orhan Şahin",
-        date: "24 May 2023",
+        name: "Büşra Keskin",
+        date: "Temmuz 2023",
         avatar: "/icons/woman.png",
         rating: 5,
         text:
-            "Urgup bölgesi kalınacak bir yer. Urgup bölgesinde merkeze yakın temiz ve yöresel bir otel bulmak zor olabilir ama burası kesinlikle beklentileri karşılıyor. Güler yüzlü personeli ve temiz odalarıyla rahat bir tatil geçirdik.",
+            "4 gece 5 gün konaklama gerçekleştirdik. Oda gerçekten çok temizdi. Bahçesine özellikle bayıldık. Çalışanların güleryüzlülüğü de ekstra bizi rahat hissettirdi. Herkese tavsiye ediyoruz. Teşekkürler Yıldız Hotel :)"
     },
     {
-        name: "Orhan Şahin",
-        date: "24 May 2023",
+        name: "Elif Oncel",
+        date: "Mart 2023",
         avatar: "/icons/woman.png",
         rating: 5,
         text:
-            "Urgup bölgesi kalınacak bir yer. Urgup bölgesinde merkeze yakın temiz ve yöresel bir otel bulmak zor olabilir ama burası kesinlikle beklentileri karşılıyor. Güler yüzlü personeli ve temiz odalarıyla rahat bir tatil geçirdik.",
+            "Her şey oldukça güzeldi. Çalışanlar çok güler yüzlü ve samimiydi. İçi şirin ve yöreyi hissettirecek şekilde düzenlenen bir otel. Odalar temiz ve sıcacıktı. Otelin konumu merkezi olduğundan bol bol gezme imkanı da bulduk. Uygun fiyatli ve gayet memnun kaldık. Yine gelsem yine tercih edeceğim bir otel. Kesinlikle tavsiye ediyorum "
     },
-    {
-        name: "Orhan Şahin",
-        date: "24 May 2023",
-        avatar: "/icons/woman.png",
-        rating: 5,
-        text:
-            "Urgup bölgesi kalınacak bir yer. Urgup bölgesinde merkeze yakın temiz ve yöresel bir otel bulmak zor olabilir ama burası kesinlikle beklentileri karşılıyor. Güler yüzlü personeli ve temiz odalarıyla rahat bir tatil geçirdik.",
-    },
-    {
-        name: "Orhan Şahin",
-        date: "24 May 2023",
-        avatar: "/icons/woman.png",
-        rating: 5,
-        text:
-            "Urgup bölgesi kalınacak bir yer. Urgup bölgesinde merkeze yakın temiz ve yöresel bir otel bulmak zor olabilir ama burası kesinlikle beklentileri karşılıyor. Güler yüzlü personeli ve temiz odalarıyla rahat bir tatil geçirdik.",
-    },
-    // Diğer tekrar edenleri tek bıraktım
 ];
 
 export default function CustomerReviews() {
@@ -68,10 +67,10 @@ export default function CustomerReviews() {
             <div className="container max-w-[1200px] min-h-[400px] md:min-h-[500px] mx-auto text-center flex flex-col">
                 <div className="flex flex-col justify-center mt-8">
                     <h2 className="text-3xl md:text-4xl font-bold text-[#1f2c42] mb-2">
-                        CUSTOMER REVIEWS
+                        MİSAFİRLERİMİZİN YORUMLARI
                     </h2>
                     <p className="text-[#111827] mb-4">
-                        What our guests are saying about us
+                        Misafirlerimiz bizim hakkımızda neler söylüyor
                     </p>
                     <div className="mb-8">
                         <a

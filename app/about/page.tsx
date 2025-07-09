@@ -40,7 +40,7 @@ const AboutPage = () => {
                     style={{ backgroundImage: "url('/images/banner.jpg')" }}
                 >
                     <h1 className="text-[#1f2c42] text-5xl md:text-6xl font-bold tracking-wide drop-shadow-lg">
-                        About Us
+                        Hakkımızda
                     </h1>
                 </section>
 
@@ -54,26 +54,17 @@ const AboutPage = () => {
                         <h2 className="text-4xl font-bold leading-snug mb-4">YILDIZ OTEL</h2>
 
                         <p className="text-base leading-relaxed">
-                            Özgün ve çağdaş mimarinin, usta ellerin estetik dokunuşlarıyla buluşması sonucu,
-                            birbirinden farklı ve özel olarak tasarlanan 11 odası ile, lüksün ve konforun tanımını
-                            yeniden değiştiren VIA REGIA HOTEL CAPPADOCIA, milyonlarca yıllık geçmişi, olağanüstü
-                            güzel doğası ve tarihin bütünleştiği, Kapadokya bölgesinin en özel yeri olan Uçhisar
-                            kalesinin yanı başında konumlanmıştır.
+                            Kapadokya’nın büyüleyici atmosferinde, geleneksel taş mimari ile modern konforu bir araya getiren YILDIZ OTEL CAPPADOCIA, bölgenin en özel noktalarından biri olan Ürgüp'te konumlanmıştır. Her biri özenle tasarlanmış odalarımızda, huzur ve estetiği bir arada yaşarken, doğanın kalbinde benzersiz bir konaklama deneyimi sizleri bekliyor.
                         </p>
 
                         <p className="text-base leading-relaxed">
-                            Kapadokya’nın benzersiz vadilerini, Uçhisar Kalesini, Peri Bacalarını ve sabah gün doğumunu
-                            ile gökyüzünde muhteşem bir görsel şölen oluşturan balonları, odalarımızdan ve otelimizin
-                            her köşesinden, 360 derece nefes kesen panoramik bir manzara seyredebilme ayrıcalığı ile
-                            siz değerli misafirlerimize her anınızı özel hissedeceğiniz büyüleyici ve masalsı bir deneyim sunuyoruz.
+                            Ürgüp’ün tam merkezinde yer alan konumumuz sayesinde, bölgenin öne çıkan noktalarına—Göreme, Avanos, Üçhisar ve Peri Bacaları gibi eşsiz destinasyonlara—kolaylıkla ulaşabilirsiniz. Restoranlar, kafeler, alışveriş ve gezi alanlarına yürüme mesafesinde bulunan otelimiz, bölgeyi keşfetmek isteyen misafirler için ideal bir başlangıç noktasıdır.
                         </p>
 
                         <p className="text-base leading-relaxed">
-                            Muhteşem manzaralar eşliğinde, kaya mağara, bahçe ve terastan oluşan, dünya ve geleneksel
-                            Anadolu mutfağının mükemmel lezzetlerini sizlere sunan mistik atmosfere sahip LUUK
-                            Restoranımızda ve otelimizde geçireceğiniz keyifli anlarınız ile konaklamanızı unutulmaz
-                            kılacak tüm hizmetlerimiz VIA REGIA HOTEL CAPPADOCIA’da sizleri beklemektedir.
+                            Misafirlerimizin konforunu ön planda tutan hizmet anlayışımızla, jakuzili, balkonlu ve özel teraslı odalarımızda her anınızı özel hissetmeniz için tüm detaylar düşünüldü. Sessizlik, sakinlik ve zarafet arayanlara özel olarak tasarlanan YILDIZ OTEL CAPPADOCIA, Kapadokya’nın ruhunu hissedebileceğiniz ayrıcalıklı bir deneyim sunuyor.
                         </p>
+
 
                         <div className='flex flex-row justify-start gap-6'>
                             <div className="mt-2">
@@ -81,12 +72,12 @@ const AboutPage = () => {
                                     <PhoneCall size={20} className="text-[#c1a37b]" /> Rezervasyon:
                                 </h4>
                                 <p className="text-[#1f2c42] text-lg font-semibold">
-                                    +90 384 551 22 22 <br />
+                                    +90 530 389 71 63 <br />
                                 </p>
                             </div>
                             <div className="mt-2">
                                 <h4 className="text-base font-semibold mb-2 flex items-center gap-2">
-                                    <Mail size={20} className="text-[#c1a37b]" /> Contact:
+                                    <Mail size={20} className="text-[#c1a37b]" /> İletişim:
                                 </h4>
                                 <p className="text-[#1f2c42] text-lg font-semibold">
                                     info@yildizhotel.com <br />
@@ -104,7 +95,8 @@ const AboutPage = () => {
                             viewport={{ once: true }}
                             className="w-full h-[300px] relative overflow-hidden shadow-lg"
                         >
-                            <Image src="/images/slider2.jpeg" alt="Hotel Front View" fill className="object-cover" />
+                            <Image src="/images/bahce/slide5.jpg" alt="Hotel Front View" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 600px"
+                                className="object-cover" />
                         </motion.div>
                         <div className="grid grid-cols-2 gap-4">
                             <motion.div
@@ -114,7 +106,8 @@ const AboutPage = () => {
                                 viewport={{ once: true }}
                                 className="relative w-full h-[200px] overflow-hidden shadow-lg"
                             >
-                                <Image src="/images/tour1.jpg" alt="Rock View" fill className="object-cover" />
+                                <Image src="/images/turlar/tur21.jpg" alt="Rock View" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 600px"
+                                    className="object-cover" />
                             </motion.div>
                             <motion.div
                                 initial={{ opacity: 0, x: 50 }}
@@ -123,14 +116,15 @@ const AboutPage = () => {
                                 viewport={{ once: true }}
                                 className="relative w-full h-[200px] overflow-hidden shadow-lg"
                             >
-                                <Image src="/images/balon.png" alt="Terrace Breakfast" fill className="object-cover" />
+                                <Image src="/images/bahce/slide2.jpg" alt="Terrace Breakfast" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 600px"
+                                    className="object-cover" />
                             </motion.div>
                         </div>
                     </div>
                 </section>
                 {/* Services Section */}
                 <section className="container max-w-[1200px] mx-auto px-6 py-12 mb-4">
-                    <h2 className="text-3xl font-bold text-[#111827] mb-8">SERVICES</h2>
+                    <h2 className="text-3xl font-bold text-[#111827] mb-8">HİZMETLERİMİZ</h2>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                         {services.map((s, i) => (
                             <div

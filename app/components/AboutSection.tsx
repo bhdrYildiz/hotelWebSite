@@ -38,7 +38,7 @@ const AboutSection = () => {
                             variants={imageVariants}
                         >
                             <img
-                                src="/images/bahce/bahce2.jpg"
+                                src="/images/bahce/slide6.jpg"
                                 alt="pool"
                                 className="shadow-lg w-5/6 h-[250px] object-cover"
                             />
@@ -53,7 +53,7 @@ const AboutSection = () => {
                             variants={imageVariants}
                         >
                             <img
-                                src="/images/bahce/bahce10.jpg"
+                                src="/images/bahce/slide3.jpg"
                                 alt="room"
                                 className="shadow-lg w-full h-[230px] object-cover"
                             />
@@ -68,7 +68,7 @@ const AboutSection = () => {
                             variants={imageVariants}
                         >
                             <img
-                                src="/images/tour1.jpg"
+                                src="/images/turlar/tur27.jpg"
                                 alt="tour"
                                 className="shadow-lg w-full h-[350px] object-cover"
                             />
@@ -88,20 +88,19 @@ const AboutSection = () => {
                         YILDIZ OTEL CAPPADOCIA
                     </h4>
                     <h2 className="text-4xl md:text-5xl font-bold text-[#1f2c42] leading-tight mb-6">
-                        Discover Our <br /> Underground
+                        Dünyamızı Keşfedin
                     </h2>
                     <p className="text-base leading-relaxed text-[#111827] mb-6">
-                        Welcome to a hidden realm of extraordinary accommodations where luxury,
-                        comfort, and adventure converge. Our underground hotels offer an unparalleled
-                        escape from the ordinary, inviting you to explore a subterranean world of
-                        wonders.
+                        Lüks, konfor ve maceranın buluştuğu sıra dışı bir konaklama deneyimine hoş geldiniz.
+                        Otelimiz, sıradanlıktan uzak, benzersiz bir kaçış sunarak sizi Kapadokyanın
+                        büyüleyici dünyasını keşfetmeye davet ediyor.
                     </p>
                     <Link
                         href="/contact"
                         className="font-cormorant rounded-sm bg-[#c1a37b] hover:bg-[#b99365] px-6 py-2 inline-block 
                         transition-all duration-300 text-[#f8f8f3] hover:text-[#1f2c42] font-semibold text-sm tracking-wider"
                     >
-                        Book Now
+                        Hemen Rezervasyon Yap
                     </Link>
                 </motion.div>
             </div>

@@ -4,22 +4,22 @@ import { useEffect, useState } from "react";
 
 const slides = [
     {
-        image: "/images/bahce/bahce1.jpg",
-        topText: "MODERN & SPACIOUS ROOMS",
-        middleText: "Sophisticated Experiences",
-        bottomText: "Inspired by Cappadocia",
+        image: "/images/bahce/slide1.jpg",
+        topText: "MODERN VE FERAH ODALAR",
+        middleText: "Zarif Deneyimler",
+        bottomText: "Kapadokya'dan İlhamla",
     },
     {
-        image: "/images/bahce/bahce6.jpg",
-        topText: "PANORAMIC VIEWS",
-        middleText: "Breathtaking Mornings",
-        bottomText: "Moments that Matter",
+        image: "/images/bahce/slide7.jpg",
+        topText: "PANORAMİK MANZARALAR",
+        middleText: "Nefes Kesen Sabahlar",
+        bottomText: "Anı Yaşa",
     },
     {
-        image: "/images/bahce/bahce7.jpg",
-        topText: "UNIQUE ATMOSPHERE",
-        middleText: "Feel the Magic",
-        bottomText: "A Story in Every Corner",
+        image: "/images/bahce/slide5.jpg",
+        topText: "EŞSİZ ATMOSFER",
+        middleText: "Büyüyü Hisset",
+        bottomText: "Her Köşede Bir Hikâye",
     },
 ];
 
@@ -64,21 +64,15 @@ const Slider = () => {
                             {/* SLIDE 2 */}
                             {index === 1 && (
                                 <>
-                                    <h2 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in-out text-[#f8f8f3]">
+                                    <h2 className="text-4xl md:text-6xl font-bold mb-4 animate-slide-down text-[#f8f8f3]">
                                         {slide.topText}
                                     </h2>
-                                    <div className="flex items-center text-4xl md:text-6xl font-medium text-[#c1a37b]">
-                                        Dive Into
-                                        <div className="ml-4 h-[1.1em] w-[8rem] overflow-hidden relative">
-                                            <div className="absolute top-0 left-0 w-full leading-none animate-slide-up">
-                                                <div className="h-[1.1em] flex items-center justify-center text-[#f8f8f3]">Ideas</div>
-                                                <div className="h-[1.1em] flex items-center justify-center text-[#f8f8f3]">Tech</div>
-                                                <div className="h-[1.1em] flex items-center justify-center text-[#f8f8f3]">Art</div>
-                                                <div className="h-[1.1em] flex items-center justify-center text-[#f8f8f3]">Art</div>
-                                                <div className="h-[1.1em] flex items-center justify-center text-[#f8f8f3]">Art</div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <h3 className="text-2xl md:text-4xl font-medium mb-4 animate-slide-left text-[#f8f8f3]">
+                                        {slide.middleText}
+                                    </h3>
+                                    <p className="text-lg md:text-xl font-light tracking-wider">
+                                        <span className="animate-typewriter">{slide.bottomText}</span>
+                                    </p>
                                 </>
                             )}
 
