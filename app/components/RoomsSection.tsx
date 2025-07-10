@@ -21,7 +21,7 @@ const RoomsSection = () => {
                     </Link>
                     <h2 className="text-4xl font-bold mt-4 text-[#1f2c42]">ODALARIMIZ</h2>
                     <p className="text-[#111827] mt-4 max-w-xl mx-auto text-base leading-relaxed">
-                        Kapadokya'nın büyüleyici güzelliğini Yıldız Otel'in konforunda keşfedin.
+                        Kapadokya&apos;nın büyüleyici güzelliğini Yıldız Otel&apos;in konforunda keşfedin.
                     </p>
                 </div>
 
@@ -89,13 +89,10 @@ const RoomsSection = () => {
                 {/* Opsiyonel boş pagination alanı (kaldırılabilir) */}
                 <div className="custom-pagination mt-8 flex justify-center gap-2 cursor-pointer"></div>
                 <div className="mt-2">
-                    <a
-                        href="/rooms"
-                        className="relative overflow-hidden inline-block px-6 py-2 bg-[#1f2c42] text-[#f8f8f3] group z-0 cursor-pointer"
-                    >
+                    <Link href="/rooms" className="relative overflow-hidden inline-block px-6 py-2 bg-[#1f2c42] text-[#f8f8f3] group z-0 cursor-pointer">
                         <span className="relative z-10">Tüm Odaları Gör</span>
                         <span className="absolute inset-0 bg-[#b99365] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>

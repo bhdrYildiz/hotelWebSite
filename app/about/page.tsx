@@ -54,15 +54,15 @@ const AboutPage = () => {
                         <h2 className="text-4xl font-bold leading-snug mb-4">YILDIZ OTEL</h2>
 
                         <p className="text-base leading-relaxed">
-                            Kapadokya’nın büyüleyici atmosferinde, geleneksel taş mimari ile modern konforu bir araya getiren YILDIZ OTEL CAPPADOCIA, bölgenin en özel noktalarından biri olan Ürgüp'te konumlanmıştır. Her biri özenle tasarlanmış odalarımızda, huzur ve estetiği bir arada yaşarken, doğanın kalbinde benzersiz bir konaklama deneyimi sizleri bekliyor.
+                            Kapadokya&apos;nın büyüleyici atmosferinde, geleneksel taş mimari ile modern konforu bir araya getiren YILDIZ OTEL CAPPADOCIA, bölgenin en özel noktalarından biri olan Ürgüp&apos;te konumlanmıştır. Her biri özenle tasarlanmış odalarımızda, huzur ve estetiği bir arada yaşarken, doğanın kalbinde benzersiz bir konaklama deneyimi sizleri bekliyor.
                         </p>
 
                         <p className="text-base leading-relaxed">
-                            Ürgüp’ün tam merkezinde yer alan konumumuz sayesinde, bölgenin öne çıkan noktalarına—Göreme, Avanos, Üçhisar ve Peri Bacaları gibi eşsiz destinasyonlara—kolaylıkla ulaşabilirsiniz. Restoranlar, kafeler, alışveriş ve gezi alanlarına yürüme mesafesinde bulunan otelimiz, bölgeyi keşfetmek isteyen misafirler için ideal bir başlangıç noktasıdır.
+                            Ürgüp&apos;ün tam merkezinde yer alan konumumuz sayesinde, bölgenin öne çıkan noktalarına—Göreme, Avanos, Uçhisar ve Peri Bacaları gibi eşsiz destinasyonlara—kolaylıkla ulaşabilirsiniz. Restoranlar, kafeler, alışveriş ve gezi alanlarına yürüme mesafesinde bulunan otelimiz, bölgeyi keşfetmek isteyen misafirler için ideal bir başlangıç noktasıdır.
                         </p>
 
                         <p className="text-base leading-relaxed">
-                            Misafirlerimizin konforunu ön planda tutan hizmet anlayışımızla, jakuzili, balkonlu ve özel teraslı odalarımızda her anınızı özel hissetmeniz için tüm detaylar düşünüldü. Sessizlik, sakinlik ve zarafet arayanlara özel olarak tasarlanan YILDIZ OTEL CAPPADOCIA, Kapadokya’nın ruhunu hissedebileceğiniz ayrıcalıklı bir deneyim sunuyor.
+                            Misafirlerimizin konforunu ön planda tutan hizmet anlayışımızla, jakuzili, balkonlu ve özel teraslı odalarımızda her anınızı özel hissetmeniz için tüm detaylar düşünüldü. Sessizlik, sakinlik ve zarafet arayanlara özel olarak tasarlanan YILDIZ OTEL CAPPADOCIA, Kapadokya&apos;nın ruhunu hissedebileceğiniz ayrıcalıklı bir deneyim sunuyor.
                         </p>
 
 

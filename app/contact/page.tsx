@@ -3,6 +3,7 @@
 import { MapPin, Phone, Mail, Navigation } from 'lucide-react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import Link from 'next/link';
 
 export default function ContactPage() {
     return (
@@ -24,7 +25,7 @@ export default function ContactPage() {
                     <div className="text-center space-y-4">
                         <h1 className="text-4xl md:text-5xl font-bold">Neredeyiz?</h1>
                         <p className="mx-auto text-gray-700 text-start leading-relaxed">
-                            Ürgüp’ün büyüleyici zirvesinde yer alan Yıldız Hotel, misafirlerine benzersiz bir deneyim sunuyor. Gün doğumunun ilk ışıklarıyla uyanırken, Kapadokya’nın eşsiz balon manzarasına şahit olabilirsiniz. Akşamları ise, gün batımının sıcak tonları eşliğinde, otelin manzaraya hakim terasında huzuru bulacaksınız. Doğanın sunduğu bu görsel şölen, Yıldız Hotel’in sunduğu lüks ve konforla birleşerek unutulmaz bir konaklama deneyimi yaratıyor.
+                            Ürgüp&apos;ün büyüleyici zirvesinde yer alan Yıldız Hotel, misafirlerine benzersiz bir deneyim sunuyor. Gün doğumunun ilk ışıklarıyla uyanırken, Kapadokya&apos;nın eşsiz balon manzarasına şahit olabilirsiniz. Akşamları ise, gün batımının sıcak tonları eşliğinde, otelin manzaraya hakim terasında huzuru bulacaksınız. Doğanın sunduğu bu görsel şölen, Yıldız Hotel&apos;in sunduğu lüks ve konforla birleşerek unutulmaz bir konaklama deneyimi yaratıyor.
                         </p>
                     </div>
 
@@ -49,26 +50,26 @@ export default function ContactPage() {
                             <div className="space-y-3 text-sm">
                                 <div className="flex items-center gap-2">
                                     <Phone size={16} className="text-[#b99365]" />
-                                    <a href="tel:+903842282850" className="hover:underline">
+                                    <Link href="tel:+903842282850" className="hover:underline">
                                         +90 530 389 71 63
-                                    </a>
+                                    </Link>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Mail size={16} className="text-[#b99365]" />
-                                    <a href="mailto:info@yildizhotel.com.tr" className="hover:underline">
+                                    <Link href="mailto:info@yildizhotel.com.tr" className="hover:underline">
                                         info@yildizhotel.com.tr
-                                    </a>
+                                    </Link>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Navigation size={16} className="text-[#b99365]" />
-                                    <a
+                                    <Link
                                         href="https://www.google.com/maps/place/Y%C4%B1ld%C4%B1z+Hotel/@38.6430322,34.9175703,14z/data=!4m9!3m8!1s0x152a5cdd1a34f68b:0xfba04847217ba7b8!5m2!4m1!1i2!8m2!3d38.6326155!4d34.9160521!16s%2Fg%2F1tglcsdb?entry=ttu"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="hover:underline"
                                     >
                                         Yol Tarifi
-                                    </a>
+                                    </Link>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <MapPin size={16} className="text-[#b99365]" />

@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Link from 'next/link';
 
 const imageVariants = {
@@ -37,10 +38,12 @@ const AboutSection = () => {
                             viewport={{ once: true }}
                             variants={imageVariants}
                         >
-                            <img
+                            <Image
                                 src="/images/bahce/slide6.jpg"
                                 alt="pool"
                                 className="shadow-lg w-5/6 h-[250px] object-cover"
+                                width={400}
+                                height={500}
                             />
                         </motion.div>
 
@@ -52,10 +55,12 @@ const AboutSection = () => {
                             viewport={{ once: true }}
                             variants={imageVariants}
                         >
-                            <img
+                            <Image
                                 src="/images/bahce/slide3.jpg"
                                 alt="room"
                                 className="shadow-lg w-full h-[230px] object-cover"
+                                width={400}
+                                height={500}
                             />
                         </motion.div>
 
@@ -67,10 +72,12 @@ const AboutSection = () => {
                             viewport={{ once: true }}
                             variants={imageVariants}
                         >
-                            <img
+                            <Image
                                 src="/images/turlar/tur27.jpg"
                                 alt="tour"
                                 className="shadow-lg w-full h-[350px] object-cover"
+                                width={400}
+                                height={500}
                             />
                         </motion.div>
                     </div>
@@ -92,7 +99,7 @@ const AboutSection = () => {
                     </h2>
                     <p className="text-base leading-relaxed text-[#111827] mb-6">
                         Lüks, konfor ve maceranın buluştuğu sıra dışı bir konaklama deneyimine hoş geldiniz.
-                        Otelimiz, sıradanlıktan uzak, benzersiz bir kaçış sunarak sizi Kapadokyanın
+                        Otelimiz, sıradanlıktan uzak, benzersiz bir kaçış sunarak sizi Kapadokya&apos;nın
                         büyüleyici dünyasını keşfetmeye davet ediyor.
                     </p>
                     <Link

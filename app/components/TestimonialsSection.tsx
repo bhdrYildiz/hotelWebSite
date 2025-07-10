@@ -7,6 +7,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { FaStar } from "react-icons/fa";
+import Link from "next/link";
 
 const reviews = [
     {
@@ -73,13 +74,13 @@ export default function CustomerReviews() {
                         Misafirlerimiz bizim hakkımızda neler söylüyor
                     </p>
                     <div className="mb-8">
-                        <a
+                        <Link
                             href="https://www.tripadvisor.com.tr/Hotel_Review-g297989-d3161070-Reviews-Yildiz_Hotel-Urgup_Cappadocia.html#REVIEWS"
                             className="relative overflow-hidden inline-block px-6 py-2 bg-[#1f2c42] text-[#f8f8f3] group z-0 cursor-pointer"
                         >
                             <span className="relative z-10">Tüm Yorumları Gör</span>
                             <span className="absolute inset-0 bg-[#b99365] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>
-                        </a>
+                        </Link>
                     </div>
                 </div>
 

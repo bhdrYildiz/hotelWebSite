@@ -2,7 +2,6 @@ import React, { JSX } from "react";
 import {
   BedDouble,
   Wifi,
-  Snowflake,
   Tv,
   BathIcon,
   Coffee,

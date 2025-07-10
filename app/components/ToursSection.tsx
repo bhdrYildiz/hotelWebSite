@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { tours as allTours } from '@/app/data/tours'
 import type { Tour } from '@/app/data/tours';
+import Link from "next/link";
 
 const tours = allTours.slice(0, 3);
 
@@ -19,13 +20,13 @@ export default function ToursSection() {
                     Unutulmaz turlar ve maceralar sizi bekliyor
                 </p>
                 <div className="mt-4 mx-auto block text-center">
-                    <a
+                    <Link
                         href="/tours"
                         className="relative overflow-hidden inline-block px-6 py-2 bg-[#1f2c42] text-[#f8f8f3] group z-0 cursor-pointer"
                     >
                         <span className="relative z-10">Turlara Göz At</span>
                         <span className="absolute inset-0 bg-[#b99365] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>
-                    </a>
+                    </Link>
                 </div>
             </div>
 
@@ -74,13 +75,13 @@ function TourCard({ tour, index }: { tour: Tour; index: number }) {
                 <p className="text-sm text-[#1f2c42] mb-4 font-cormorant">
                     {tour.description}
                 </p>
-                <a
+                <Link
                     href={`/tours/${tour.id}`}
                     className="relative overflow-hidden inline-block px-6 py-2 bg-[#1f2c42] text-[#f8f8f3] group z-0 cursor-pointer"
                 >
                     <span className="relative z-10">Detayları Gör</span>
                     <span className="absolute inset-0 bg-[#b99365] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>
-                </a>
+                </Link>
             </div>
         </motion.div>
     );
