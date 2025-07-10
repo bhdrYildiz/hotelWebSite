@@ -39,7 +39,7 @@ const AboutPage = () => {
                     className="w-full h-[300px] bg-cover bg-center flex items-center justify-center"
                     style={{ backgroundImage: "url('/images/banner.jpg')" }}
                 >
-                    <h1 className="text-[#1f2c42] text-5xl md:text-6xl font-bold tracking-wide drop-shadow-lg">
+                    <h1 className="text-[#1f2c42] text-4xl md:text-6xl font-bold tracking-wide drop-shadow-lg">
                         Hakkımızda
                     </h1>
                 </section>
@@ -48,10 +48,10 @@ const AboutPage = () => {
                 <section className="container max-w-[1200px] min-h-[600px] mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-16 items-start mt-2">
                     {/* Text Content */}
                     <div className="space-y-6 text-[#1f2c42]">
-                        <p className="text-sm uppercase tracking-widest text-[#b99365] font-semibold">
+                        <p className="text-sm uppercase tracking-widest text-[#b99365] font-semibold text-center md:text-left">
                             Unutulmaz Konaklama Deneyimi
                         </p>
-                        <h2 className="text-4xl font-bold leading-snug mb-4">YILDIZ OTEL</h2>
+                        <h2 className="text-4xl font-bold leading-snug mb-4 text-center md:text-left">YILDIZ OTEL</h2>
 
                         <p className="text-base leading-relaxed">
                             Kapadokya&apos;nın büyüleyici atmosferinde, geleneksel taş mimari ile modern konforu bir araya getiren YILDIZ OTEL CAPPADOCIA, bölgenin en özel noktalarından biri olan Ürgüp&apos;te konumlanmıştır. Her biri özenle tasarlanmış odalarımızda, huzur ve estetiği bir arada yaşarken, doğanın kalbinde benzersiz bir konaklama deneyimi sizleri bekliyor.
@@ -124,7 +124,7 @@ const AboutPage = () => {
                 </section>
                 {/* Services Section */}
                 <section className="container max-w-[1200px] mx-auto px-6 py-12 mb-4">
-                    <h2 className="text-3xl font-bold text-[#111827] mb-8">HİZMETLERİMİZ</h2>
+                    <h2 className="text-3xl font-bold text-[#111827] mb-8 text-center md:text-left">HİZMETLERİMİZ</h2>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                         {services.map((s, i) => (
                             <div

@@ -43,7 +43,7 @@ const RoomDetailPage = () => {
             <Header />
             <main className="font-cormorant bg-[#f8f8f3] text-[#1f2c42]">
                 <section className="w-full h-[300px] bg-cover bg-center flex items-center justify-center" style={{ backgroundImage: "url('/images/banner.jpg')" }}>
-                    <h1 className="text-5xl font-bold drop-shadow-md">{room.name}</h1>
+                    <h1 className="text-3xl md:text-5xl font-bold drop-shadow-md ">{room.name}</h1>
                 </section>
 
                 <section className="w-full bg-[#e2e2e2]/40 py-12">
@@ -79,11 +79,11 @@ const RoomDetailPage = () => {
                 </section>
 
                 <section className="max-w-[1200px] mx-auto px-6 py-12">
-                    <h2 className="text-4xl font-bold mb-6">{room.name}</h2>
-                    <p className="text-base text-[#111827] leading-relaxed mb-10 max-w-full">{room.description}</p>
+                    <h2 className="text-4xl font-bold mb-6 text-center md:text-left">{room.name}</h2>
+                    <p className="text-base text-[#111827] leading-relaxed mb-10 max-w-full text-center md:text-left">{room.description}</p>
 
                     <div className="border-t-1 border-t-gray-300 pt-10">
-                        <h3 className="text-3xl font-semibold mb-8">Oda Özellikleri</h3>
+                        <h3 className="text-3xl font-semibold mb-8 text-center md:text-left">Oda Özellikleri</h3>
                         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                             {room.features.map((feature, i) => {
                                 const matchedAmenity = amenities.find((a) => a.icon === feature);

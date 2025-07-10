@@ -31,7 +31,7 @@ const TourDetailPage = () => {
                     className="w-full h-[300px] bg-cover bg-center flex items-center justify-center"
                     style={{ backgroundImage: "url('/images/banner.jpg')" }}
                 >
-                    <h1 className="text-[#1f2c42] text-5xl md:text-6xl font-bold tracking-wide drop-shadow-lg">
+                    <h1 className="text-[#1f2c42] text-3xl md:text-6xl font-bold tracking-wide drop-shadow-lg">
                         {tour.title}
                     </h1>
                 </section>
@@ -40,12 +40,12 @@ const TourDetailPage = () => {
                     {/* Left - Content */}
                     <div className="lg:col-span-2 space-y-10">
                         <div>
-                            <h2 className="text-3xl font-bold text-[#1f2c42]">Tur Detayları</h2>
-                            <p className="text-[#1f2c42] mt-4 leading-relaxed">{tour.description}</p>
+                            <h2 className="text-3xl font-bold text-[#1f2c42] text-center md:text-left">Tur Detayları</h2>
+                            <p className="text-[#1f2c42] mt-4 leading-relaxed text-center md:text-left">{tour.description}</p>
                         </div>
 
                         <div>
-                            <h3 className="text-3xl font-semibold text-[#1f2c42] mb-4">Tur Programı</h3>
+                            <h3 className="text-3xl font-semibold text-[#1f2c42] mb-4 text-center md:text-left">Tur Programı</h3>
                             <Accordion>
                                 {tour.program.map((item, i) => (
                                     <AccordionItem key={i} title={item.title} defaultOpen={true} >

@@ -91,24 +91,26 @@ const AboutSection = () => {
                     transition={{ duration: 1.2, ease: 'easeOut' }}
                     viewport={{ once: true }}
                 >
-                    <h4 className="text-sm font-semibold text-[#b99365] uppercase mb-2 tracking-wider">
+                    <h4 className="text-sm font-semibold text-[#b99365] uppercase mb-2 tracking-wider text-center md:text-left">
                         YILDIZ OTEL CAPPADOCIA
                     </h4>
-                    <h2 className="text-4xl md:text-5xl font-bold text-[#1f2c42] leading-tight mb-6">
+                    <h2 className="text-4xl md:text-5xl font-bold text-[#1f2c42] leading-tight mb-6 text-center md:text-left">
                         Dünyamızı Keşfedin
                     </h2>
-                    <p className="text-base leading-relaxed text-[#111827] mb-6">
+                    <p className="text-base leading-relaxed text-[#111827] mb-6 text-center md:text-left">
                         Lüks, konfor ve maceranın buluştuğu sıra dışı bir konaklama deneyimine hoş geldiniz.
                         Otelimiz, sıradanlıktan uzak, benzersiz bir kaçış sunarak sizi Kapadokya&apos;nın
                         büyüleyici dünyasını keşfetmeye davet ediyor.
                     </p>
-                    <Link
-                        href="/contact"
-                        className="font-cormorant rounded-sm bg-[#c1a37b] hover:bg-[#b99365] px-6 py-2 inline-block 
-                        transition-all duration-300 text-[#f8f8f3] hover:text-[#1f2c42] font-semibold text-sm tracking-wider"
-                    >
-                        Hemen Rezervasyon Yap
-                    </Link>
+                    <div className="text-center md:text-left">
+                        <Link
+                            href="/contact"
+                            className="font-cormorant rounded-sm bg-[#c1a37b] hover:bg-[#b99365] px-6 py-2 inline-block 
+        transition-all duration-300 text-[#f8f8f3] hover:text-[#1f2c42] font-semibold text-sm tracking-wider"
+                        >
+                            Hemen Rezervasyon Yap
+                        </Link>
+                    </div>
                 </motion.div>
             </div>
         </section>

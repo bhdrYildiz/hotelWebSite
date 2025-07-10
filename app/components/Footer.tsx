@@ -18,7 +18,7 @@ export default function Footer() {
                     <img
                         src="/images/logo2.png"
                         alt="Yıldız Otel Logo"
-                        className="h-24 justify-self-start cursor-pointer"
+                        className="h-24 cursor-pointer mx-auto md:mx-0"
                     />
                     <p className="text-base text-gray-700 max-w-xs mx-auto md:mx-0 font-cormorant">
                         Yıldız Otele geldiğinizde bu eşsiz mekanın duyuları harekete geçiren butik bir deneyim sunduğunu fark ediyorsunuz.

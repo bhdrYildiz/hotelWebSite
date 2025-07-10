@@ -16,7 +16,7 @@ const RoomsPage = () => {
             <Header />
             <main className="font-cormorant bg-[#f8f8f3]">
                 <section className="w-full h-[300px] bg-cover bg-center flex items-center justify-center" style={{ backgroundImage: "url('/images/banner.jpg')" }}>
-                    <h1 className="text-[#1f2c42] text-5xl md:text-6xl font-bold tracking-wide drop-shadow-lg">Odalar</h1>
+                    <h1 className="text-[#1f2c42] text-4xl md:text-6xl font-bold tracking-wide drop-shadow-lg">Odalar</h1>
                 </section>
 
                 <section className="container max-w-[1200px] mx-auto px-6 py-20">

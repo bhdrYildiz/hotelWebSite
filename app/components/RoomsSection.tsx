@@ -52,8 +52,9 @@ const RoomsSection = () => {
                                     <Link href={`/rooms/${room.id}`}>
                                         <button
                                             className="absolute bottom-2 left-2 bg-[#1f2c42] text-white px-5 py-2 text-sm 
-        tracking-wide opacity-0 group-hover:opacity-100 hover:bg-[#b99365] hover:text-[#1f2c42] 
-        hover:font-bold transition cursor-pointer flex items-center gap-2"
+                                                        tracking-wide opacity-100 md:opacity-0 md:group-hover:opacity-100 
+                                                        hover:bg-[#b99365] hover:text-[#1f2c42] hover:font-bold transition cursor-pointer 
+                                                        flex items-center gap-2"
                                         >
                                             DETAYLARI GÖR
                                             <FaArrowRight className="text-sm" />

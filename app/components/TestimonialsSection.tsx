@@ -88,7 +88,7 @@ export default function CustomerReviews() {
                     <div className="relative w-full flex justify-center">
                         <Swiper
                             spaceBetween={16}
-                            slidesPerView={1.1}
+                            slidesPerView={1}
                             navigation={{
                                 nextEl: ".custom-next",
                                 prevEl: ".custom-prev",
@@ -101,32 +101,34 @@ export default function CustomerReviews() {
                         >
                             {reviews.map((review, index) => (
                                 <SwiperSlide key={index}>
-                                    <div className="bg-[#f8f8f3] shadow-lg p-6 text-left max-w-xs w-full flex flex-col justify-between font-cormorant">
-                                        <div className="flex items-center gap-2 mb-3">
-                                            <Image src={review.avatar} alt={review.name} width={40} height={40} className="rounded-full" />
-                                            <div>
-                                                <p className="font-semibold text-sm text-[#1f2c42]">{review.name}</p>
-                                                <p className="text-xs text-[#b99365]">{review.date}</p>
+                                    <div className="flex justify-center">
+                                        <div className="bg-[#f8f8f3] shadow-lg p-6 text-left max-w-xs w-full flex flex-col justify-between font-cormorant">
+                                            <div className="flex items-center gap-2 mb-3">
+                                                <Image src={review.avatar} alt={review.name} width={40} height={40} className="rounded-full" />
+                                                <div>
+                                                    <p className="font-semibold text-sm text-[#1f2c42]">{review.name}</p>
+                                                    <p className="text-xs text-[#b99365]">{review.date}</p>
+                                                </div>
+                                                <Image src="/icons/tripLogo.svg" alt="Tripadvisor" width={20} height={20} className="ml-auto" />
                                             </div>
-                                            <Image src="/icons/tripLogo.svg" alt="Tripadvisor" width={20} height={20} className="ml-auto" />
+
+                                            <div className="flex gap-1 mb-2 text-[#c1a37b]">
+                                                {[...Array(review.rating)].map((_, i) => (
+                                                    <FaStar key={i} size={16} />
+                                                ))}
+                                            </div>
+
+                                            <p className={`text-[#111827] leading-relaxed ${expanded === index ? "" : "line-clamp-4"}`}>
+                                                {review.text}
+                                            </p>
+
+                                            <button
+                                                className="text-sm text-[#b99365] hover:underline hover:text-[#1f2c42] hover:font-semibold mt-2 self-start cursor-pointer"
+                                                onClick={() => setExpanded(expanded === index ? null : index)}
+                                            >
+                                                {expanded === index ? "Hide" : "Read more"}
+                                            </button>
                                         </div>
-
-                                        <div className="flex gap-1 mb-2 text-[#c1a37b]">
-                                            {[...Array(review.rating)].map((_, i) => (
-                                                <FaStar key={i} size={16} />
-                                            ))}
-                                        </div>
-
-                                        <p className={`text-[#111827] leading-relaxed ${expanded === index ? "" : "line-clamp-4"}`}>
-                                            {review.text}
-                                        </p>
-
-                                        <button
-                                            className="text-sm text-[#b99365] hover:underline hover:text-[#1f2c42] hover:font-semibold mt-2 self-start cursor-pointer"
-                                            onClick={() => setExpanded(expanded === index ? null : index)}
-                                        >
-                                            {expanded === index ? "Hide" : "Read more"}
-                                        </button>
                                     </div>
                                 </SwiperSlide>
                             ))}

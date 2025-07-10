@@ -16,7 +16,7 @@ const ToursPage = () => {
                     className="w-full h-[300px] bg-cover bg-center flex items-center justify-center"
                     style={{ backgroundImage: "url('/images/banner.jpg')" }}
                 >
-                    <h1 className="text-[#1f2c42] text-5xl md:text-6xl font-bold tracking-wide drop-shadow-lg">
+                    <h1 className="text-[#1f2c42] text-4xl md:text-6xl font-bold tracking-wide drop-shadow-lg">
                         Tur ve Aktiviteler
                     </h1>
                 </section>
@@ -28,16 +28,18 @@ const ToursPage = () => {
                         >
                             {/* Text Content */}
                             <div className="basis-1/2 text-start ml-2 space-y-4">
-                                <h2 className="text-3xl font-bold font-cormorant text-[#1f2c42]">{tour.title}</h2>
-                                <p className="text-[#1f2c42] text-base leading-relaxed">
+                                <h2 className="text-3xl font-bold font-cormorant text-[#1f2c42] text-center md:text-left">{tour.title}</h2>
+                                <p className="text-[#1f2c42] text-base leading-relaxed text-center md:text-left">
                                     {tour.description}
                                 </p>
-                                <Link href={`/tours/${tour.id}`}>
-                                    <button className="mt-2 px-10 py-2 bg-[#b99365] text-[#f8f8f3] relative overflow-hidden z-0 group cursor-pointer">
-                                        <span className="relative z-10">Turu İncele</span>
-                                        <span className="absolute inset-0 bg-[#1f2c42] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>
-                                    </button>
-                                </Link>
+                                <div className="flex justify-center md:justify-start">
+                                    <Link href={`/tours/${tour.id}`}>
+                                        <button className="mt-2 px-10 py-2 bg-[#b99365] text-[#f8f8f3] relative overflow-hidden z-0 group cursor-pointer ">
+                                            <span className="relative z-10">Turu İncele</span>
+                                            <span className="absolute inset-0 bg-[#1f2c42] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>
+                                        </button>
+                                    </Link>
+                                </div>
                             </div>
 
                             {/* Image */}
