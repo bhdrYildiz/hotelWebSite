@@ -3,7 +3,6 @@
 import React from 'react';
 import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
-import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import { Accordion, AccordionItem } from '../../components/ui/accordion';
 import { BadgeCheck, CreditCard, Mail, MapPin, Phone, Star } from 'lucide-react';
