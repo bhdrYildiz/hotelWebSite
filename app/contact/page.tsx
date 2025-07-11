@@ -73,7 +73,7 @@ export default function ContactPage() {
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <MapPin size={16} className="text-[#b99365]" />
-                                    <span>Kavaklıönü, Atatürk Blv. No:61, 50400 Ürgüp/Nevşehir</span>
+                                    <span>Kavaklıönü Mah., Atatürk Blv. No:61, 50400 Ürgüp/Nevşehir</span>
                                 </div>
                             </div>
                         </div>

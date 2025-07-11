@@ -8,7 +8,6 @@ import ScrollToTop from "./components/ScrollToTop";
 const cormorantInfant = Cormorant_Infant({
   subsets: ["latin"],
   weight: ["400", "700"],
-  // CSS değişkeni olarak tanımlıyoruz
   variable: "--font-cormorant-infant",
 });
 
@@ -19,8 +18,11 @@ const cormorantSC = Cormorant_SC({
 });
 
 export const metadata: Metadata = {
-  title: "Otel Web Sitesi",
-  description: "Otelimiz için modern ve dinamik web sitesi",
+  title: "Yıldız Otel Cappadocia",
+  description: "Kapadokyada unutulmaz bir tatil deneyimi..",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

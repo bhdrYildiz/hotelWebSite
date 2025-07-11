@@ -67,7 +67,7 @@ export default function Footer() {
                     <div className="space-y-4 text-base text-[#1f2c42]">
                         <p className="flex items-center justify-center md:justify-start gap-2">
                             <FaMapMarkerAlt className="text-[#b99365]" />
-                            Kavaklıönü, Atatürk Blv. No:61, Ürgüp/Nevşehir
+                            Kavaklıönü Mah., Atatürk Blv. No:61, Ürgüp/Nevşehir
                         </p>
                         <p className="flex items-center justify-center md:justify-start gap-2">
                             <FaPhoneAlt className="text-[#b99365]" />

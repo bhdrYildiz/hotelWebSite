@@ -1,4 +1,3 @@
-// pages/index.tsx
 import type { NextPage } from "next";
 import Head from "next/head";
 import Header from "./components/Header";
@@ -14,8 +13,9 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Otel Web Sitesi</title>
-        <meta name="description" content="Otelimiz için modern ve dinamik web sitesi" />
+        <title>Yıldız Otel Ürgüp</title>
+        <meta name="description" content="Yıldız Otel Cappadocia" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
       <main className="mt-0">
@@ -33,7 +33,6 @@ const Home: NextPage = () => {
           <CallToActionBanner />
           <Footer />
         </section>
-        {/* Diğer sayfa bölümlerini ekleyebilirsiniz: Hakkımızda, Odalar, Galeri vs. */}
       </main>
     </>
   );
