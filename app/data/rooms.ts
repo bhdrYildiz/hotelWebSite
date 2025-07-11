@@ -44,6 +44,8 @@ export const rooms: Room[] = [
       "/images/room-105/105-4.jpg",
       "/images/room-105/105-5.jpg",
       "/images/room-105/105-6.jpg",
+      "/images/room-105/105-7.jpg",
+      "/images/room-105/105-8.jpg",
     ],
     description:
       "Hem geleneksel hem çağdaş detaylarla donatılmış bu odada, unutulmaz anılar biriktirin.",

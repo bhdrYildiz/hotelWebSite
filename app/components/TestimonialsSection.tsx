@@ -11,52 +11,52 @@ import Link from "next/link";
 
 const reviews = [
     {
-        name: "Burcu S.",
-        date: "Eylül 2024",
-        avatar: "/icons/woman.png",
-        rating: 5,
-        text:
-            "ilgi alaka 4 4luk bir otel küçük mutevazi ama herseyiyle yeterli 4 kisilik bir aile olarak 3 gün gecirdik çok memnun kaldık"
-    },
-    {
-        name: "Canan K.",
-        date: "Nisan 2024",
-        avatar: "/icons/woman.png",
-        rating: 5,
-        text:
-            "Otel sahipleri cok guler yuzlu ve otel odalari son derece temiz ve bakimli Ayrica her türlü transferlerinize yardimci oluyorlar merkeze cok yakin fiyat olarakta uygun içiniz rahatlikla tercih edebilirsiniz ozellikle yakujili odalari cok güzel.Tesekkur ediyorum"
-    },
-    {
-        name: "ALİ H.",
-        date: "Kasım 2023",
+        name: "Ahmet Demir",
+        date: "Haziran 2025",
         avatar: "/icons/man.png",
         rating: 5,
         text:
-            "Otel muhteşem. İlgi alaka harika. Kahvaltılar muhteşem. Mirkan kardeşim her konuda sağolsun yardımcı oldu. Yolunuz düşerse bu güzel aile mekanında kalmanızı tavsiye ederim. Herşey için teşekkür ederim."
+            "Güzel ve ferah bi yerdi hizmetten memnun kaldık tavsiye ederim ilgilinizden dolayı çok teşekkür ederiz"
     },
     {
-        name: "Senem Ç.",
-        date: "Mayıs 2023",
+        name: "Şebnem Acar",
+        date: "Haziran 2025",
         avatar: "/icons/woman.png",
         rating: 5,
         text:
-            "Akşamları Otelimize dönerken evimize dönüyoruz gibi hissettirdikleri için çok teşekkür ederiz. Temiz, güzel bir otel, fiyat kalite performansı çok iyi mutlaka deneyin... Ürgüp merkezine 5 dakika yürüme mesafesinde."
+            "Konumu çok güzel, önünde küçük bir otoparkı var, işletmeci çok ilgili ve yardım sever, odalar temiz, kahvaltısı gayet güzel. Yörenin yabancısıydık işletmeci Fatih bey, harita üzerinden sırasıyla nereleri gezmemiz gerektiği konusunda da, balon yolculuğu konusunda da yardımcı oldu. Tekrar gidersem konaklama konusunda maceraya girmem."
     },
     {
-        name: "Büşra Keskin",
-        date: "Temmuz 2023",
+        name: "Mustafa Arguc",
+        date: "Haziran 2025",
+        avatar: "/icons/man.png",
+        rating: 5,
+        text:
+            "Ailecek ilk defa gittiğimiz Ürgüp turumuzda 3 gece misafir eden yıldız hotel sahibi ve çok degerli oğullarına teşekkür ediyoruz. Herkese tavsiye ediyorum temiz güler yüzlü. Geri dönüş yolculuğumuz da arayıp sormaları ayrıca bize bir kat daha memnun etti"
+    },
+    {
+        name: "Selin Kuyumcuoğlu",
+        date: "Mayıs 2025",
         avatar: "/icons/woman.png",
         rating: 5,
         text:
-            "4 gece 5 gün konaklama gerçekleştirdik. Oda gerçekten çok temizdi. Bahçesine özellikle bayıldık. Çalışanların güleryüzlülüğü de ekstra bizi rahat hissettirdi. Herkese tavsiye ediyoruz. Teşekkürler Yıldız Hotel :)"
+            "Çok tatlı bir aile işletmesi, çok güleryüzlü, saygılı ve yardımseverler. İhtiyacımız olan her konuda yardımcı oldular. Odalar temiz ve konforluydu. Kahvaltılar gayet yeterli, özellikle portakallı kek çok lezzetliydi. Konum olarak gezilebilecek her yere yakın. Tekrar konaklamak isteyebileceğim ve tavsiye edebileceğim bir otel."
     },
     {
-        name: "Elif Oncel",
+        name: "İrem Özcan",
+        date: "Mayıs 2025",
+        avatar: "/icons/woman.png",
+        rating: 5,
+        text:
+            "Ailece çok güler yüzlü ve yardımsever insanlar işletiyor. Bize her konuda yardımcı oldular. Konum olarak çoğu gezilecek yere çok yakın. Tekrar gidecek olsam aynı yerde kalmayı tercih edebilirim."
+    },
+    {
+        name: "Özgür Ergin",
         date: "Mart 2023",
-        avatar: "/icons/woman.png",
+        avatar: "/icons/man.png",
         rating: 5,
         text:
-            "Her şey oldukça güzeldi. Çalışanlar çok güler yüzlü ve samimiydi. İçi şirin ve yöreyi hissettirecek şekilde düzenlenen bir otel. Odalar temiz ve sıcacıktı. Otelin konumu merkezi olduğundan bol bol gezme imkanı da bulduk. Uygun fiyatli ve gayet memnun kaldık. Yine gelsem yine tercih edeceğim bir otel. Kesinlikle tavsiye ediyorum "
+            "Her şeyi ile çok güzel bir oteldi ailece kendimizi evimizde hissettirdiler konum olsun hizmet olsun gerçekten gidersem kalacağım tek hotel yıldız hotel saygılarımla"
     },
 ];
 
@@ -75,7 +75,7 @@ export default function CustomerReviews() {
                     </p>
                     <div className="mb-8">
                         <Link
-                            href="https://www.tripadvisor.com.tr/Hotel_Review-g297989-d3161070-Reviews-Yildiz_Hotel-Urgup_Cappadocia.html#REVIEWS"
+                            href="https://www.google.com/travel/search?gsas=1&ts=EggKAggDCgIIAxocEhoSFAoHCOkPEAcYCxIHCOkPEAcYDBgBMgIQAA&qs=MhRDZ3NJdU1fdWlfS0lrdEQ3QVJBQjgC&ap=ugEHcmV2aWV3cw&ictx=111&biw=1440&bih=833&hl=tr-TR&ved=0CAAQ5JsGahcKEwjohuyL_rSOAxUAAAAAHQAAAAAQEA"
                             className="relative overflow-hidden inline-block px-6 py-2 bg-[#1f2c42] text-[#f8f8f3] group z-0 cursor-pointer"
                         >
                             <span className="relative z-10">Tüm Yorumları Gör</span>
@@ -102,14 +102,14 @@ export default function CustomerReviews() {
                             {reviews.map((review, index) => (
                                 <SwiperSlide key={index}>
                                     <div className="flex justify-center">
-                                        <div className="bg-[#f8f8f3] shadow-lg p-6 text-left max-w-xs w-full flex flex-col justify-between font-cormorant">
+                                        <div className="bg-[#f8f8f3] shadow-lg hover:shadow-xl hover:-translate-y-1 transition-transform duration-300 p-6 text-left max-w-xs w-full flex flex-col justify-between font-cormorant">
                                             <div className="flex items-center gap-2 mb-3">
                                                 <Image src={review.avatar} alt={review.name} width={40} height={40} className="rounded-full" />
                                                 <div>
                                                     <p className="font-semibold text-sm text-[#1f2c42]">{review.name}</p>
                                                     <p className="text-xs text-[#b99365]">{review.date}</p>
                                                 </div>
-                                                <Image src="/icons/tripLogo.svg" alt="Tripadvisor" width={20} height={20} className="ml-auto" />
+                                                <Image src="/icons/google.png" alt="Tripadvisor" width={20} height={20} className="ml-auto" />
                                             </div>
 
                                             <div className="flex gap-1 mb-2 text-[#c1a37b]">
@@ -118,7 +118,7 @@ export default function CustomerReviews() {
                                                 ))}
                                             </div>
 
-                                            <p className={`text-[#111827] leading-relaxed ${expanded === index ? "" : "line-clamp-4"}`}>
+                                            <p className={`text-[#111827] leading-relaxed ${expanded === index ? "" : "line-clamp-3"}`}>
                                                 {review.text}
                                             </p>
 
