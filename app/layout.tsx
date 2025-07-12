@@ -23,7 +23,11 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  other: {
+    "google-site-verification": "W1lKX5tF_py6MEepHknRQp89CgXDSV-p8hdDrTEwx0M",
+  },
 };
+
 
 export default function RootLayout({
   children,
