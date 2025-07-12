@@ -49,7 +49,7 @@ const AboutPage = () => {
                     {/* Text Content */}
                     <div className="space-y-6 text-[#1f2c42]">
                         <p className="text-sm uppercase tracking-widest text-[#b99365] font-semibold text-center md:text-left">
-                            Unutulmaz Konaklama Deneyimi
+                            Kapadokya&apos;da Unutulmaz Konaklama Deneyimi
                         </p>
                         <h2 className="text-4xl font-bold leading-snug mb-4 text-center md:text-left">YILDIZ OTEL</h2>
 
@@ -95,7 +95,7 @@ const AboutPage = () => {
                             viewport={{ once: true }}
                             className="w-full h-[300px] relative overflow-hidden shadow-lg"
                         >
-                            <Image src="/images/bahce/slide5.jpg" alt="Hotel Front View" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 600px"
+                            <Image src="/images/bahce/slide5.jpg" alt="Kapadokya Jakuzili Taş Oda - Yıldız Otel Ürgüp" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 600px"
                                 className="object-cover" />
                         </motion.div>
                         <div className="grid grid-cols-2 gap-4">
@@ -106,7 +106,7 @@ const AboutPage = () => {
                                 viewport={{ once: true }}
                                 className="relative w-full h-[200px] overflow-hidden shadow-lg"
                             >
-                                <Image src="/images/turlar/tur21.jpg" alt="Rock View" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 600px"
+                                <Image src="/images/turlar/tur21.jpg" alt="Kapadokya Tatili - Yıldız Otel Ürgüp" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 600px"
                                     className="object-cover" />
                             </motion.div>
                             <motion.div
@@ -116,7 +116,7 @@ const AboutPage = () => {
                                 viewport={{ once: true }}
                                 className="relative w-full h-[200px] overflow-hidden shadow-lg"
                             >
-                                <Image src="/images/bahce/slide2.jpg" alt="Terrace Breakfast" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 600px"
+                                <Image src="/images/bahce/slide2.jpg" alt="Ürgüp Tatilinizi Cave odalarda gerçekleştirin - Yıldız Otel Ürgüp" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 600px"
                                     className="object-cover" />
                             </motion.div>
                         </div>

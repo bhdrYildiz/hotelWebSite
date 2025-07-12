@@ -1,3 +1,36 @@
+// app/page.tsx
+
+export const generateMetadata = () => ({
+  title: "Yıldız Otel Ürgüp | Kapadokya Jakuzili ve Taş Odalar",
+  description:
+    "Kapadokya'nın kalbinde, jakuzili taş odalar ve huzur dolu atmosferiyle Yıldız Otel Ürgüp sizi bekliyor. Balayı çiftleri ve tatilciler için ideal konaklama!",
+  keywords: [
+    "kapadokya otel", "jakuzili oda", "ürgüp otelleri", "balayı oteli",
+    "taş oda", "yıldız otel", "yıldız otel kapadokya", "kapadokya tatil"
+  ],
+  alternates: {
+    canonical: "https://yildizhotelcappadocia.com",
+  },
+  openGraph: {
+    title: "Yıldız Otel Ürgüp | Kapadokya Jakuzili Taş Odalar",
+    description:
+      "Jakuzili ve taş mimarili özel odalar ile Kapadokya'da unutulmaz bir tatil deneyimi. Yıldız Otel Ürgüp'te huzur sizi bekliyor.",
+    url: "https://yildizhotelcappadocia.com",
+    siteName: "Yıldız Otel Kapadokya",
+    images: [
+      {
+        url: "https://yildizhotelcappadocia.com/images/banner.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Yıldız Otel Ürgüp Kapadokya",
+      },
+    ],
+    locale: "tr_TR",
+    type: "website",
+  },
+});
+
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import Header from "./components/Header";
