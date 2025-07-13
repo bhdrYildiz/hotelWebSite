@@ -5,6 +5,7 @@ import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
 import Link from 'next/link';
 import { tours } from '../data/tours';
+import Image from 'next/image';
 
 const ToursPage = () => {
     return (
@@ -45,13 +46,18 @@ const ToursPage = () => {
                             </div>
 
                             {/* Image */}
-                            <div className="basis-1/2 flex justify-end">
-                                <img
+                            <div className="relative w-full max-w-[550px] aspect-[550/740] rounded-md shadow-md overflow-hidden">
+                                <Image
                                     src={tour.image}
-                                    alt={`Kapadokya turu - ${tour.title}`}
-                                    className="rounded-md shadow-md w-full h-[740px] object-cover max-w-[550px]"
+                                    alt={`Kapadokya - ${tour.title} turu`}
+                                    fill
+                                    className="object-cover"
+                                    sizes="(max-width: 768px) 100vw, 550px"
+                                    quality={75}
+                                    priority={index === 0}
                                 />
                             </div>
+
                         </div>
                     ))}
                 </section>

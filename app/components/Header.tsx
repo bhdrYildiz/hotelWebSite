@@ -34,7 +34,11 @@ const Header = () => {
             <header className={`fixed w-full z-[1000] transition-all duration-200 ${navBg ? "bg-[#1f2c42] backdrop-blur-md shadow-md" : ""}`}>
                 <div className="container max-w-[1200px] mx-auto px-4 py-3 flex items-center justify-between relative">
                     <Link href="/" className="shrink-0">
-                        <img src="/images/logo2.png" alt="Logo" className="h-20 md:h-24" />
+                        <img
+                            src="/images/logo2.png"
+                            alt="Logo"
+                            className="h-16 md:h-24 transition-all duration-300"
+                        />
                     </Link>
 
                     {/* Desktop Nav */}

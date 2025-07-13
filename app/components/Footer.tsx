@@ -43,9 +43,10 @@ export default function Footer() {
                             <li key={item.href}>
                                 <Link
                                     href={item.href}
-                                    className="hover:text-[#b99365] transition-colors duration-200"
+                                    className="hover:text-[#b99365] transition-colors duration-200" aria-label="label"
                                 >
                                     {item.label}
+
                                 </Link>
                             </li>
                         ))}
@@ -55,12 +56,12 @@ export default function Footer() {
                 <div className="text-center md:text-left">
                     <h3 className="font-bold mb-4 uppercase text-lg text-[#c1a37b] tracking-wide">Odalar</h3>
                     <ul className="space-y-2 text-base font-medium">
-                        <li><Link href="/rooms/room-301" className="hover:text-[#b99365] transition">Özel Teraslı ve Jakuzili King Suit</Link></li>
-                        <li><Link href="/rooms/room-105" className="hover:text-[#b99365] transition">Havuzlu King Suit</Link></li>
-                        <li><Link href="/rooms/room-103" className="hover:text-[#b99365] transition">Jakuzili ve Balkonlu Suit</Link></li>
-                        <li><Link href="/rooms/room-202" className="hover:text-[#b99365] transition">Deluxe Room 202</Link></li>
-                        <li><Link href="/rooms/room-203" className="hover:text-[#b99365] transition">Deluxe Room 203</Link></li>
-                        <li><Link href="/rooms/room-104" className="hover:text-[#b99365] transition">Deluxe Room</Link></li>
+                        <li><Link href="/rooms/room-301" className="hover:text-[#b99365] transition" aria-label="Özel Teraslı ve Jakuzili King Suit">Özel Teraslı ve Jakuzili King Suit</Link></li>
+                        <li><Link href="/rooms/room-105" className="hover:text-[#b99365] transition" aria-label="Havuzlu King Suit">Havuzlu King Suit</Link></li>
+                        <li><Link href="/rooms/room-103" className="hover:text-[#b99365] transition" aria-label="Jakuzili ve Balkonlu Suit">Jakuzili ve Balkonlu Suit</Link></li>
+                        <li><Link href="/rooms/room-202" className="hover:text-[#b99365] transition" aria-label="Deluxe Room 202">Deluxe Room 202</Link></li>
+                        <li><Link href="/rooms/room-203" className="hover:text-[#b99365] transition" aria-label="Deluxe Room 203">Deluxe Room 203</Link></li>
+                        <li><Link href="/rooms/room-104" className="hover:text-[#b99365] transition" aria-label="Deluxe Room">Deluxe Room</Link></li>
                     </ul>
                 </div>
 
@@ -74,11 +75,11 @@ export default function Footer() {
                         </p>
                         <p className="flex items-center justify-center md:justify-start gap-2">
                             <FaPhoneAlt className="text-[#b99365]" />
-                            <Link href="tel:+905303897163" className="hover:underline">+90 530 389 7163</Link>
+                            <Link href="tel:+905303897163" className="hover:underline" aria-label="telefon numarası">+90 530 389 7163</Link>
                         </p>
                         <p className="flex items-center justify-center md:justify-start gap-2">
                             <FaEnvelope className="text-[#b99365]" />
-                            <Link href="mailto:info@yildizhotel.com" className="hover:underline">info@yildizhotel.com</Link>
+                            <Link href="mailto:info@yildizhotel.com" className="hover:underline" aria-label="mail için">info@yildizhotel.com</Link>
                         </p>
                     </address>
 
