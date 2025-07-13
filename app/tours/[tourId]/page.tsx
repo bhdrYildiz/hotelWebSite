@@ -109,7 +109,7 @@ const TourDetailPage = () => {
                                     placeholder="1"
                                 />
                             </div>
-                            <button className="w-full cursor-pointer bg-[#b99365] hover:bg-[#a98256] text-[#f8f8f3] py-2 rounded transition-all duration-300">
+                            <button className="w-full cursor-pointer bg-[#b99365] hover:bg-[#a98256] text-white py-2 rounded transition-all duration-300">
                                 Müsaitliği Kontrol Et
                             </button>
                         </div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
     FaPhoneAlt,
     FaEnvelope,
@@ -15,10 +16,12 @@ export default function Footer() {
             <div className="w-full max-w-[1200px] mx-auto px-4 grid grid-cols-1 md:grid-cols-[repeat(4,minmax(0,1fr))] gap-10">
                 {/* Sol Sütun - Logo ve açıklama */}
                 <div className="text-center md:text-left space-y-4">
-                    <img
+                    <Image
                         src="/images/logo2.png"
                         alt="Yıldız Otel Logo"
-                        className="h-24 cursor-pointer mx-auto md:mx-0"
+                        width={120}
+                        height={96}
+                        className="cursor-pointer mx-auto md:mx-0"
                     />
                     <p className="text-base text-gray-700 max-w-xs mx-auto md:mx-0 font-cormorant">
                         Yıldız Otele geldiğinizde bu eşsiz mekanın duyuları harekete geçiren butik bir deneyim sunduğunu fark ediyorsunuz.
@@ -64,7 +67,7 @@ export default function Footer() {
                 {/* Sağ Sütun - İletişim bilgileri */}
                 <div className="text-center md:text-left">
                     <h3 className="font-bold mb-4 uppercase text-lg text-[#c1a37b] tracking-wide">İletişim</h3>
-                    <div className="space-y-4 text-base text-[#1f2c42]">
+                    <address className="not-italic space-y-4 text-base text-[#1f2c42]">
                         <p className="flex items-center justify-center md:justify-start gap-2">
                             <FaMapMarkerAlt className="text-[#b99365]" />
                             Kavaklıönü Mah., Atatürk Blv. No:61, Ürgüp/Nevşehir
@@ -77,14 +80,14 @@ export default function Footer() {
                             <FaEnvelope className="text-[#b99365]" />
                             <Link href="mailto:info@yildizhotel.com" className="hover:underline">info@yildizhotel.com</Link>
                         </p>
-                    </div>
+                    </address>
 
                     {/* Sosyal medya ikonları */}
                     <div className="flex justify-center md:justify-start gap-4 mt-4 text-xl text-[#b99365]">
-                        <Link href="/"><FaFacebookF className="hover:text-[#1f2c42] transition" /></Link>
-                        <Link href="/"><FaInstagram className="hover:text-[#1f2c42] transition" /></Link>
-                        <Link href="/"><FaTripadvisor className="hover:text-[#1f2c42] transition" /></Link>
-                        <Link href="/"><FaWhatsapp className="hover:text-[#1f2c42] transition" /></Link>
+                        <Link href="/" aria-label="Facebook sayfamız"><FaFacebookF className="hover:text-[#1f2c42] transition" /></Link>
+                        <Link href="/" aria-label="Instagram sayfamız"><FaInstagram className="hover:text-[#1f2c42] transition" /></Link>
+                        <Link href="/" aria-label="Tripadvisor sayfamız"><FaTripadvisor className="hover:text-[#1f2c42] transition" /></Link>
+                        <Link href="/" aria-label="Whatsapp sayfamız"><FaWhatsapp className="hover:text-[#1f2c42] transition" /></Link>
                     </div>
                 </div>
             </div>

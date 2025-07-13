@@ -42,17 +42,17 @@ const Slider = () => {
                         }`}
                     style={{ backgroundImage: `url(${slide.image})` }}
                 >
-                    <div className="absolute inset-0 bg-[#111827]/30"></div>
+                    <div className="absolute inset-0"></div>
 
                     {index === current && (
-                        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 text-[#c1a37b]"> {/* text-light */}
+                        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 text-[#c1a37b]">
                             {/* SLIDE 1 */}
                             {index === 0 && (
                                 <>
-                                    <h2 className="text-4xl md:text-6xl font-bold mb-4 animate-slide-down text-[#f8f8f3]"> {/* text-secondary */}
+                                    <h2 className="text-4xl md:text-6xl font-bold mb-4 animate-slide-down text-white">
                                         {slide.topText}
                                     </h2>
-                                    <h3 className="text-2xl md:text-4xl font-medium mb-4 animate-slide-left text-[#f8f8f3]"> {/* text-accent */}
+                                    <h3 className="text-2xl md:text-4xl font-medium mb-4 animate-slide-left text-white">
                                         {slide.middleText}
                                     </h3>
                                     <p className="text-lg md:text-xl font-light tracking-wider">
@@ -64,10 +64,10 @@ const Slider = () => {
                             {/* SLIDE 2 */}
                             {index === 1 && (
                                 <>
-                                    <h2 className="text-4xl md:text-6xl font-bold mb-4 animate-slide-down text-[#f8f8f3]">
+                                    <h2 className="text-4xl md:text-6xl font-bold mb-4 animate-slide-down text-white">
                                         {slide.topText}
                                     </h2>
-                                    <h3 className="text-2xl md:text-4xl font-medium mb-4 animate-slide-left text-[#f8f8f3]">
+                                    <h3 className="text-2xl md:text-4xl font-medium mb-4 animate-slide-left text-white">
                                         {slide.middleText}
                                     </h3>
                                     <p className="text-lg md:text-xl font-light tracking-wider">
@@ -79,13 +79,13 @@ const Slider = () => {
                             {/* SLIDE 3 */}
                             {index === 2 && (
                                 <>
-                                    <h2 className="text-4xl md:text-6xl font-bold mb-2 animate-slide-down text-[#f8f8f3]">
+                                    <h2 className="text-4xl md:text-6xl font-bold mb-2 animate-slide-down text-white">
                                         {slide.topText}
                                     </h2>
                                     <h3 className="text-2xl md:text-4xl font-medium mb-2 animate-slide-left text-[#c1a37b]">
                                         {slide.middleText}
                                     </h3>
-                                    <p className="text-lg md:text-xl font-light tracking-wider text-[#f8f8f3] animate-fade-in-out">
+                                    <p className="text-lg md:text-xl font-light tracking-wider text-white animate-fade-in-out">
                                         {slide.bottomText}
                                     </p>
                                 </>

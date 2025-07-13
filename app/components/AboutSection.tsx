@@ -19,7 +19,7 @@ const imageVariants = {
 
 const AboutSection = () => {
     return (
-        <section className="relative py-24 bg-[#f8f8f3] overflow-hidden z-10 font-cormorant">
+        <section className="relative py-24 bg-white overflow-hidden z-10 font-cormorant">
             {/* Sağ arka plan görseli */}
             <div
                 className="absolute inset-y-0 right-12 top-24 w-full md:w-3/4 h-3/4 bg-center opacity-10"
@@ -106,7 +106,7 @@ const AboutSection = () => {
                         <Link
                             href="/contact"
                             className="font-cormorant rounded-sm bg-[#c1a37b] hover:bg-[#b99365] px-6 py-2 inline-block 
-        transition-all duration-300 text-[#f8f8f3] hover:text-[#1f2c42] font-semibold text-sm tracking-wider"
+        transition-all duration-300 text-white hover:text-[#1f2c42] font-semibold text-sm tracking-wider"
                         >
                             Hemen Rezervasyon Yap
                         </Link>

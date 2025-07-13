@@ -65,7 +65,7 @@ const RoomDetailPage = () => {
                         {room.images.map((img, index) => (
                             <SwiperSlide key={index} className="rounded-md overflow-hidden shadow-md cursor-pointer" style={{ width: 'auto' }} onClick={() => setFullscreenIndex(index)}>
                                 <div className="relative h-[500px] w-[600px]">
-                                    <Image src={img} alt={`${room.name} image ${index + 1}`} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px" className="object-cover rounded-md" />
+                                    <Image src={img} alt={`${room.name} fotoğraf ${index + 1}`} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px" className="object-cover rounded-md" />
                                 </div>
                             </SwiperSlide>
                         ))}
@@ -109,7 +109,7 @@ const RoomDetailPage = () => {
                         {otherRooms.slice(0, 3).map((room) => (
                             <div key={room.id} className="bg-[#e2e2e2]/40 shadow-md overflow-hidden hover:scale-[1.02] transition-all duration-300">
                                 <div className="relative h-[360px]">
-                                    <Image src={room.images[0]} alt={room.name} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px" className="object-cover" />
+                                    <Image src={room.images[0]} alt={`Yıldız Otel - ${room.name} odası görseli`} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px" className="object-cover" />
                                 </div>
                                 <div className="p-6 space-y-3 text-[#111827]">
                                     <h3 className="text-xl font-semibold">{room.name}</h3>
@@ -118,12 +118,15 @@ const RoomDetailPage = () => {
                                             <span key={i}>{iconMap[feature]?.()}</span>
                                         ))}
                                     </div>
-                                    <Link href={`/rooms/${room.id}`}>
-                                        <button className="mt-2 px-10 py-2 bg-[#1f2c42] text-[#f8f8f3] relative overflow-hidden z-0 group cursor-pointer">
-                                            <span className="relative z-10">Detayları Gör</span>
-                                            <span className="absolute inset-0 bg-[#b99365] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>
-                                        </button>
+                                    <Link
+                                        href={`/rooms/${room.id}`}
+                                        className="mt-2 inline-block px-10 py-2 bg-[#1f2c42] text-white relative overflow-hidden z-0 group cursor-pointer"
+                                        aria-label={`${room.name} odasının detay sayfasını aç`}
+                                    >
+                                        <span className="relative z-10">Detayları Gör</span>
+                                        <span className="absolute inset-0 bg-[#b99365] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>
                                     </Link>
+
                                 </div>
                             </div>
                         ))}

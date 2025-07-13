@@ -33,11 +33,13 @@ const ToursPage = () => {
                                     {tour.description}
                                 </p>
                                 <div className="flex justify-center md:justify-start">
-                                    <Link href={`/tours/${tour.id}`}>
-                                        <button className="mt-2 px-10 py-2 bg-[#b99365] text-[#f8f8f3] relative overflow-hidden z-0 group cursor-pointer ">
-                                            <span className="relative z-10">Turu İncele</span>
-                                            <span className="absolute inset-0 bg-[#1f2c42] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>
-                                        </button>
+                                    <Link
+                                        href={`/tours/${tour.id}`}
+                                        aria-label={`${tour.title} tur detaylarını inceleyin`}
+                                        className="mt-2 inline-block px-10 py-2 bg-[#aa875d] text-white relative overflow-hidden z-0 group cursor-pointer"
+                                    >
+                                        <span className="relative z-10">Turu İncele</span>
+                                        <span className="absolute inset-0 bg-[#1f2c42] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>
                                     </Link>
                                 </div>
                             </div>
@@ -46,7 +48,7 @@ const ToursPage = () => {
                             <div className="basis-1/2 flex justify-end">
                                 <img
                                     src={tour.image}
-                                    alt={tour.title}
+                                    alt={`Kapadokya turu - ${tour.title}`}
                                     className="rounded-md shadow-md w-full h-[740px] object-cover max-w-[550px]"
                                 />
                             </div>

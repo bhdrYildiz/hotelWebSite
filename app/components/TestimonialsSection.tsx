@@ -76,7 +76,8 @@ export default function CustomerReviews() {
                     <div className="mb-8">
                         <Link
                             href="https://www.google.com/travel/search?gsas=1&ts=EggKAggDCgIIAxocEhoSFAoHCOkPEAcYCxIHCOkPEAcYDBgBMgIQAA&qs=MhRDZ3NJdU1fdWlfS0lrdEQ3QVJBQjgC&ap=ugEHcmV2aWV3cw&ictx=111&biw=1440&bih=833&hl=tr-TR&ved=0CAAQ5JsGahcKEwjohuyL_rSOAxUAAAAAHQAAAAAQEA"
-                            className="relative overflow-hidden inline-block px-6 py-2 bg-[#1f2c42] text-[#f8f8f3] group z-0 cursor-pointer"
+                            className="relative overflow-hidden inline-block px-6 py-2 bg-[#1f2c42] text-white group z-0 cursor-pointer"
+                            aria-label="Tüm Google yorumlarını görüntüle"
                         >
                             <span className="relative z-10">Tüm Yorumları Gör</span>
                             <span className="absolute inset-0 bg-[#b99365] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>
@@ -123,6 +124,7 @@ export default function CustomerReviews() {
                                             </p>
 
                                             <button
+                                                aria-expanded={expanded === index}
                                                 className="text-sm text-[#b99365] hover:underline hover:text-[#1f2c42] hover:font-semibold mt-2 self-start cursor-pointer"
                                                 onClick={() => setExpanded(expanded === index ? null : index)}
                                             >
@@ -135,10 +137,16 @@ export default function CustomerReviews() {
                         </Swiper>
 
                         {/* NAV BUTTONS */}
-                        <div className="custom-prev absolute left-8 top-1/2 transform -translate-y-1/2 cursor-pointer z-10 text-[#1f2c42] text-4xl hover:scale-110 transition">
+                        <div className="custom-prev absolute left-8 top-1/2 transform -translate-y-1/2 cursor-pointer z-10 text-[#1f2c42] text-4xl hover:scale-110 transition"
+                            role="button"
+                            aria-label="Önceki yorum"
+                            tabIndex={0}>
                             ❮
                         </div>
-                        <div className="custom-next absolute right-8 top-1/2 transform -translate-y-1/2 cursor-pointer z-10 text-[#1f2c42] text-4xl hover:scale-110 transition">
+                        <div className="custom-next absolute right-8 top-1/2 transform -translate-y-1/2 cursor-pointer z-10 text-[#1f2c42] text-4xl hover:scale-110 transition"
+                            role="button"
+                            aria-label="Sonraki yorum"
+                            tabIndex={0}>
                             ❯
                         </div>
                     </div>

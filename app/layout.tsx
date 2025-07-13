@@ -1,4 +1,3 @@
-// layout.tsx
 import "./global.css";
 import type { Metadata } from "next";
 import { Cormorant_Infant, Cormorant_SC } from "next/font/google";

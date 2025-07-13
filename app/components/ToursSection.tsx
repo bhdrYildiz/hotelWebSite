@@ -22,7 +22,8 @@ export default function ToursSection() {
                 <div className="mt-4 mx-auto block text-center">
                     <Link
                         href="/tours"
-                        className="relative overflow-hidden inline-block px-6 py-2 bg-[#1f2c42] text-[#f8f8f3] group z-0 cursor-pointer"
+                        aria-label="Tüm turları görüntüle"
+                        className="relative overflow-hidden inline-block px-6 py-2 bg-[#1f2c42] text-white group z-0 cursor-pointer"
                     >
                         <span className="relative z-10">Turlara Göz At</span>
                         <span className="absolute inset-0 bg-[#b99365] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>
@@ -61,7 +62,7 @@ function TourCard({ tour, index }: { tour: Tour; index: number }) {
             <div className="w-full h-[420px] relative">
                 <Image
                     src={tour.image}
-                    alt={tour.title}
+                    alt={`${tour.title} turuna ait tanıtım görseli`}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
                     className="object-cover transition-transform duration-500"
@@ -77,7 +78,8 @@ function TourCard({ tour, index }: { tour: Tour; index: number }) {
                 </p>
                 <Link
                     href={`/tours/${tour.id}`}
-                    className="relative overflow-hidden inline-block px-6 py-2 bg-[#1f2c42] text-[#f8f8f3] group z-0 cursor-pointer"
+                    aria-label={`${tour.title} turunun detaylarını gör`}
+                    className="relative overflow-hidden inline-block px-6 py-2 bg-[#1f2c42] text-white group z-0 cursor-pointer"
                 >
                     <span className="relative z-10">Detayları Gör</span>
                     <span className="absolute inset-0 bg-[#b99365] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>

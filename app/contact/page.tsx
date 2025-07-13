@@ -34,6 +34,7 @@ export default function ContactPage() {
                         {/* Google Map Embed */}
                         <div className="w-full h-[400px]">
                             <iframe
+                                title="Yıldız Hotel Konumu"
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3055.67950900664!2d34.91486377633296!3d38.63261497177908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152a5cdd1a34f68b%3A0xfba04847217ba7b8!2sY%C4%B1ld%C4%B1z%20Hotel!5e0!3m2!1str!2str!4v1718123456789!5m2!1str!2str"
                                 width="100%"
                                 height="100%"
@@ -45,38 +46,39 @@ export default function ContactPage() {
                         </div>
 
                         {/* Contact Details */}
-                        <div className="bg-[#e2e2e2]/40 p-6 shadow space-y-4">
+                        <address className="not-italic bg-[#e2e2e2]/40 p-6 shadow space-y-4">
                             <h2 className="text-2xl font-bold mb-4">İletişim</h2>
                             <div className="space-y-3 text-sm">
-                                <div className="flex items-center gap-2">
+                                <div className="flex items-center gap-3">
                                     <Phone size={16} className="text-[#b99365]" />
-                                    <Link href="tel:+903842282850" className="hover:underline">
+                                    <Link href="tel:+903842282850" className="hover:underline" aria-label="Telefonla ara: +90 530 389 71 63">
                                         +90 530 389 71 63
                                     </Link>
                                 </div>
-                                <div className="flex items-center gap-2">
+                                <div className="flex items-center gap-3">
                                     <Mail size={16} className="text-[#b99365]" />
-                                    <Link href="mailto:info@yildizhotel.com.tr" className="hover:underline">
-                                        info@yildizhotel.com.tr
+                                    <Link href="mailto:info@yildizhotel.com.tr" className="hover:underline" aria-label="mail at: info@yildizhotel.com">
+                                        info@yildizhotel.com
                                     </Link>
                                 </div>
-                                <div className="flex items-center gap-2">
+                                <div className="flex items-center gap-3">
                                     <Navigation size={16} className="text-[#b99365]" />
                                     <Link
                                         href="https://www.google.com/maps/place/Y%C4%B1ld%C4%B1z+Hotel/@38.6430322,34.9175703,14z/data=!4m9!3m8!1s0x152a5cdd1a34f68b:0xfba04847217ba7b8!5m2!4m1!1i2!8m2!3d38.6326155!4d34.9160521!16s%2Fg%2F1tglcsdb?entry=ttu"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="hover:underline"
+                                        aria-label="Yol tarifi"
                                     >
                                         Yol Tarifi
                                     </Link>
                                 </div>
-                                <div className="flex items-center gap-2">
+                                <div className="flex items-center gap-3">
                                     <MapPin size={16} className="text-[#b99365]" />
                                     <span>Kavaklıönü Mah., Atatürk Blv. No:61, 50400 Ürgüp/Nevşehir</span>
                                 </div>
                             </div>
-                        </div>
+                        </address >
                     </div>
                 </section>
             </main>

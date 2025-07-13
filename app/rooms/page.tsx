@@ -16,14 +16,13 @@ const RoomsPage = () => {
                 <section className="w-full h-[300px] bg-cover bg-center flex items-center justify-center" style={{ backgroundImage: "url('/images/banner.jpg')" }}>
                     <h1 className="text-[#1f2c42] text-4xl md:text-6xl font-bold tracking-wide drop-shadow-lg">Odalar</h1>
                 </section>
-
                 <section className="container max-w-[1200px] mx-auto px-6 py-20">
                     <h2 className="text-3xl font-bold text-[#1f2c42] mb-12 text-center">Odalarımız</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                         {rooms.map((room) => (
                             <div key={room.id} className="bg-[#e2e2e2]/40 shadow-md overflow-hidden hover:scale-[1.02] transition-all duration-300">
                                 <div className="relative h-[420px]">
-                                    <Image src={room.images[0]} alt={room.name} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
+                                    <Image src={room.images[0]} alt={`${room.name} - Yıldız Hotel Kapadokya`} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
                                         className="object-cover" />
                                 </div>
                                 <div className="p-6 space-y-3 text-[#111827]">
@@ -34,8 +33,8 @@ const RoomsPage = () => {
                                             <span key={i} className="flex items-center gap-1">{iconMap[feature]?.()}</span>
                                         ))}
                                     </div>
-                                    <Link href={`/rooms/${room.id}`}>
-                                        <button className="mt-2 px-10 py-2 bg-[#1f2c42] text-[#f8f8f3] relative overflow-hidden z-0 group cursor-pointer">
+                                    <Link href={`/rooms/${room.id}`} aria-label="Ürgüp Taş Odalar">
+                                        <button className="mt-2 px-10 py-2 bg-[#1f2c42] text-white relative overflow-hidden z-0 group cursor-pointer">
                                             <span className="relative z-10">Detayları Gör</span>
                                             <span className="absolute inset-0 bg-[#b99365] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>
                                         </button>
