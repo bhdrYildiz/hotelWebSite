@@ -23,7 +23,7 @@ const AboutSection = () => {
             {/* Sağ arka plan görseli */}
             <div
                 className="absolute inset-y-0 right-12 top-24 w-full md:w-3/4 h-3/4 bg-center opacity-10"
-                style={{ backgroundImage: "url('/images/balon.png')" }}
+                style={{ backgroundImage: "url('/images/turlar/tur24.jpg')" }}
             />
 
             <div className="container max-w-[1200px] min-h-[500px] md:min-h-[600px] mx-auto px-4 grid md:grid-cols-2 gap-12 items-center relative z-20">
