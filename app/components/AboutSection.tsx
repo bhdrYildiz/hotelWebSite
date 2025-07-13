@@ -39,7 +39,7 @@ const AboutSection = () => {
                             variants={imageVariants}
                         >
                             <Image
-                                src="/images/bahce/slide6.jpg"
+                                src="/images/bahce/slide8.jpg"
                                 alt="pool"
                                 className="shadow-lg w-5/6 h-[250px] object-cover"
                                 width={400}

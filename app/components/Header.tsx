@@ -31,7 +31,7 @@ const Header = () => {
     return (
         <>
             {/* Üst Navbar */}
-            <header className={`fixed w-full z-[1000] transition-all duration-200 ${navBg ? "bg-[#1f2c42] backdrop-blur-md shadow-md" : ""}`}>
+            <header className={`fixed w-full z-[1000] transition-all duration-200 ${navBg ? "bg-[#1f2c42]/40 backdrop-blur-md shadow-md" : ""}`}>
                 <div className="container max-w-[1200px] mx-auto px-4 py-3 flex items-center justify-between relative">
                     <Link href="/" className="shrink-0">
                         <img
