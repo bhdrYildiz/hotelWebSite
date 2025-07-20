@@ -31,11 +31,11 @@ const Header = () => {
     return (
         <>
             {/* Üst Navbar */}
-            <header className={`fixed w-full z-[1000] transition-all duration-200 ${navBg ? "bg-[#1f2c42]/40 backdrop-blur-md shadow-md" : ""}`}>
+            <header className={`fixed w-full z-[1000] transition-all duration-200 ${navBg ? "bg-[#1f2c42]/90 backdrop-blur-md shadow-md" : ""}`}>
                 <div className="container max-w-[1200px] mx-auto px-4 py-3 flex items-center justify-between relative">
                     <Link href="/" className="shrink-0">
                         <img
-                            src="/images/logo2.png"
+                            src="/images/logo3.png"
                             alt="Logo"
                             className="h-16 md:h-24 transition-all duration-300"
                         />
@@ -51,7 +51,7 @@ const Header = () => {
                     </nav>
 
                     {/* Desktop Rezervasyon */}
-                    <Link href="/contact" className="hidden md:flex items-center gap-2 bg-[#c1a37b] hover:bg-[#b99365] hover:text-[#1f2c42] text-white px-5 py-2 rounded-sm font-semibold text-sm font-cormorant transition-all duration-300">
+                    <Link href="/contact" className="hidden md:flex items-center gap-2 bg-[#421f1f] hover:bg-[#151E2E] hover:text-[#F1E9E0] text-white px-5 py-2 rounded-sm font-semibold text-base font-cormorant transition-all duration-300">
                         <CalendarDays size={16} />
                         REZERVASYON
                     </Link>

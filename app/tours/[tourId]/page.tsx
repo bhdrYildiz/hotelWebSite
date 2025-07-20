@@ -80,8 +80,8 @@ const TourDetailPage = () => {
                         <div>
                             <h3 className="text-2xl font-semibold text-[#1f2c42] mb-4">Yorumlar</h3>
                             <div className="bg-white rounded-lg p-4 shadow">
-                                <div className="flex items-center gap-2 text-[#b99365]">
-                                    {Array(5).fill(0).map((_, i) => <Star key={i} size={16} fill="#b99365" />)}
+                                <div className="flex items-center gap-2 text-[#1f2c42]">
+                                    {Array(5).fill(0).map((_, i) => <Star key={i} size={16} fill="#1f2c42" />)}
                                 </div>
                                 <p className="mt-2 text-gray-800">Muhteşem mekanlar ve harika rehberlerle muhteşem bir deneyim.</p>
                                 <span className="block mt-1 text-sm text-gray-500">– Yusuf Al Haddad, 15 Mart 2025</span>
@@ -93,7 +93,7 @@ const TourDetailPage = () => {
                     <div className="space-y-6 sticky top-24 self-start">
                         <div className="bg-white p-6 rounded-lg shadow-md">
                             <h4 className="text-xl font-bold text-[#1f2c42] mb-2">Online Rezervasyon</h4>
-                            <p className="text-[#b99365] text-2xl font-bold mb-1">{tour.price}</p>
+                            <p className="text-[#421f1f] text-2xl font-bold mb-1">{tour.price}</p>
                             <p className="text-sm text-gray-600 mb-4">Kişi başı – 24 saat öncesine kadar ücretsiz iptal</p>
                             <input type="date" className="w-full mb-2 p-2 border border-gray-300 rounded" />
                             <div className="mb-4">
@@ -105,11 +105,11 @@ const TourDetailPage = () => {
                                     id="personCount"
                                     min="1"
                                     max="10"
-                                    className="w-full p-2 border border-gray-300 rounded outline-none focus:ring-2 focus:ring-[#b99365] transition"
+                                    className="w-full p-2 border border-gray-300 rounded outline-none focus:ring-2 focus:ring-[#1f2c42] transition"
                                     placeholder="1"
                                 />
                             </div>
-                            <button className="w-full cursor-pointer bg-[#b99365] hover:bg-[#a98256] text-white py-2 rounded transition-all duration-300">
+                            <button className="w-full cursor-pointer bg-[#421f1f] hover:bg-[#1f2c42] text-white py-2 rounded transition-all duration-300">
                                 Müsaitliği Kontrol Et
                             </button>
                         </div>

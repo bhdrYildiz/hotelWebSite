@@ -113,7 +113,7 @@ const RoomDetailPage = () => {
                                 </div>
                                 <div className="p-6 space-y-3 text-[#111827]">
                                     <h3 className="text-xl font-semibold">{room.name}</h3>
-                                    <div className="flex flex-wrap gap-2 text-sm text-[#c1a37b]">
+                                    <div className="flex flex-wrap gap-2 text-sm text-[#421f1f]">
                                         {room.features.slice(0, 6).map((feature, i) => (
                                             <span key={i}>{iconMap[feature]?.()}</span>
                                         ))}
@@ -124,7 +124,7 @@ const RoomDetailPage = () => {
                                         aria-label={`${room.name} odasının detay sayfasını aç`}
                                     >
                                         <span className="relative z-10">Detayları Gör</span>
-                                        <span className="absolute inset-0 bg-[#b99365] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>
+                                        <span className="absolute inset-0 bg-[#421f1f] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>
                                     </Link>
 
                                 </div>

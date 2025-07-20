@@ -80,7 +80,7 @@ export default function CustomerReviews() {
                             aria-label="Tüm Google yorumlarını görüntüle"
                         >
                             <span className="relative z-10">Tüm Yorumları Gör</span>
-                            <span className="absolute inset-0 bg-[#b99365] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>
+                            <span className="absolute inset-0 bg-[#421f1f] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>
                         </Link>
                     </div>
                 </div>
@@ -108,7 +108,7 @@ export default function CustomerReviews() {
                                                 <Image src={review.avatar} alt={review.name} width={40} height={40} className="rounded-full" />
                                                 <div>
                                                     <p className="font-semibold text-sm text-[#1f2c42]">{review.name}</p>
-                                                    <p className="text-xs text-[#b99365]">{review.date}</p>
+                                                    <p className="text-xs text-[#421f1f]">{review.date}</p>
                                                 </div>
                                                 <Image src="/icons/google.png" alt="Tripadvisor" width={20} height={20} className="ml-auto" />
                                             </div>
@@ -125,7 +125,7 @@ export default function CustomerReviews() {
 
                                             <button
                                                 aria-expanded={expanded === index}
-                                                className="text-sm text-[#b99365] hover:underline hover:text-[#1f2c42] hover:font-semibold mt-2 self-start cursor-pointer"
+                                                className="text-sm text-[#421f1f] hover:underline hover:text-[#1f2c42] hover:font-semibold mt-2 self-start cursor-pointer"
                                                 onClick={() => setExpanded(expanded === index ? null : index)}
                                             >
                                                 {expanded === index ? "Hide" : "Read more"}

@@ -37,7 +37,7 @@ const ToursPage = () => {
                                     <Link
                                         href={`/tours/${tour.id}`}
                                         aria-label={`${tour.title} tur detaylarını inceleyin`}
-                                        className="mt-2 inline-block px-10 py-2 bg-[#aa875d] text-white relative overflow-hidden z-0 group cursor-pointer"
+                                        className="mt-2 inline-block px-10 py-2 bg-[#421f1f] text-white relative overflow-hidden z-0 group cursor-pointer"
                                     >
                                         <span className="relative z-10">Turu İncele</span>
                                         <span className="absolute inset-0 bg-[#1f2c42] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>

@@ -53,7 +53,7 @@ const RoomsSection = () => {
                                         <button
                                             className="absolute bottom-2 left-2 bg-[#1f2c42] text-white px-5 py-2 text-sm 
                                                         tracking-wide opacity-100 md:opacity-0 md:group-hover:opacity-100 
-                                                        hover:bg-[#b99365] hover:text-[#1f2c42] hover:font-bold transition cursor-pointer 
+                                                        hover:bg-[#F1E9E0] hover:text-[#1f2c42] hover:font-bold transition cursor-pointer 
                                                         flex items-center gap-2"
                                         >
                                             DETAYLARI GÖR
@@ -64,10 +64,10 @@ const RoomsSection = () => {
 
                                 {/* Metin Bilgileri */}
                                 <div className="p-6 text-left">
-                                    <h3 className="text-xl font-semibold text-[#1f2c42]">
+                                    <h3 className="text-xl font-semibold text-[#421f1f]">
                                         {room.name}
                                     </h3>
-                                    <p className="text-sm text-[#b99365] tracking-wide mb-2">
+                                    <p className="text-sm text-[#111827] tracking-wide mb-2">
                                         {room.description}
                                     </p>
                                     <div className="border-t-1 border-t-gray-300 pt-4 flex justify-between text-sm text-[#111827]">
@@ -92,7 +92,7 @@ const RoomsSection = () => {
                 <div className="mt-2">
                     <Link href="/rooms" className="relative overflow-hidden inline-block px-6 py-2 bg-[#1f2c42] text-white group z-0 cursor-pointer">
                         <span className="relative z-10">Tüm Odaları Gör</span>
-                        <span className="absolute inset-0 bg-[#b99365] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>
+                        <span className="absolute inset-0 bg-[#421f1f] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>
                     </Link>
                 </div>
             </div>

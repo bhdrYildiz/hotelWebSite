@@ -50,19 +50,19 @@ export default function ContactPage() {
                             <h2 className="text-2xl font-bold mb-4">İletişim</h2>
                             <div className="space-y-3 text-sm">
                                 <div className="flex items-center gap-3">
-                                    <Phone size={16} className="text-[#b99365]" />
+                                    <Phone size={16} className="text-[#421f1f]" />
                                     <Link href="tel:+903842282850" className="hover:underline" aria-label="Telefonla ara: +90 530 389 71 63">
                                         +90 530 389 71 63
                                     </Link>
                                 </div>
                                 <div className="flex items-center gap-3">
-                                    <Mail size={16} className="text-[#b99365]" />
+                                    <Mail size={16} className="text-[#421f1f]" />
                                     <Link href="mailto:info@yildizhotel.com.tr" className="hover:underline" aria-label="mail at: info@yildizhotel.com">
                                         info@yildizhotel.com
                                     </Link>
                                 </div>
                                 <div className="flex items-center gap-3">
-                                    <Navigation size={16} className="text-[#b99365]" />
+                                    <Navigation size={16} className="text-[#421f1f]" />
                                     <Link
                                         href="https://www.google.com/maps/place/Y%C4%B1ld%C4%B1z+Hotel/@38.6430322,34.9175703,14z/data=!4m9!3m8!1s0x152a5cdd1a34f68b:0xfba04847217ba7b8!5m2!4m1!1i2!8m2!3d38.6326155!4d34.9160521!16s%2Fg%2F1tglcsdb?entry=ttu"
                                         target="_blank"
@@ -74,7 +74,7 @@ export default function ContactPage() {
                                     </Link>
                                 </div>
                                 <div className="flex items-center gap-3">
-                                    <MapPin size={16} className="text-[#b99365]" />
+                                    <MapPin size={16} className="text-[#421f1f]" />
                                     <span>Kavaklıönü Mah., Atatürk Blv. No:61, 50400 Ürgüp/Nevşehir</span>
                                 </div>
                             </div>

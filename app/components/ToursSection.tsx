@@ -26,7 +26,7 @@ export default function ToursSection() {
                         className="relative overflow-hidden inline-block px-6 py-2 bg-[#1f2c42] text-white group z-0 cursor-pointer"
                     >
                         <span className="relative z-10">Turlara Göz At</span>
-                        <span className="absolute inset-0 bg-[#b99365] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>
+                        <span className="absolute inset-0 bg-[#421f1f] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>
                     </Link>
                 </div>
             </div>
@@ -82,7 +82,7 @@ function TourCard({ tour, index }: { tour: Tour; index: number }) {
                     className="relative overflow-hidden inline-block px-6 py-2 bg-[#1f2c42] text-white group z-0 cursor-pointer"
                 >
                     <span className="relative z-10">Detayları Gör</span>
-                    <span className="absolute inset-0 bg-[#b99365] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>
+                    <span className="absolute inset-0 bg-[#421f1f] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>
                 </Link>
             </div>
         </motion.div>

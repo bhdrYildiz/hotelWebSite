@@ -30,7 +30,7 @@ export default function Footer() {
 
                 {/* Orta Sütun - Sayfa linkleri */}
                 <div className="text-center md:text-left">
-                    <h3 className="font-bold mb-4 uppercase text-lg text-[#c1a37b] tracking-wide">Hızlı Linkler</h3>
+                    <h3 className="font-bold mb-4 uppercase text-lg text-[#421f1f] tracking-wide">Hızlı Linkler</h3>
                     <ul className="space-y-2 text-base font-medium">
                         {[
                             { label: "AnaSayfa", href: "/" },
@@ -43,7 +43,7 @@ export default function Footer() {
                             <li key={item.href}>
                                 <Link
                                     href={item.href}
-                                    className="hover:text-[#b99365] transition-colors duration-200" aria-label="label"
+                                    className="hover:text-[#421f1f] transition-colors duration-200" aria-label="label"
                                 >
                                     {item.label}
 
@@ -54,37 +54,37 @@ export default function Footer() {
                 </div>
 
                 <div className="text-center md:text-left">
-                    <h3 className="font-bold mb-4 uppercase text-lg text-[#c1a37b] tracking-wide">Odalar</h3>
+                    <h3 className="font-bold mb-4 uppercase text-lg text-[#421f1f] tracking-wide">Odalar</h3>
                     <ul className="space-y-2 text-base font-medium">
-                        <li><Link href="/rooms/room-301" className="hover:text-[#b99365] transition" aria-label="Özel Teraslı ve Jakuzili King Suit">Özel Teraslı ve Jakuzili King Suit</Link></li>
-                        <li><Link href="/rooms/room-105" className="hover:text-[#b99365] transition" aria-label="Havuzlu King Suit">Havuzlu King Suit</Link></li>
-                        <li><Link href="/rooms/room-103" className="hover:text-[#b99365] transition" aria-label="Jakuzili ve Balkonlu Suit">Jakuzili ve Balkonlu Suit</Link></li>
-                        <li><Link href="/rooms/room-202" className="hover:text-[#b99365] transition" aria-label="Deluxe Room 202">Deluxe Room 202</Link></li>
-                        <li><Link href="/rooms/room-203" className="hover:text-[#b99365] transition" aria-label="Deluxe Room 203">Deluxe Room 203</Link></li>
-                        <li><Link href="/rooms/room-104" className="hover:text-[#b99365] transition" aria-label="Deluxe Room">Deluxe Room</Link></li>
+                        <li><Link href="/rooms/room-301" className="hover:text-[#421f1f] transition" aria-label="Özel Teraslı ve Jakuzili King Suit">Özel Teraslı ve Jakuzili King Suit</Link></li>
+                        <li><Link href="/rooms/room-105" className="hover:text-[#421f1f] transition" aria-label="Havuzlu King Suit">Havuzlu King Suit</Link></li>
+                        <li><Link href="/rooms/room-103" className="hover:text-[#421f1f] transition" aria-label="Jakuzili ve Balkonlu Suit">Jakuzili ve Balkonlu Suit</Link></li>
+                        <li><Link href="/rooms/room-202" className="hover:text-[#421f1f] transition" aria-label="Deluxe Room 202">Deluxe Room 202</Link></li>
+                        <li><Link href="/rooms/room-203" className="hover:text-[#421f1f] transition" aria-label="Deluxe Room 203">Deluxe Room 203</Link></li>
+                        <li><Link href="/rooms/room-104" className="hover:text-[#421f1f] transition" aria-label="Deluxe Room">Deluxe Room</Link></li>
                     </ul>
                 </div>
 
                 {/* Sağ Sütun - İletişim bilgileri */}
                 <div className="text-center md:text-left">
-                    <h3 className="font-bold mb-4 uppercase text-lg text-[#c1a37b] tracking-wide">İletişim</h3>
+                    <h3 className="font-bold mb-4 uppercase text-lg text-[#421f1f] tracking-wide">İletişim</h3>
                     <address className="not-italic space-y-4 text-base text-[#1f2c42]">
                         <p className="flex items-center justify-center md:justify-start gap-2">
-                            <FaMapMarkerAlt className="text-[#b99365]" />
+                            <FaMapMarkerAlt className="text-[#421f1f]" />
                             Kavaklıönü Mah., Atatürk Blv. No:61, Ürgüp/Nevşehir
                         </p>
                         <p className="flex items-center justify-center md:justify-start gap-2">
-                            <FaPhoneAlt className="text-[#b99365]" />
+                            <FaPhoneAlt className="text-[#421f1f]" />
                             <Link href="tel:+905303897163" className="hover:underline" aria-label="telefon numarası">+90 530 389 7163</Link>
                         </p>
                         <p className="flex items-center justify-center md:justify-start gap-2">
-                            <FaEnvelope className="text-[#b99365]" />
+                            <FaEnvelope className="text-[#421f1f]" />
                             <Link href="mailto:info@yildizhotel.com" className="hover:underline" aria-label="mail için">info@yildizhotel.com</Link>
                         </p>
                     </address>
 
                     {/* Sosyal medya ikonları */}
-                    <div className="flex justify-center md:justify-start gap-4 mt-4 text-xl text-[#b99365]">
+                    <div className="flex justify-center md:justify-start gap-4 mt-4 text-xl text-[#421f1f]">
                         <Link href="/" aria-label="Facebook sayfamız"><FaFacebookF className="hover:text-[#1f2c42] transition" /></Link>
                         <Link href="/" aria-label="Instagram sayfamız"><FaInstagram className="hover:text-[#1f2c42] transition" /></Link>
                         <Link href="/" aria-label="Tripadvisor sayfamız"><FaTripadvisor className="hover:text-[#1f2c42] transition" /></Link>
@@ -94,7 +94,7 @@ export default function Footer() {
             </div>
 
             {/* Alt Bilgi */}
-            <div className="mt-12 border-t border-[#d6d6d6] pt-6 text-center text-xs text-[#1f2c42] font-light tracking-wide">
+            <div className="mt-12 border-t border-[#d6d6d6] pt-6 text-center text-xs text-[#421f1f] font-light tracking-wide">
                 © {new Date().getFullYear()} Yıldız Otel Cappadocia.
             </div>
         </footer>
