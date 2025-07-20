@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Cormorant_Infant, Cormorant_SC } from "next/font/google";
 import WhatsappButton from "./components/WhatsappButton";
 import ScrollToTop from "./components/ScrollToTop";
+import Script from "next/script";
 
 const cormorantInfant = Cormorant_Infant({
   subsets: ["latin"],
@@ -27,7 +28,6 @@ export const metadata: Metadata = {
   },
 };
 
-
 export default function RootLayout({
   children,
 }: {
@@ -36,6 +36,24 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorantInfant.variable} ${cormorantSC.variable}`}>
       <body>
+        {/* Google Analytics Script */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-SFGQLN589J"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-SFGQLN589J');
+            `,
+          }}
+        />
+        {/* Site içeriği */}
         {children}
         <WhatsappButton />
         <ScrollToTop />
