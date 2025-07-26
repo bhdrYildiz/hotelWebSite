@@ -85,8 +85,8 @@ export default function Footer() {
 
                     {/* Sosyal medya ikonları */}
                     <div className="flex justify-center md:justify-start gap-4 mt-4 text-xl text-[#421f1f]">
-                        <Link href="/" aria-label="Facebook sayfamız"><FaFacebookF className="hover:text-[#1f2c42] transition" /></Link>
-                        <Link href="/" aria-label="Instagram sayfamız"><FaInstagram className="hover:text-[#1f2c42] transition" /></Link>
+                        <Link href="https://www.instagram.com/urgupyildizhotel/" aria-label="Facebook sayfamız"><FaFacebookF className="hover:text-[#1f2c42] transition" /></Link>
+                        <Link href="https://www.instagram.com/urgupyildizhotel/" aria-label="Instagram sayfamız"><FaInstagram className="hover:text-[#1f2c42] transition" /></Link>
                         <Link href="/" aria-label="Tripadvisor sayfamız"><FaTripadvisor className="hover:text-[#1f2c42] transition" /></Link>
                         <Link href="/" aria-label="Whatsapp sayfamız"><FaWhatsapp className="hover:text-[#1f2c42] transition" /></Link>
                     </div>

@@ -52,6 +52,12 @@ export default function ContactPage() {
                                 <div className="flex items-center gap-3">
                                     <Phone size={16} className="text-[#421f1f]" />
                                     <Link href="tel:+903842282850" className="hover:underline" aria-label="Telefonla ara: +90 530 389 71 63">
+                                        0 (384) 341 46 10
+                                    </Link>
+                                </div>
+                                <div className="flex items-center gap-3">
+                                    <Phone size={16} className="text-[#421f1f]" />
+                                    <Link href="tel:+903842282850" className="hover:underline" aria-label="Telefonla ara: +90 530 389 71 63">
                                         +90 530 389 71 63
                                     </Link>
                                 </div>
