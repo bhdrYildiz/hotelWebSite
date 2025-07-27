@@ -75,6 +75,8 @@ export default function Footer() {
                         </p>
                         <p className="flex items-center justify-center md:justify-start gap-2">
                             <FaPhoneAlt className="text-[#421f1f]" />
+                            <Link href="tel:0(384)3414610" className="hover:underline" aria-label="telefon numarası">0 (384) 341 46 10</Link>
+                            <FaPhoneAlt className="text-[#421f1f]" />
                             <Link href="tel:+905303897163" className="hover:underline" aria-label="telefon numarası">+90 530 389 7163</Link>
                         </p>
                         <p className="flex items-center justify-center md:justify-start gap-2">
