@@ -20,17 +20,17 @@ export const metadata = {
   ],
   robots: "index, follow",
   alternates: {
-    canonical: "https://yildizhotelcappadocia.com/about",
+    canonical: "www.https://yildizhotelcappadocia.com/about",
   },
   openGraph: {
     title: "Hakkımızda | Yıldız Otel Kapadokya",
     description:
       "Kapadokya’da konforlu ve otantik konaklama için Yıldız Otel’e göz atın. Jakuzili taş odalar, balayı süitleri ve Ürgüp merkezi konumuyla hizmetinizde.",
-    url: "https://yildizhotelcappadocia.com/about",
+    url: "www.https://yildizhotelcappadocia.com/about",
     siteName: "Yıldız Otel Kapadokya",
     images: [
       {
-        url: "https://yildizhotelcappadocia.com/images/bahce/slide5.jpg",
+        url: "www.https://yildizhotelcappadocia.com/images/logo.png",
         width: 800,
         height: 600,
         alt: "Yıldız Otel Kapadokya Taş Oda",

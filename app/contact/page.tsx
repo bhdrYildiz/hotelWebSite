@@ -25,7 +25,7 @@ export default function ContactPage() {
                     <div className="text-center space-y-4">
                         <h1 className="text-4xl md:text-5xl font-bold">Neredeyiz?</h1>
                         <p className="mx-auto text-gray-700 text-start leading-relaxed">
-                            Ürgüp&apos;ün büyüleyici zirvesinde yer alan Yıldız Hotel, misafirlerine benzersiz bir deneyim sunuyor. Gün doğumunun ilk ışıklarıyla uyanırken, Kapadokya&apos;nın eşsiz balon manzarasına şahit olabilirsiniz. Akşamları ise, gün batımının sıcak tonları eşliğinde, otelin manzaraya hakim terasında huzuru bulacaksınız. Doğanın sunduğu bu görsel şölen, Yıldız Hotel&apos;in sunduğu lüks ve konforla birleşerek unutulmaz bir konaklama deneyimi yaratıyor.
+                            Ürgüp&apos;ün merkezinde yer alan Yıldız Hotel, 1989’dan bu yana misafirlerine Kapadokya&apos;nın büyüsünü yaşatıyor. Taş odalarımızda geleneksel dokuyu modern konforla buluşturuyor, jakuzili suitlerimizde tatilinize ayrıcalık katıyoruz. Sıcak kahvaltılarımız, samimi hizmetimiz ve 30 yılı aşan deneyimimizle sizi sadece bir misafir değil, ailemizin bir parçası olarak ağırlıyoruz. Kapadokya&apos;nın eşsiz manzaraları eşliğinde unutulmaz bir konaklama deneyimi için Yıldız Hotel sizi bekliyor.
                         </p>
                     </div>
 
@@ -50,25 +50,25 @@ export default function ContactPage() {
                             <h2 className="text-2xl font-bold mb-4">İletişim</h2>
                             <div className="space-y-3 text-sm">
                                 <div className="flex items-center gap-3">
-                                    <Phone size={16} className="text-[#421f1f]" />
+                                    <Phone size={16} className="text-[#b99365]" />
                                     <Link href="tel:+903842282850" className="hover:underline" aria-label="Telefonla ara: +90 530 389 71 63">
                                         0 (384) 341 46 10
                                     </Link>
                                 </div>
                                 <div className="flex items-center gap-3">
-                                    <Phone size={16} className="text-[#421f1f]" />
+                                    <Phone size={16} className="text-[#b99365]" />
                                     <Link href="tel:+903842282850" className="hover:underline" aria-label="Telefonla ara: +90 530 389 71 63">
                                         +90 530 389 71 63
                                     </Link>
                                 </div>
                                 <div className="flex items-center gap-3">
-                                    <Mail size={16} className="text-[#421f1f]" />
+                                    <Mail size={16} className="text-[#b99365]" />
                                     <Link href="mailto:info@yildizhotel.com.tr" className="hover:underline" aria-label="mail at: info@yildizhotel.com">
                                         info@yildizhotel.com
                                     </Link>
                                 </div>
                                 <div className="flex items-center gap-3">
-                                    <Navigation size={16} className="text-[#421f1f]" />
+                                    <Navigation size={16} className="text-[#b99365]" />
                                     <Link
                                         href="https://www.google.com/maps/place/Y%C4%B1ld%C4%B1z+Hotel/@38.6430322,34.9175703,14z/data=!4m9!3m8!1s0x152a5cdd1a34f68b:0xfba04847217ba7b8!5m2!4m1!1i2!8m2!3d38.6326155!4d34.9160521!16s%2Fg%2F1tglcsdb?entry=ttu"
                                         target="_blank"
@@ -80,7 +80,7 @@ export default function ContactPage() {
                                     </Link>
                                 </div>
                                 <div className="flex items-center gap-3">
-                                    <MapPin size={16} className="text-[#421f1f]" />
+                                    <MapPin size={16} className="text-[#b99365]" />
                                     <span>Kavaklıönü Mah., Atatürk Blv. No:61, 50400 Ürgüp/Nevşehir</span>
                                 </div>
                             </div>

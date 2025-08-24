@@ -51,7 +51,7 @@ const Header = () => {
                     </nav>
 
                     {/* Desktop Rezervasyon */}
-                    <Link href="/contact" className="hidden md:flex items-center gap-2 bg-[#421f1f] hover:bg-[#151E2E] hover:text-[#F1E9E0] text-white px-5 py-2 rounded-sm font-semibold text-base font-cormorant transition-all duration-300">
+                    <Link href="/contact" className="hidden md:flex items-center gap-2 bg-[#b99365] hover:bg-[#151E2E] hover:text-[#F1E9E0] text-white px-5 py-2 rounded-sm font-semibold text-base font-cormorant transition-all duration-300">
                         <CalendarDays size={16} />
                         REZERVASYON
                     </Link>

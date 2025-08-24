@@ -91,7 +91,7 @@ const AboutSection = () => {
                     transition={{ duration: 1.2, ease: 'easeOut' }}
                     viewport={{ once: true }}
                 >
-                    <h4 className="text-sm font-semibold text-[#421f1f] uppercase mb-2 tracking-wider text-center md:text-left">
+                    <h4 className="text-sm font-semibold text-[#b99365] uppercase mb-2 tracking-wider text-center md:text-left">
                         YILDIZ OTEL CAPPADOCIA
                     </h4>
                     <h2 className="text-4xl md:text-5xl font-bold text-[#1f2c42] leading-tight mb-6 text-center md:text-left">
@@ -105,7 +105,7 @@ const AboutSection = () => {
                     <div className="text-center md:text-left">
                         <Link
                             href="/contact"
-                            className="font-cormorant rounded-sm bg-[#421f1f] hover:bg-[#1f2c42] px-6 py-2 inline-block 
+                            className="font-cormorant rounded-sm bg-[#b99365] hover:bg-[#1f2c42] px-6 py-2 inline-block 
         transition-all duration-300 text-white hover:text-white font-semibold text-sm tracking-wider"
                         >
                             Hemen Rezervasyon Yap

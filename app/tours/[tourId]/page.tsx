@@ -41,7 +41,7 @@ const TourDetailPage = () => {
                     <div className="lg:col-span-2 space-y-10">
                         <div>
                             <h2 className="text-3xl font-bold text-[#1f2c42] text-center md:text-left">Tur Detayları</h2>
-                            <p className="text-[#1f2c42] mt-4 leading-relaxed text-center md:text-left">{tour.description}</p>
+                            <p className="text-gray-900 mt-4 font-semibold leading-relaxed text-center md:text-left">{tour.description}</p>
                         </div>
 
                         <div>
@@ -49,7 +49,7 @@ const TourDetailPage = () => {
                             <Accordion>
                                 {tour.program.map((item, i) => (
                                     <AccordionItem key={i} title={item.title} defaultOpen={true} >
-                                        <p className="text-base text-gray-700">{item.description}</p>
+                                        <p className="text-base text-gray-900 font-semibold">{item.description}</p>
                                     </AccordionItem>
                                 ))}
                             </Accordion>
@@ -80,11 +80,11 @@ const TourDetailPage = () => {
                         <div>
                             <h3 className="text-2xl font-semibold text-[#1f2c42] mb-4">Yorumlar</h3>
                             <div className="bg-white rounded-lg p-4 shadow">
-                                <div className="flex items-center gap-2 text-[#1f2c42]">
-                                    {Array(5).fill(0).map((_, i) => <Star key={i} size={16} fill="#1f2c42" />)}
+                                <div className="flex items-center gap-2 text-[#b99365]">
+                                    {Array(5).fill(0).map((_, i) => <Star key={i} size={16} fill="#b99365" />)}
                                 </div>
-                                <p className="mt-2 text-gray-800">Muhteşem mekanlar ve harika rehberlerle muhteşem bir deneyim.</p>
-                                <span className="block mt-1 text-sm text-gray-500">– Yusuf Al Haddad, 15 Mart 2025</span>
+                                <p className="mt-2 text-gray-800 font-bold">Muhteşem mekanlar ve harika rehberlerle muhteşem bir deneyim.</p>
+                                <span className="block mt-1 text-sm text-gray-800 font-semibold">– Yusuf Al Haddad, 15 Mart 2025</span>
                             </div>
                         </div>
                     </div>
@@ -93,7 +93,7 @@ const TourDetailPage = () => {
                     <div className="space-y-6 sticky top-24 self-start">
                         <div className="bg-white p-6 rounded-lg shadow-md">
                             <h4 className="text-xl font-bold text-[#1f2c42] mb-2">Online Rezervasyon</h4>
-                            <p className="text-[#421f1f] text-2xl font-bold mb-1">{tour.price}</p>
+                            <p className="text-[#b99365] text-2xl font-bold mb-1">{tour.price}</p>
                             <p className="text-sm text-gray-600 mb-4">Kişi başı – 24 saat öncesine kadar ücretsiz iptal</p>
                             <input type="date" className="w-full mb-2 p-2 border border-gray-300 rounded" />
                             <div className="mb-4">
@@ -109,32 +109,32 @@ const TourDetailPage = () => {
                                     placeholder="1"
                                 />
                             </div>
-                            <button className="w-full cursor-pointer bg-[#421f1f] hover:bg-[#1f2c42] text-white py-2 rounded transition-all duration-300">
+                            <button className="w-full cursor-pointer bg-[#b99365] hover:bg-[#1f2c42] text-white py-2 rounded transition-all duration-300">
                                 Müsaitliği Kontrol Et
                             </button>
                         </div>
-                        <div className="space-y-3 text-[#1f2c42] text-sm">
+                        <div className="space-y-3 text-gray-900 text-sm">
                             <div className="flex items-center gap-2">
-                                <BadgeCheck size={16} className="text-[#1f2c42]" />
+                                <BadgeCheck size={16} className="text-[#1f2c42] font-bold" />
                                 <span>Ücretsiz İptal</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <CreditCard size={16} className="text-[#1f2c42]" />
+                                <CreditCard size={16} className="text-[#1f2c42] font-bold " />
                                 <span>Sonra Ödeme Seçeneği</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <MapPin size={16} className="text-[#1f2c42]" />
+                                <MapPin size={16} className="text-[#1f2c42] font-bold" />
                                 <span>Otelden alma hizmeti dahildir</span>
                             </div>
 
                             {/* İletişim Bilgileri */}
                             <div className="mt-4 border-t border-gray-200 pt-4 space-y-2">
                                 <div className="flex items-center gap-2">
-                                    <Phone size={16} className="text-[#1f2c42]" />
+                                    <Phone size={16} className="text-[#1f2c42] font-semibold" />
                                     <a href="tel:+905551112233" className="hover:underline">+90 530 389 7163</a>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <Mail size={16} className="text-[#1f2c42]" />
+                                    <Mail size={16} className="text-[#1f2c42] font-semibold" />
                                     <a href="mailto:info@cappadociatours.com" className="hover:underline">info@yildizhotel.com</a>
                                 </div>
                             </div>

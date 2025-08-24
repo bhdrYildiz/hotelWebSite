@@ -2,7 +2,7 @@ import { rooms } from "@/app/data/rooms";
 import { tours } from "@/app/data/tours";
 
 export async function GET() {
-  const baseUrl = "https://yildizhotelcappadocia.com";
+  const baseUrl = "https://www.yildizhotelcappadocia.com";
 
   const staticRoutes = [
     "",

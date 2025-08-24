@@ -18,17 +18,17 @@ export const metadata = {
   ],
   robots: "index, follow",
   alternates: {
-    canonical: "https://yildizhotelcappadocia.com/rooms",
+    canonical: "www.https://yildizhotelcappadocia.com/rooms",
   },
   openGraph: {
     title: "Yıldız Otel Kapadokya Odaları | Jakuzili & Taş Odalar",
     description:
       "Kapadokya'nın merkezinde jakuzili, cave ve taş odalarla lüks bir tatil için Yıldız Otel'in odalarına göz atın.",
-    url: "https://yildizhotelcappadocia.com/rooms",
+    url: "www.https://yildizhotelcappadocia.com/rooms",
     siteName: "Yıldız Otel Kapadokya",
     images: [
       {
-        url: "https://yildizhotelcappadocia.com/images/banner.jpg",
+        url: "www.https://yildizhotelcappadocia.com/images/logo.png",
         width: 800,
         height: 600,
         alt: "Kapadokya Jakuzili Taş Oda - Yıldız Otel",

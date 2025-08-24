@@ -4,7 +4,7 @@ export async function GET() {
 User-agent: *
 Allow: /
 
-Sitemap: https://yildizhotelcappadocia.com/sitemap.xml
+Sitemap: https://www.yildizhotelcappadocia.com/sitemap.xml
   `.trim();
 
   return new Response(body, {

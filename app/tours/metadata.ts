@@ -21,11 +21,11 @@ export const metadata = {
     title: "Kapadokya Turları ve Aktiviteler | Yıldız Otel",
     description:
       "Yıldız Otel'in sunduğu eşsiz turlar ile Kapadokya’yı deneyimleyin. Balon turları, vadilerde yürüyüş ve daha fazlası sizi bekliyor.",
-    url: "https://yildizhotelcappadocia.com/tours",
+    url: "https://www.yildizhotelcappadocia.com/tours",
     siteName: "Yıldız Otel Kapadokya",
     images: [
       {
-        url: "https://yildizhotelcappadocia.com/images/banner.jpg",
+        url: "https://www.yildizhotelcappadocia.com/images/logo.png",
         width: 1200,
         height: 630,
         alt: "Kapadokya Turları - Yıldız Otel",

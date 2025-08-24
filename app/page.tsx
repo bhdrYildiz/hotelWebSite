@@ -5,21 +5,21 @@ export const generateMetadata = () => ({
   description:
     "Kapadokya'nın kalbinde, jakuzili taş odalar ve huzur dolu atmosferiyle Yıldız Otel Ürgüp sizi bekliyor. Balayı çiftleri ve tatilciler için ideal konaklama!",
   keywords: [
-    "kapadokya otel", "jakuzili oda", "ürgüp otelleri", "balayı oteli",
-    "taş oda", "yıldız otel", "yıldız otel kapadokya", "kapadokya tatil"
+    "kapadokya otel", "kapadokya jakuzili oda", "ürgüp otelleri", "ürgüp balayı oteli",
+    "kapadokya taş odalar", "kapadokya otelleri", "yıldız otel kapadokya", "kapadokya tatil"
   ],
   alternates: {
-    canonical: "https://yildizhotelcappadocia.com",
+    canonical: "https://www.yildizhotelcappadocia.com",
   },
   openGraph: {
     title: "Yıldız Otel Ürgüp | Kapadokya Jakuzili Taş Odalar",
     description:
       "Jakuzili ve taş mimarili özel odalar ile Kapadokya'da unutulmaz bir tatil deneyimi. Yıldız Otel Ürgüp'te huzur sizi bekliyor.",
-    url: "https://yildizhotelcappadocia.com",
+    url: "https://www.yildizhotelcappadocia.com",
     siteName: "Yıldız Otel Kapadokya",
     images: [
       {
-        url: "https://yildizhotelcappadocia.com/images/banner.jpg",
+        url: "https://www.yildizhotelcappadocia.com/images/banner.jpg",
         width: 1200,
         height: 630,
         alt: "Yıldız Otel Ürgüp Kapadokya",

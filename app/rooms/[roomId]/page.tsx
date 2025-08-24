@@ -21,7 +21,7 @@ const RoomDetailPage = () => {
     const [fullscreenIndex, setFullscreenIndex] = useState<number | null>(null);
 
     const amenities = [
-        { icon: "Coffee", label: "Nespresso" },
+        { icon: "Coffee", label: "Çay Kahve ikramı" },
         { icon: "Tv", label: "TV" },
         { icon: "Wifi", label: "Ücretsiz internet" },
         { icon: "Thermometer", label: "Klima" },
@@ -35,18 +35,23 @@ const RoomDetailPage = () => {
     ];
 
     if (!room) {
-        return <div className="text-center py-20">Room not found</div>;
+        return <div className="text-center py-20 text-lg">Oda bulunamadı.</div>;
     }
 
     return (
         <>
             <Header />
             <main className="font-cormorant bg-[#f8f8f3] text-[#1f2c42]">
-                <section className="w-full h-[300px] bg-cover bg-center flex items-center justify-center" style={{ backgroundImage: "url('/images/banner.jpg')" }}>
-                    <h1 className="text-3xl md:text-5xl font-bold drop-shadow-md ">{room.name}</h1>
+                {/* Banner */}
+                <section
+                    className="w-full h-[300px] bg-cover bg-center flex items-center justify-center"
+                    style={{ backgroundImage: "url('/images/banner.jpg')" }}
+                >
+                    <h1 className="text-3xl md:text-5xl font-bold drop-shadow-md text-center">{room.name}</h1>
                 </section>
 
-                <section className="w-full bg-[#e2e2e2]/40 py-12">
+                {/* Swiper Gallery */}
+                <section className="w-full bg-[#e2e2e2]/40 py-12 relative">
                     <Swiper
                         modules={[Navigation, Autoplay]}
                         navigation={{ nextEl: '.swiper-button-next-custom', prevEl: '.swiper-button-prev-custom' }}
@@ -63,77 +68,109 @@ const RoomDetailPage = () => {
                         className="relative w-full"
                     >
                         {room.images.map((img, index) => (
-                            <SwiperSlide key={index} className="rounded-md overflow-hidden shadow-md cursor-pointer" style={{ width: 'auto' }} onClick={() => setFullscreenIndex(index)}>
-                                <div className="relative h-[500px] w-[600px]">
-                                    <Image src={img} alt={`${room.name} fotoğraf ${index + 1}`} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px" className="object-cover rounded-md" />
-                                </div>
+                            <SwiperSlide key={index}>
+                                <button
+                                    onClick={() => setFullscreenIndex(index)}
+                                    className="rounded-md overflow-hidden shadow-md cursor-pointer w-full focus:outline-none focus:ring-2 focus:ring-[#b99365]"
+                                    aria-label={`${room.name} fotoğraf ${index + 1} - tam ekran aç`}
+                                >
+                                    <div className="relative h-[500px] w-[100%] md:w-[600px]">
+                                        <Image
+                                            src={img}
+                                            alt={`${room.name} fotoğraf ${index + 1}`}
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
+                                            className="object-cover rounded-md"
+                                        />
+                                    </div>
+                                </button>
                             </SwiperSlide>
                         ))}
-                        <div className="swiper-button-prev-custom absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/70 text-[#1f2c42] hover:bg-[#b99365] hover:text-white rounded-full p-1 shadow-md cursor-pointer">
+
+                        {/* Navigation Buttons */}
+                        <button
+                            className="swiper-button-prev-custom absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/70 text-[#1f2c42] hover:bg-[#b99365] hover:text-white rounded-full p-2 shadow-md"
+                            aria-label="Önceki görsel"
+                        >
                             <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" /></svg>
-                        </div>
-                        <div className="swiper-button-next-custom absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/70 text-[#1f2c42] hover:bg-[#b99365] hover:text-white rounded-full p-1 shadow-md cursor-pointer">
+                        </button>
+                        <button
+                            className="swiper-button-next-custom absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/70 text-[#1f2c42] hover:bg-[#b99365] hover:text-white rounded-full p-2 shadow-md"
+                            aria-label="Sonraki görsel"
+                        >
                             <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" /></svg>
-                        </div>
+                        </button>
                     </Swiper>
                 </section>
 
+                {/* Room Info */}
                 <section className="max-w-[1200px] mx-auto px-6 py-12">
                     <h2 className="text-4xl font-bold mb-6 text-center md:text-left">{room.name}</h2>
-                    <p className="text-base text-[#111827] leading-relaxed mb-10 max-w-full text-center md:text-left">{room.description}</p>
+                    <p className="text-base text-[#111827] leading-relaxed mb-10 text-center md:text-left">
+                        {room.description}
+                        Tüm odalarımızda modern konfor, sıcak atmosfer ve Kapadokya manzarasıyla unutulmaz bir konaklama deneyimi sunuyoruz.
+                    </p>
 
-                    <div className="border-t-1 border-t-gray-300 pt-10">
+                    <div className="border-t border-gray-300 pt-10">
                         <h3 className="text-3xl font-semibold mb-8 text-center md:text-left">Oda Özellikleri</h3>
-                        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                        <ul className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                             {room.features.map((feature, i) => {
                                 const matchedAmenity = amenities.find((a) => a.icon === feature);
                                 return (
-                                    <div
+                                    <li
                                         key={i}
                                         className="flex items-center gap-3 border border-gray-200 rounded-xl px-6 py-4 shadow-sm bg-[#e2e2e2]/40 hover:shadow-md transition"
                                     >
                                         {iconMap[feature]?.()}
-                                        <span className="text-sm font-medium text-[#1f2c42]">
-                                            {matchedAmenity?.label ?? feature}
-                                        </span>
-                                    </div>
+                                        <span className="text-sm font-medium text-[#1f2c42]">{matchedAmenity?.label ?? feature}</span>
+                                    </li>
                                 );
                             })}
-                        </div>
+                        </ul>
                     </div>
                 </section>
 
+                {/* Other Rooms */}
                 <section className="max-w-[1200px] mx-auto px-6 py-20">
                     <h2 className="text-3xl font-bold text-[#1f2c42] mb-12 text-center">Diğer Odalarımız</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {otherRooms.slice(0, 3).map((room) => (
-                            <div key={room.id} className="bg-[#e2e2e2]/40 shadow-md overflow-hidden hover:scale-[1.02] transition-all duration-300">
+                        {otherRooms.slice(0, 3).map((r) => (
+                            <article
+                                key={r.id}
+                                className="bg-[#e2e2e2]/40 shadow-md overflow-hidden hover:scale-[1.02] transition-all duration-300"
+                            >
                                 <div className="relative h-[360px]">
-                                    <Image src={room.images[0]} alt={`Yıldız Otel - ${room.name} odası görseli`} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px" className="object-cover" />
+                                    <Image
+                                        src={r.images[0]}
+                                        alt={`Yıldız Otel - ${r.name} odası görseli`}
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
+                                        className="object-cover"
+                                    />
                                 </div>
                                 <div className="p-6 space-y-3 text-[#111827]">
-                                    <h3 className="text-xl font-semibold">{room.name}</h3>
-                                    <div className="flex flex-wrap gap-2 text-sm text-[#421f1f]">
-                                        {room.features.slice(0, 6).map((feature, i) => (
-                                            <span key={i}>{iconMap[feature]?.()}</span>
+                                    <h3 className="text-xl font-semibold">{r.name}</h3>
+                                    <ul className="flex flex-wrap gap-2 text-sm text-[#b99365]">
+                                        {r.features.slice(0, 6).map((feature, i) => (
+                                            <li key={i} aria-label={feature}>{iconMap[feature]?.()}</li>
                                         ))}
-                                    </div>
+                                    </ul>
                                     <Link
-                                        href={`/rooms/${room.id}`}
-                                        className="mt-2 inline-block px-10 py-2 bg-[#1f2c42] text-white relative overflow-hidden z-0 group cursor-pointer"
-                                        aria-label={`${room.name} odasının detay sayfasını aç`}
+                                        href={`/rooms/${r.id}`}
+                                        className="mt-2 inline-block px-10 py-2 bg-[#1f2c42] text-white relative overflow-hidden z-0 group cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#b99365]"
+                                        aria-label={`${r.name} odasının detay sayfasını aç`}
                                     >
                                         <span className="relative z-10">Detayları Gör</span>
-                                        <span className="absolute inset-0 bg-[#421f1f] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>
+                                        <span className="absolute inset-0 bg-[#b99365] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></span>
                                     </Link>
-
                                 </div>
-                            </div>
+                            </article>
                         ))}
                     </div>
                 </section>
             </main>
             <Footer />
+
             {fullscreenIndex !== null && (
                 <FullScreenSlider images={room.images} startIndex={fullscreenIndex} onClose={() => setFullscreenIndex(null)} />
             )}

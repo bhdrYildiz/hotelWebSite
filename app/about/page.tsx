@@ -19,14 +19,14 @@ import {
 import { motion } from 'framer-motion';
 
 const services = [
-    { icon: <Car size={24} />, label: 'Airport Pickup' },
-    { icon: <Wifi size={24} />, label: 'Wi-Fi' },
+    { icon: <Car size={24} />, label: 'Havaalanı Transfer' },
+    { icon: <Wifi size={24} />, label: 'Ücretsiz İnternet' },
     { icon: <Martini size={24} />, label: 'Bar' },
-    { icon: <Snowflake size={24} />, label: 'Air Conditioner' },
-    { icon: <Tv size={24} />, label: 'Widescreen TV' },
-    { icon: <ParkingSquare size={24} />, label: 'Car Parking' },
-    { icon: <Utensils size={24} />, label: 'Breakfast' },
-    { icon: <BedDouble size={24} />, label: 'Long Beds' },
+    { icon: <Snowflake size={24} />, label: 'Klimalı Odalar' },
+    { icon: <Tv size={24} />, label: 'Bein connect' },
+    { icon: <ParkingSquare size={24} />, label: 'Ücretsiz Otopark' },
+    { icon: <Utensils size={24} />, label: 'Açık Büfe Kahvaltı' },
+    { icon: <BedDouble size={24} />, label: 'Geniş Yatak' },
 ];
 
 const AboutPage = () => {
@@ -48,9 +48,9 @@ const AboutPage = () => {
                 <section className="container max-w-[1200px] min-h-[600px] mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-16 items-start mt-2">
                     {/* Text Content */}
                     <div className="space-y-6 text-[#1f2c42]">
-                        <p className="text-sm uppercase tracking-widest text-[#421f1f] font-semibold text-center md:text-left">
+                        <h2 className="text-sm uppercase tracking-widest text-[#b99365] font-semibold text-center md:text-left">
                             Kapadokya&apos;da Unutulmaz Konaklama Deneyimi
-                        </p>
+                        </h2>
                         <h2 className="text-4xl font-bold leading-snug mb-4 text-center md:text-left">YILDIZ OTEL</h2>
 
                         <p className="text-base leading-relaxed">
@@ -69,15 +69,18 @@ const AboutPage = () => {
                         <div className='flex flex-row justify-start gap-6'>
                             <div className="mt-2">
                                 <h4 className="text-base font-semibold mb-2 flex items-center gap-2">
-                                    <PhoneCall size={20} className="text-[#421f1f]" /> Rezervasyon:
+                                    <PhoneCall size={20} className="text-[#b99365]" /> Rezervasyon:
                                 </h4>
                                 <p className="text-[#1f2c42] text-lg font-semibold">
-                                    +90 530 389 71 63 <br />
+                                    0(384) 341 46 10 <br />
+                                </p>
+                                <p className="text-[#1f2c42] text-lg font-semibold">
+                                    0 530 389 71 63 <br />
                                 </p>
                             </div>
                             <div className="mt-2">
                                 <h4 className="text-base font-semibold mb-2 flex items-center gap-2">
-                                    <Mail size={20} className="text-[#421f1f]" /> İletişim:
+                                    <Mail size={20} className="text-[#b99365]" /> İletişim:
                                 </h4>
                                 <p className="text-[#1f2c42] text-lg font-semibold">
                                     info@yildizhotel.com <br />
@@ -132,7 +135,7 @@ const AboutPage = () => {
                                 className="bg-[#e2e2e2]/40 backdrop-blur-md p-6 rounded-xl shadow-inner text-center border border-[#f8f8f3]/30 hover:scale-105 transition-all duration-300 flex flex-col items-center justify-center"
                             >
                                 <div className="text-[#1f2c42] mb-3">{s.icon}</div>
-                                <p className="text-[#421f1f] text-sm font-semibold">{s.label}</p>
+                                <p className="text-[#b99365] text-sm font-semibold">{s.label}</p>
                             </div>
                         ))}
                     </div>
