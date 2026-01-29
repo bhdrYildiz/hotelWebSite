@@ -90,12 +90,12 @@ export default function BlogSidebar(props: {
           <form action="/blog" method="get" className="flex">
             <input
               name="q"
-              placeholder="Search..."
+              placeholder="Arama yapın..."
               className="w-full border border-black/10 px-4 py-3 text-sm outline-none focus:border-[#ab9a8b]"
             />
             <button
               type="submit"
-              aria-label="Search"
+              aria-label="Arama yapın"
               className="shrink-0 w-12 bg-[#1c2c34] text-white hover:bg-[#ab9a8b] transition"
             >
               <span className="text-lg leading-none">⌕</span>
@@ -106,7 +106,7 @@ export default function BlogSidebar(props: {
         {/* Kategoriler */}
         <div className="p-6 border-b border-black/10">
           <div className="bg-[#1c2c34] text-white px-5 py-4 font-light tracking-wide">
-            Categories
+            Kategoriler
           </div>
           <div className="border border-black/10 border-t-0">
             <ul className="divide-y divide-black/10">
@@ -128,7 +128,7 @@ export default function BlogSidebar(props: {
         {/* Recent Posts */}
         <div className="p-6 border-b border-black/10">
           <div className="bg-[#1c2c34] text-white px-5 py-4 font-light tracking-wide">
-            Recent Posts
+            Son Yazılar
           </div>
           <div className="border border-black/10 border-t-0 divide-y divide-black/10">
             {props.recentPosts.slice(0, 3).map((p) => (
@@ -163,7 +163,7 @@ export default function BlogSidebar(props: {
         {/* Tags */}
         <div className="p-6 border-b border-black/10">
           <div className="bg-[#1c2c34] text-white px-5 py-4 font-light tracking-wide">
-            Tags
+            Etiketler
           </div>
           <div className="border border-black/10 border-t-0 p-5 flex flex-wrap gap-3">
             {tags.map((t) => (

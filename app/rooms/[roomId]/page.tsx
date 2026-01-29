@@ -109,7 +109,7 @@ const RoomDetailPage = () => {
 
                         <div className="w-full lg:w-[40%] space-y-8">
                             <div className="bg-[#f5f5f0] border border-gray-200 p-8">
-                                <p className="text-5xl font-bold text-[#c9b896] text-center">{room.price} <span className="text-lg text-gray-600">$</span></p>
+                                <p className="text-5xl font-bold text-[#c9b896] text-center">{room.price} <span className="text-lg text-gray-600">€</span></p>
                                 <p className="text-lg font-semibold text-gray-700 mb-2 text-center">Çift Kişilik Fiyat</p>
                             </div>
 
@@ -445,7 +445,7 @@ const RoomDetailPage = () => {
                                     alt={`${room.name} - ${fullscreenIndex + 1}`}
                                     fill
                                     sizes="(max-width: 768px) 100vw, 1200px"
-                                    className="object-contain shadow-2xl"
+                                    className="object-cover shadow-2xl"
                                     priority
                                 />
                             </div>

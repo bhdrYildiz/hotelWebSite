@@ -216,6 +216,7 @@ Kapadokya seyahatinizi planlarken bu rotayı temel alabilir, ilgi alanlarınıza
       "Balon Turu",
       "ATV",
       "Vadi Yürüyüşü",
+      "Ürgüp",
       "Göreme",
       "Uçhisar",
       "Avanos",

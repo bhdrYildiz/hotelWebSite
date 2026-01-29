@@ -53,7 +53,6 @@ export default function Gallery() {
         <>
             <Header />
             <main className="min-h-screen bg-light">
-                {/* Hero Banner */}
                 <PageHero
                     title="GALERİ"
                     subtitle="- YILDIZ OTEL&apos;İ RESİMLERLE KEŞFEDİN -"
@@ -77,7 +76,7 @@ export default function Gallery() {
                                     src={image.src}
                                     alt={`Gallery ${index + 1}`}
                                     fill
-                                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 300px"
+                                    sizes="(max-width: 768px) 100vw, 1200px"
                                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                                 />
 
@@ -139,13 +138,14 @@ export default function Gallery() {
                                     </svg>
                                 </button>
 
-                                <div className="flex h-full w-full items-center justify-center">
+                                <div className="relative h-full w-full">
                                     <Image
                                         src={selectedImage}
                                         alt={`Gallery ${selectedIndex + 1}`}
-                                        className="object-cover gallery-lightbox__image shadow-2xl"
                                         fill
-                                        sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 300px"
+                                        sizes="(max-width: 768px) 100vw, 1200px"
+                                        className="object-cover shadow-2xl"
+                                        priority
                                     />
                                 </div>
 
