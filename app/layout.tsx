@@ -1,24 +1,19 @@
 import "./global.css";
 import type { Metadata } from "next";
-import { Cormorant_Infant, Cormorant_SC } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
 import WhatsappButton from "./components/WhatsappButton";
 import ScrollToTop from "./components/ScrollToTop";
 import Script from "next/script";
 
-const cormorantInfant = Cormorant_Infant({
+const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-cormorant-infant",
-});
-
-const cormorantSC = Cormorant_SC({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-cormorant-sc",
+  weight: ["400", "500", "600", "700", "800"],
+  style: ["normal", "italic"],
+  variable: "--font-playfair",
 });
 
 export const metadata: Metadata = {
-  title: "Yıldız Otel Cappadocia",
+  title: "Yıldız Otel Kapadokya",
   description: "Kapadokyada unutulmaz bir tatil deneyimi..",
   icons: {
     icon: "/favicon.ico",
@@ -34,9 +29,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${cormorantInfant.variable} ${cormorantSC.variable}`}>
+    <html lang="en" className={playfairDisplay.variable}>
       <body>
-        {/* Google Analytics Script */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-SFGQLN589J"
           strategy="afterInteractive"
@@ -53,7 +47,6 @@ export default function RootLayout({
             `,
           }}
         />
-        {/* Site içeriği */}
         {children}
         <WhatsappButton />
         <ScrollToTop />

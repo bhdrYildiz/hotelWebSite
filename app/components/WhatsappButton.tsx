@@ -12,7 +12,6 @@ const WhatsappButton = () => {
         >
             <FaWhatsapp size={24} />
         </Link>
-
     );
 };
 

@@ -115,7 +115,7 @@ export const tours: Tour[] = [
     description:
       "Kendinizi genç ve enerjik hissediyorsanız Kapadokya’yı Atv ile karış karış etmek istiyorsanız bu tura katıldıktan sonra macera seviyeniz artacaktır. Ayrıca Kapadokya’ya arkadaş grubunuz ile geldiğinizde birlikte katılmanız gereken turların başında geleceğini düşünüyoruz ! Son zamanlarda trend aktiviterlerin başında gelen Atv Turu , genelde balayı çiftleri , arkadaş grupları tarafından tercih edilmekte olup günün her saatinde yapılabilmektedir.",
     price: "€20.00",
-    image: "/images/turlar/atv1.jpg",
+    image: "/images/turlar/atv2.jpg",
     gallery: [
       "/images/turlar/atv4.jpg",
       "/images/turlar/atv2.jpg",

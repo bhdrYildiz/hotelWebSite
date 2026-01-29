@@ -1,7 +1,7 @@
 // app/page.tsx
 
 export const generateMetadata = () => ({
-  title: "Yıldız Otel Ürgüp | Kapadokya Jakuzili ve Taş Odalar",
+  title: "Yıldız Otel Ürgüp | Kapadokya Taş Odalar",
   description:
     "Kapadokya'nın kalbinde, jakuzili taş odalar ve huzur dolu atmosferiyle Yıldız Otel Ürgüp sizi bekliyor. Balayı çiftleri ve tatilciler için ideal konaklama!",
   keywords: [
@@ -12,7 +12,7 @@ export const generateMetadata = () => ({
     canonical: "https://www.yildizhotelcappadocia.com",
   },
   openGraph: {
-    title: "Yıldız Otel Ürgüp | Kapadokya Jakuzili Taş Odalar",
+    title: "Yıldız Otel Ürgüp | Kapadokya Taş Odalar",
     description:
       "Jakuzili ve taş mimarili özel odalar ile Kapadokya'da unutulmaz bir tatil deneyimi. Yıldız Otel Ürgüp'te huzur sizi bekliyor.",
     url: "https://www.yildizhotelcappadocia.com",
@@ -22,7 +22,7 @@ export const generateMetadata = () => ({
         url: "https://www.yildizhotelcappadocia.com/images/banner.jpg",
         width: 1200,
         height: 630,
-        alt: "Yıldız Otel Ürgüp Kapadokya",
+        alt: "Yıldız Otel Ürgüp",
       },
     ],
     locale: "tr_TR",
@@ -36,7 +36,9 @@ import Header from "./components/Header";
 import Slider from "./components/Slider";
 import AboutSection from "./components/AboutSection";
 import RoomsSection from "./components/RoomsSection";
+import FacilitiesSection from "./components/FacilitiesSection";
 import TestimonialsSection from "./components/TestimonialsSection";
+import BlogSection from "./components/BlogSection";
 import Footer from "./components/Footer";
 import CallToActionBanner from "./components/CallToActionBanner";
 import ToursSection from "./components/ToursSection";
@@ -55,17 +57,19 @@ const Home: NextPage = () => {
           <Slider />
           <AboutSection />
           <RoomsSection />
+          <FacilitiesSection />
           <div
             className="relative h-[500px] bg-fixed bg-center bg-cover"
-            style={{ backgroundImage: "url('/images/bahce/slide6.webp')" }}
+            style={{ backgroundImage: "url('/images/otelBahce/resim6.jpeg')" }}
           >
           </div>
-          <TestimonialsSection />
           <ToursSection />
+          <TestimonialsSection />
+          <BlogSection />
           <CallToActionBanner />
-          <Footer />
         </section>
       </main>
+      <Footer />
     </>
   );
 };

@@ -24,7 +24,7 @@ const ScrollToTop = () => {
         isVisible && (
             <button
                 onClick={scrollToTop}
-                className="fixed bottom-6 right-6 z-[1001] bg-[#b99365] text-white p-3 rounded-full shadow-lg hover:bg-[#1f2c42] transition-all cursor-pointer"
+                className="fixed bottom-6 right-6 z-[1001] bg-[#ab9a8b] text-white p-3 rounded-full shadow-lg hover:bg-[#1c2c34] transition-all cursor-pointer"
             >
                 <FaChevronUp size={20} />
             </button>

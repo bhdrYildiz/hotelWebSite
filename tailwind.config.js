@@ -18,18 +18,16 @@ module.exports = {
         slide: "slide 2.5s linear infinite",
       },
       colors: {
-        //Tanım	Hex Kodu	Açıklama
-        //Primary	#1f2c42	Başlık, header, footer
-        //Secondary	#c1a37b	Butonlar, hover efektleri
-        //Accent	#b99365	İkonlar, aktif link, detay
-        //Light	#f8f8f3	Arka plan, açık alanlar
-        //Dark	#111827	Yazı ya da koyu arka planlar
-        //footer #e2e2e2
+        // Yeni Renk Paleti
+        primary: "#1c2c34",    // Koyu gri-mavi - Başlık, header, footer
+        secondary: "#ab9a8b",  // Bej/taş tonu - Butonlar, hover efektleri
+        accent: "#ab9a8b",     // Bej/taş tonu - İkonlar, aktif link, detay
+        light: "#ffffff",      // Beyaz - Arka plan, açık alanlar
+        dark: "#1c2c34",       // Koyu gri-mavi - Yazı ya da koyu arka planlar
       },
       fontFamily: {
-        // Daha sonra fontları yükleyeceğimiz adımlarla ilişkilendiriyoruz.
-        // next/font veya Google Fonts kullanabilirsiniz.
-        cormorant: ["'Cormorant Infant'", "'Cormorant SC'", "serif"],
+        // Playfair Display font
+        playfair: ["var(--font-playfair)", "serif"],
       },
       maxWidth: {
         "screen-xl": "1120px", // örnek genişlik

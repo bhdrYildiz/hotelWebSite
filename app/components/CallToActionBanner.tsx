@@ -1,11 +1,10 @@
 import Link from "next/link";
 
-{/* components/CallToActionBanner.tsx */ }
 export default function CallToActionBanner() {
     return (
         <section
             className="relative h-[400px] bg-fixed bg-center bg-cover flex items-center justify-center text-white text-center"
-            style={{ backgroundImage: "url('/images/banner.jpg')" }}
+            style={{ backgroundImage: "url('/images/turlar/balon5.jpg')" }}
         >
             <div className="bg-black/50 absolute inset-0 z-0"></div>
             <div className="relative z-10 px-6 font-cormorant">
@@ -13,10 +12,10 @@ export default function CallToActionBanner() {
                 <p className="text-lg md:text-xl mb-6 font-cormorant">Konaklamanızı bugünden ayırtın ve unutulmaz anlar yaşayın.</p>
                 <Link
                     href="/contact"
-                    className="font-cormorant rounded-sm bg-[#b99365] hover:bg-[#f8f8f3] px-6 py-2 inline-block 
-                        transition-all duration-300 text-[#f8f8f3] hover:text-[#1f2c42] font-semibold text-sm tracking-wider"
+                    className="inline-flex items-center justify-center bg-[#1c2c34] hover:bg-[#ab9a8b] text-white px-8 py-2.5 text-sm font-bold tracking-wider transition-all duration-300 font-cormorant"
+                    prefetch={false}
                 >
-                    Rezervasyon
+                    REZERVASYON
                 </Link>
             </div>
         </section>

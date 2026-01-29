@@ -18,13 +18,11 @@ export default function PhotoGallery({ images }: { images: string[] }) {
 
     return (
         <div className="space-y-4">
-            {/* Slider Container */}
             <div
                 className="relative w-full h-[450px] rounded-md overflow-hidden"
                 onMouseEnter={() => setHovering(true)}
                 onMouseLeave={() => setHovering(false)}
             >
-                {/* Images Row */}
                 <div
                     className="flex transition-transform duration-700 ease-in-out h-full w-full"
                     style={{ transform: `translateX(-${activeIndex * 100}%)` }}
@@ -35,13 +33,13 @@ export default function PhotoGallery({ images }: { images: string[] }) {
                                 src={src}
                                 alt={`Gallery Image ${i + 1}`}
                                 fill
+                                sizes="(max-width: 768px) 100vw, (max-width: 1400px) 90vw, 1400px"
                                 className="object-cover"
                             />
                         </div>
                     ))}
                 </div>
 
-                {/* Left Arrow */}
                 <button
                     onClick={prevImage}
                     className={`cursor-pointer absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full transition-opacity duration-300 ${hovering ? 'opacity-100' : 'opacity-0'
@@ -50,7 +48,6 @@ export default function PhotoGallery({ images }: { images: string[] }) {
                     <ChevronLeft />
                 </button>
 
-                {/* Right Arrow */}
                 <button
                     onClick={nextImage}
                     className={`cursor-pointer absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full transition-opacity duration-300 ${hovering ? 'opacity-100' : 'opacity-0'
@@ -60,7 +57,6 @@ export default function PhotoGallery({ images }: { images: string[] }) {
                 </button>
             </div>
 
-            {/* Thumbnails */}
             <div className="flex gap-3 overflow-x-auto overflow-y-hidden no-scrollbar px-1">
                 {images.map((src, i) => (
                     <Image
@@ -71,7 +67,7 @@ export default function PhotoGallery({ images }: { images: string[] }) {
                         height={50}
                         onClick={() => setActiveIndex(i)}
                         className={`object-cover w-[120px] h-[80px] cursor-pointer rounded-md border-2 transition-transform duration-300 ${activeIndex === i
-                            ? 'border-[#b99365] scale-105'
+                            ? 'border-[#ab9a8b] scale-105'
                             : 'border-transparent opacity-60 hover:opacity-100'
                             }`}
                     />

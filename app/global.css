@@ -2,21 +2,40 @@
 
 /* Renk değişkenlerinin tanımlanması */
 :root {
-  /* next/font ile tanımladığınız fontların değişkeni */
-  --font-cormorant: var(--font-cormorant-infant), var(--font-cormorant-sc),
-    serif;
+  /* Playfair Display font değişkeni */
+  --font-playfair: var(--font-playfair), serif;
 }
 /*
-#1f2c42
-#c1a37b
-#f8f8f3
+Yeni Renk Paleti:
+#1c2c34 - Koyu gri-mavi (header, footer, başlıklar)
+#ab9a8b - Bej/taş tonu (butonlar, vurgular)
+#ffffff - Beyaz (metin, arka plan)
 */
 
 /* Global stiller */
 body {
-  /* next/font ile tanımladığınız fontları kullanıyoruz */
-  font-family: var(--font-cormorant);
+  /* Playfair Display fontunu kullanıyoruz */
+  font-family: var(--font-playfair);
+  font-weight: 400;
+  /* Footer reveal efekti için koyu arka plan */
+  background-color: #0f1c22;
   @apply text-base leading-relaxed text-gray-700;
+}
+
+/* Footer "alttan çıkıyormuş" efekti için içerik üst katmanda dursun */
+main {
+  position: relative;
+  z-index: 10;
+  background-color: #ffffff;
+}
+
+/* Sitede kalın yazı kullanımını tamamen kapat */
+* {
+  font-weight: 400;
+}
+b,
+strong {
+  font-weight: 400;
 }
 .custom-swiper .swiper-pagination-bullet {
   background-color: #d1d5db; /* pasif olanlar için gri */
@@ -24,7 +43,7 @@ body {
 }
 
 .custom-swiper .swiper-pagination-bullet-active {
-  background-color: #b99365; /* aktif olan için özel renk */
+  background-color: #ab9a8b; /* aktif olan için özel renk */
 }
 
 /* Scrollbar'ı tamamen kaldırmak için */
@@ -109,4 +128,93 @@ body {
   animation: typewriter 2.5s steps(30, end) both;
   white-space: nowrap;
   overflow: hidden;
+}
+
+/* Galeri özel grid yerleşimi */
+.gallery-grid {
+  grid-auto-rows: 240px;
+  grid-auto-flow: row dense;
+}
+@media (min-width: 768px) {
+  .gallery-grid {
+    grid-template-areas:
+      "leftTall midTop1 midTop2 rightTall"
+      "leftTall midWide midWide rightTall"
+      "bottomWide bottomWide bottomRight1 bottomRight2";
+  }
+}
+
+/* Galeri lightbox görünümü */
+.gallery-lightbox__toolbar {
+  position: absolute;
+  top: -48px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+}
+
+.gallery-lightbox__counter {
+  padding: 6px 12px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: #e5e7eb;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+}
+
+.gallery-lightbox__close {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  color: #ffffff;
+  background: rgba(15, 15, 15, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  backdrop-filter: blur(8px);
+  transition: transform 0.2s ease, color 0.2s ease, border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.gallery-lightbox__close:hover,
+.gallery-lightbox__nav:hover {
+  color: #ab9a8b;
+  border-color: rgba(171, 154, 139, 0.6);
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.gallery-lightbox__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  cursor: pointer;
+  width: 46px;
+  height: 46px;
+  font-size: 0;
+  line-height: 1;
+  color: #ffffff;
+  background: rgba(15, 15, 15, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  backdrop-filter: blur(8px);
+  transition: transform 0.2s ease, color 0.2s ease, border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.gallery-lightbox__nav:hover {
+  transform: translateY(-2px);
+}
+
+.gallery-lightbox__image {
+  width: min(82vw, 1100px);
+  height: 55vh;
+  object-fit: cover;
 }
