@@ -35,9 +35,10 @@ const RoomDetailPage = () => {
     const [checkInDate, setCheckInDate] = useState<Date>(today);
     const [checkOutDate, setCheckOutDate] = useState<Date>(dfAddDays(today, 1));
 
-    const checkInRef = React.useRef<any>(null);
-    const checkOutRef = React.useRef<any>(null);
+    type DatePickerInstance = React.ElementRef<typeof DatePicker>;
 
+    const checkInRef = React.useRef<DatePickerInstance | null>(null);
+    const checkOutRef = React.useRef<DatePickerInstance | null>(null);
 
     if (!room) {
         return <div className="text-center py-20 text-lg">Oda bulunamadı.</div>;
@@ -139,7 +140,7 @@ const RoomDetailPage = () => {
 
                 <section className="bg-[#2c3e45] w-full py-12">
                     <div className="max-w-[1280px] mx-auto px-8 text-white">
-                        <h2 className="text-3xl leading-relaxed tracking-wide font-semibold text-white">" {room.name} sizi bekliyor ! "</h2>
+                        <h2 className="text-3xl leading-relaxed tracking-wide font-semibold text-white">{room.name} sizi bekliyor !</h2>
                         <p className="text-base text-white leading-8 tracking-wide mt-4">
                             {room.description}
                         </p>
@@ -354,7 +355,7 @@ const RoomDetailPage = () => {
                         <h2 className="text-4xl md:text-5xl font-bold text-[#1c2c34] mb-12">Benzer Odalar</h2>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            {otherRooms.slice(0, 3).map((r, index) => (
+                            {otherRooms.slice(0, 3).map((r) => (
                                 <Link
                                     key={r.id}
                                     href={`/rooms/${r.id}`}
@@ -438,11 +439,14 @@ const RoomDetailPage = () => {
                                 </svg>
                             </button>
 
-                            <div className="flex h-full w-full items-center justify-center">
-                                <img
+                            <div className="relative h-full w-full">
+                                <Image
                                     src={room.images[fullscreenIndex]}
                                     alt={`${room.name} - ${fullscreenIndex + 1}`}
-                                    className="gallery-lightbox__image shadow-2xl"
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 1200px"
+                                    className="object-contain shadow-2xl"
+                                    priority
                                 />
                             </div>
 

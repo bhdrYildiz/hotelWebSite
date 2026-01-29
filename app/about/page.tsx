@@ -5,13 +5,6 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Image from 'next/image';
 import {
-    Car,
-    Wifi,
-    Martini,
-    Snowflake,
-    Tv,
-    ParkingSquare,
-    Utensils,
     BedDouble,
     ShieldCheck,
     KeyRound
@@ -28,7 +21,7 @@ const AboutPage = () => {
             <main className="flex flex-col font-cormorant bg-[#ffffff]">
                 <PageHero
                     title="HAKKIMIZDA"
-                    subtitle="- YILDIZ OTEL'İ KEŞFEDİN -"
+                    subtitle="- YILDIZ OTEL&apos;İ KEŞFEDİN -"
                     backgroundImage="/images/otelBahce/resim3.jpg"
                     breadcrumbs={[
                         { label: 'ANA SAYFA', href: '/' },
@@ -121,7 +114,7 @@ const AboutPage = () => {
                             </motion.h2>
                             <motion.p variants={fadeUp} className="text-base leading-relaxed text-[#1c2c34] font-semibold tracking-wide">
                                 Otelimiz Ürgüp ilçe merkezinde yer almaktadır. Ürgüp otogarına 300 metre mesafede bulunmaktadır. Çarşı merkezine 500 metre mesafede bulunmaktadır.
-                                Kapadokya'da yer alan gezi ve örenyerlerine araba ile 10 - 15 dakikada ulaşabilirsiniz.
+                                Kapadokya&apos;da yer alan gezi ve örenyerlerine araba ile 10 - 15 dakikada ulaşabilirsiniz.
                             </motion.p>
 
                             <motion.div variants={fadeUp} className="space-y-5 pt-4">
@@ -290,7 +283,7 @@ const AboutPage = () => {
                     <div className="max-w-[1400px] mx-auto px-6 py-20">
                         <div className="space-y-6 text-[#1c2c34] text-center">
                             <h2 className="text-4xl md:text-6xl tracking-wide">
-                                Sosyal Medya'da Takip Edin
+                                Sosyal Medya&apos;da Takip Edin
                             </h2>
                             <p className="text-base text-[#1c2c34]/80">
                                 Güncel görseller ve son haberlerimiz sosyal medya hesaplarımızda:
@@ -323,11 +316,13 @@ const AboutPage = () => {
                                     '/images/room-104/104-1.jpg',
                                     '/images/otelBahce/resim4.jpg'
                                 ].map((src, index) => (
-                                    <div key={index} className="aspect-square hover:scale-105 transition-all duration-300 overflow-hidden bg-white">
-                                        <img
+                                    <div key={index} className="relative aspect-square hover:scale-105 transition-all duration-300 overflow-hidden bg-white">
+                                        <Image
                                             src={src}
                                             alt={`Instagram ${index + 1}`}
-                                            className="h-full w-full object-cover"
+                                            fill
+                                            sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 300px"
+                                            className="object-cover"
                                         />
                                     </div>
                                 ))}
@@ -340,7 +335,7 @@ const AboutPage = () => {
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center gap-2 border border-black/40 px-8 py-3 text-sm tracking-widest text-[#1c2c34] transition-all duration-300 hover:border-black hover:bg-[#1c2c34] hover:text-white hover:-translate-y-0.5 hover:shadow-lg"
                                 >
-                                    INSTAGRAM'DA TAKİP ET
+                                    INSTAGRAM&apos;DA TAKİP ET
                                 </Link>
                             </div>
                         </div>

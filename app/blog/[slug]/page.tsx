@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import type { Metadata } from "next";
 import { getAllBlogPosts, getBlogPostBySlug } from "@/app/data/blogPosts";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
@@ -11,6 +12,8 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/f
 import PageHero from "@/app/components/PageHero";
 
 const BASE_URL = "https://www.yildizhotelcappadocia.com";
+
+type PageParams = { slug: string };
 
 function formatDateBadge(iso: string) {
   const d = new Date(iso);
@@ -25,9 +28,12 @@ export function generateStaticParams() {
   return getAllBlogPosts().map((p) => ({ slug: p.slug }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const p = await params;
-  const post = getBlogPostBySlug(p.slug);
+export async function generateMetadata(
+  { params }: { params: Promise<PageParams> }
+): Promise<Metadata> {
+  const { slug } = await params;
+
+  const post = getBlogPostBySlug(slug);
   if (!post) return {};
 
   const url = `${BASE_URL}/blog/${post.slug}`;
@@ -50,23 +56,28 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
-  const p = await params;
-  const post = getBlogPostBySlug(p.slug);
+export default async function BlogPostPage(
+  { params }: { params: Promise<PageParams> }
+) {
+  const { slug } = await params;
+
+  const post = getBlogPostBySlug(slug);
   if (!post) notFound();
 
   const allPosts = getAllBlogPosts();
   const currentIndex = allPosts.findIndex((x) => x.slug === post.slug);
   const newerPost = currentIndex > 0 ? allPosts[currentIndex - 1] : undefined;
   const previousPost =
-    currentIndex >= 0 && currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : undefined;
+    currentIndex >= 0 && currentIndex < allPosts.length - 1
+      ? allPosts[currentIndex + 1]
+      : undefined;
 
   const allTags = Array.from(new Set(allPosts.flatMap((x) => x.tags ?? []))).sort((a, b) =>
     a.localeCompare(b, "tr")
   );
-  const allCategories = Array.from(
-    new Set(allPosts.flatMap((x) => x.categories ?? []))
-  ).sort((a, b) => a.localeCompare(b, "tr"));
+  const allCategories = Array.from(new Set(allPosts.flatMap((x) => x.categories ?? []))).sort(
+    (a, b) => a.localeCompare(b, "tr")
+  );
   const recentPosts = allPosts.slice(0, 3).map((x) => ({
     slug: x.slug,
     title: x.title,
@@ -78,7 +89,6 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
   const badge = formatDateBadge(post.publishedAt);
   const metaTags = (post.tags ?? []).slice(0, 4);
   const shareUrl = `${BASE_URL}/blog/${post.slug}`;
-
   return (
     <>
       <Header />

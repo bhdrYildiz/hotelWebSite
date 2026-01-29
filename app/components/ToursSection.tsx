@@ -63,7 +63,7 @@ export default function ToursSection() {
                             Tur ve Aktiviteler
                         </h2>
                         <p className="text-[#1c2c34] leading-relaxed text-base font-semibold tracking-wide mb-8 max-w-sm">
-                            Kapadokya'nın eşsiz güzelliklerini keşfedin. Unutulmaz turlar ve maceralar sizi bekliyor.
+                            Kapadokya&apos;nın eşsiz güzelliklerini keşfedin. Unutulmaz turlar ve maceralar sizi bekliyor.
                         </p>
                         <Link
                             href="/tours"

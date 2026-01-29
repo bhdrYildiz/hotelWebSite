@@ -4,11 +4,9 @@ import { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import PageHero from '../components/PageHero';
+import Image from 'next/image';
 
-// Tüm galeri resimleri - özel grid yerleşimi
 const galleryImages = [
-    // İlk 8 görsel, `global.css` içindeki `grid-template-areas` ile birebir eşleşmeli.
-    // Aynı `area` tekrar kullanılırsa görseller üst üste biner ve bazıları görünmez.
     { src: '/images/otelBahce/resim10.jpeg', area: 'leftTall' },
     { src: '/images/otelBahce/resim1.jpg', area: 'midTop1' },
     { src: '/images/otelBahce/resim9.jpeg', area: 'midTop2' },
@@ -18,7 +16,6 @@ const galleryImages = [
     { src: '/images/otelBahce/resim7.jpeg', area: 'bottomRight1' },
     { src: '/images/otelBahce/resim4.jpg', area: 'bottomRight2' },
 
-    // Devamındaki görsellerde `area` kullanma; normal akışa göre dizilsin.
     { src: '/images/otelBahce/resim5.jpeg', span: 'md:col-span-2' },
     { src: '/images/otelBahce/resim11.jpeg' },
     { src: '/images/otelBahce/resim12.jpeg' },
@@ -59,7 +56,7 @@ export default function Gallery() {
                 {/* Hero Banner */}
                 <PageHero
                     title="GALERİ"
-                    subtitle="- YILDIZ OTEL'İ RESİMLERLE KEŞFEDİN -"
+                    subtitle="- YILDIZ OTEL&apos;İ RESİMLERLE KEŞFEDİN -"
                     backgroundImage="/images/otelBahce/resim10.jpeg"
                     breadcrumbs={[
                         { label: 'ANA SAYFA', href: '/' },
@@ -67,7 +64,6 @@ export default function Gallery() {
                     ]}
                 />
 
-                {/* Gallery Grid */}
                 <div className="container mx-auto px-4 py-16">
                     <div className="gallery-grid grid grid-cols-2 md:grid-cols-4 gap-4">
                         {galleryImages.map((image, index) => (
@@ -77,13 +73,14 @@ export default function Gallery() {
                                 style={image.area ? { gridArea: image.area } : undefined}
                                 onClick={() => setSelectedIndex(index)}
                             >
-                                <img
+                                <Image
                                     src={image.src}
                                     alt={`Gallery ${index + 1}`}
-                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    fill
+                                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 300px"
+                                    className="object-cover transition-transform duration-500 group-hover:scale-110"
                                 />
 
-                                {/* Hover Overlay with Plus Icon */}
                                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300"></div>
                                 <div className="absolute inset-0 flex items-center justify-center">
                                     <div className="flex items-center justify-center transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:-translate-y-2">
@@ -143,10 +140,12 @@ export default function Gallery() {
                                 </button>
 
                                 <div className="flex h-full w-full items-center justify-center">
-                                    <img
+                                    <Image
                                         src={selectedImage}
                                         alt={`Gallery ${selectedIndex + 1}`}
-                                        className="gallery-lightbox__image shadow-2xl"
+                                        className="object-cover gallery-lightbox__image shadow-2xl"
+                                        fill
+                                        sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 300px"
                                     />
                                 </div>
 

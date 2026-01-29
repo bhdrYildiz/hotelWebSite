@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
-import { FaArrowRight, FaArrowLeft, FaBed, FaUsers, FaEye, FaStar, FaWifi } from "react-icons/fa";
+import { FaArrowRight, FaArrowLeft, FaBed, FaUsers, FaStar, FaWifi } from "react-icons/fa";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { rooms } from '../data/rooms';
@@ -14,7 +14,7 @@ import type { Swiper as SwiperType } from 'swiper';
 
 const RoomsSection = () => {
     const [activeRoom, setActiveRoom] = useState(0);
-    const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
+    const [swiperInstance] = useState<SwiperType | null>(null);
 
     return (
         <section className="relative bg-white py-20 font-cormorant" id="rooms">

@@ -25,9 +25,8 @@ function formatDateBadge(iso: string) {
 export default async function BlogPage({
   searchParams,
 }: {
-  searchParams?: Promise<SearchParams> | SearchParams;
+  searchParams?: Promise<SearchParams>;
 }) {
-
   const sp = await searchParams;
   const allPosts = getAllBlogPosts();
 

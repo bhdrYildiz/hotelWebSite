@@ -2,17 +2,24 @@
 
 import { useEffect, useRef } from "react";
 
+declare global {
+    interface Window {
+        ReselivaCustomWidget?: {
+            hotelUrl: string;
+            lang: string;
+        };
+    }
+}
+
 export default function ReselivaWidget() {
     const mountRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
-        // config önce
-        (window as any).ReselivaCustomWidget = {
+        window.ReselivaCustomWidget = {
             hotelUrl: "yildizhotel",
             lang: "tr",
         };
 
-        // daha önce eklendiyse tekrar ekleme
         if (!mountRef.current) return;
         if (mountRef.current.querySelector("#reselivaScript")) return;
 
@@ -21,7 +28,6 @@ export default function ReselivaWidget() {
         s.src = "https://www.reseliva.com/ReselivaWidget/JS/rw_iframe.js";
         s.async = true;
 
-        // script'i body'ye değil, bu div'in içine bas
         mountRef.current.appendChild(s);
     }, []);
 
@@ -29,7 +35,6 @@ export default function ReselivaWidget() {
         <div
             ref={mountRef}
             className="w-full"
-            // widget yüklenirken boş görünmesin diye
             style={{ minHeight: 800 }}
         />
     );

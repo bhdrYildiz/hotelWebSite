@@ -23,7 +23,7 @@ import {
 
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import { addDays as dfAddDays, format, startOfDay } from 'date-fns';
+import { addDays as dfAddDays, startOfDay } from 'date-fns';
 
 const perks = [
     {

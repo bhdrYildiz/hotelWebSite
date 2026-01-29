@@ -5,15 +5,15 @@ import { useEffect, useState } from "react";
 const slides = [
     {
         image: "/images/otelBahce/resim3.jpg",
-        alt: "Yıldız Otel'e Hoşgeldiniz",
+        alt: "Yıldız Otel&apos;e Hoşgeldiniz",
     },
     {
         image: "/images/otelBahce/resim7.jpeg",
-        alt: "Yıldız Otel'e Hoşgeldiniz",
+        alt: "Yıldız Otel&apos;e Hoşgeldiniz",
     },
     {
         image: "/images/otelBahce/resim11.jpeg",
-        alt: "Yıldız Otel'e Hoşgeldiniz",
+        alt: "Yıldız Otel&apos;e Hoşgeldiniz",
     },
 ];
 
@@ -55,7 +55,7 @@ const Slider = () => {
                             <div className="absolute -bottom-2 -left-2 px-4 md:px-8 lg:px-12 pb-8 md:pb-12">
                                 <div className="text-left text-white max-w-2xl">
                                     <h1 className="text-3xl md:text-5xl lg:text-6xl font-light tracking-wider mb-2 leading-tight font-cormorant">
-                                        YILDIZ OTEL'E
+                                        YILDIZ OTEL&apos;E
                                     </h1>
                                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-light tracking-wider leading-tight font-cormorant">
                                         Hoş Geldiniz
