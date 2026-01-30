@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import PageHero from '../components/PageHero';
@@ -69,7 +69,11 @@ export default function Gallery() {
                             <div
                                 key={index}
                                 className={`group cursor-pointer relative overflow-hidden ${image.span ?? ''} ${image.area ? 'md:[grid-area:var(--ga)]' : ''}`}
-                                style={image.area ? ({ ['--ga' as any]: image.area } as React.CSSProperties) : undefined}
+                                style={
+                                    image.area && typeof window !== 'undefined' && window.innerWidth >= 768
+                                        ? ({ gridArea: image.area } as React.CSSProperties)
+                                        : undefined
+                                }
                                 onClick={() => {
                                     if (typeof window !== 'undefined' && window.innerWidth >= 768) {
                                         setSelectedIndex(index);
@@ -97,7 +101,6 @@ export default function Gallery() {
                     </div>
                 </div>
 
-                {/* Lightbox Modal */}
                 {selectedImage && selectedIndex !== null && (
                     <div
                         className="fixed inset-0 bg-black/70 z-[9999] flex items-center justify-center p-8 md:p-12"
@@ -105,7 +108,7 @@ export default function Gallery() {
                     >
                         <div
                             className="relative w-full max-w-6xl h-[55vh] flex items-center justify-center gallery-lightbox"
-                            onClick={(event) => event.stopPropagation()}
+                            onClick={(event: React.MouseEvent<HTMLDivElement>) => event.stopPropagation()}
                         >
                             <div className="gallery-lightbox__toolbar">
                                 <div className="gallery-lightbox__counter">
