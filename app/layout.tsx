@@ -30,7 +30,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={playfairDisplay.variable}>
-      <body>
+      <body className="min-h-screen overflow-x-hidden">
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-SFGQLN589J"
           strategy="afterInteractive"

@@ -17,7 +17,7 @@ const RoomsSection = () => {
     const [swiperInstance] = useState<SwiperType | null>(null);
 
     return (
-        <section className="relative bg-white py-20 font-cormorant" id="rooms">
+        <section className="relative bg-white py-20 font-cormorant overflow-x-hidden" id="rooms">
             <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -41,7 +41,7 @@ const RoomsSection = () => {
                             <span className="text-sm text-gray-500 mr-2 hidden lg:block">
                                 Odalarımız ({rooms.length} oda)
                             </span>
-                            <div className="flex gap-2">
+                            <div className="flex gap-2 overflow-x-auto max-w-full pr-2 [-webkit-overflow-scrolling:touch]">
                                 {rooms.slice(0, 7).map((room, index) => (
                                     <button
                                         key={room.id}
@@ -71,34 +71,35 @@ const RoomsSection = () => {
                     className="grid lg:grid-cols-[1.3fr_1fr] gap-0 min-h-[600px]"
                 >
 
-                    <div className="bg-[#1c2c34] p-8 lg:p-16 flex flex-col justify-center order-2 lg:order-1 relative z-10">
+                    <div className="bg-[#1c2c34] p-8 lg:p-16 flex flex-col justify-center order-2 lg:order-1 relative z-10 overflow-hidden">
                         <motion.div
                             key={activeRoom}
                             initial={{ opacity: 0, x: -30 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5 }}
+                            className="max-w-xl"
                         >
 
                             <h3 className="text-3xl lg:text-4xl font-light text-white mb-8 uppercase tracking-wider">
                                 {rooms[activeRoom].name}
                             </h3>
 
-
-                            <div className="flex gap-8 mb-8 text-white">
-                                <div>
+                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 mb-8 text-white">
+                                <div className="min-w-0">
                                     <p className="text-xs text-gray-400 uppercase tracking-widest mb-1">Oda No</p>
                                     <p className="text-2xl font-light">{rooms[activeRoom].idName}</p>
                                 </div>
-                                <div className="border-l border-gray-600 pl-8">
+
+                                <div className="min-w-0 sm:border-l sm:border-gray-600 sm:pl-6">
                                     <p className="text-xs text-gray-400 uppercase tracking-widest mb-1">Alan</p>
                                     <p className="text-2xl font-light">{rooms[activeRoom].size}</p>
                                 </div>
-                                <div className="border-l border-gray-600 pl-8">
+
+                                <div className="min-w-0 sm:border-l sm:border-gray-600 sm:pl-6">
                                     <p className="text-xs text-gray-400 uppercase tracking-widest mb-1">Kapasite</p>
                                     <p className="text-2xl font-light">{rooms[activeRoom].capacity}</p>
                                 </div>
                             </div>
-
 
                             <p className="text-gray-300 leading-relaxed mb-8 text-base">
                                 {rooms[activeRoom].description}
@@ -147,7 +148,7 @@ const RoomsSection = () => {
                     </div>
 
 
-                    <div className="relative bg-white order-1 lg:order-2 min-h-[400px] lg:min-h-[600px] p-6 lg:p-12 flex items-center justify-center">
+                    <div className="relative bg-white order-1 lg:order-2 min-h-[360px] lg:min-h-[600px] p-4 sm:p-6 lg:p-12 flex items-center justify-center overflow-hidden">
                         <div className="relative w-full h-full flex items-center justify-center">
 
                             <div className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-3rem)] h-[calc(100%-3rem)] border-2 border-[#ab9a8b] z-0 pointer-events-none"></div>
@@ -160,11 +161,11 @@ const RoomsSection = () => {
                                         prevEl: '.room-image-nav-prev',
                                     }}
                                     modules={[Navigation]}
-                                    className="h-full"
+                                    className="w-full h-[320px] sm:h-[420px] lg:h-[450px]"
                                 >
 
                                     {rooms[activeRoom].images.map((image, imgIndex) => (
-                                        <SwiperSlide key={imgIndex}>
+                                        <SwiperSlide key={imgIndex} className="h-full">
                                             <div className="relative w-full h-full overflow-hidden">
                                                 <Image
                                                     src={image}
@@ -179,14 +180,18 @@ const RoomsSection = () => {
                                         </SwiperSlide>
                                     ))}
                                 </Swiper>
-
-
-                                <button className="room-image-nav-prev absolute left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 bg-white hover:bg-[#ab9a8b] text-[#1c2c34] hover:text-white flex items-center justify-center transition-all duration-300 shadow-lg opacity-0 group-hover:opacity-100">
+                                <button className="room-image-nav-prev absolute left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11
+bg-white hover:bg-[#ab9a8b] text-[#1c2c34] hover:text-white flex items-center justify-center
+transition-all duration-300 shadow-lg opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
                                     <FaArrowLeft size={14} />
                                 </button>
-                                <button className="room-image-nav-next absolute right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 bg-white hover:bg-[#ab9a8b] text-[#1c2c34] hover:text-white flex items-center justify-center transition-all duration-300 shadow-lg opacity-0 group-hover:opacity-100">
+
+                                <button className="room-image-nav-next absolute right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11
+bg-white hover:bg-[#ab9a8b] text-[#1c2c34] hover:text-white flex items-center justify-center
+transition-all duration-300 shadow-lg opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
                                     <FaArrowRight size={14} />
                                 </button>
+
                             </div>
                         </div>
                     </div>

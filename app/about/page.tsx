@@ -28,7 +28,6 @@ const AboutPage = () => {
                         { label: 'HAKKIMIZDA' },
                     ]}
                 />
-
                 <section className="bg-white">
                     <motion.div
                         className="max-w-[1400px] mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
@@ -54,7 +53,13 @@ const AboutPage = () => {
                             </motion.div>
                             <motion.div
                                 variants={fadeUp}
-                                className="absolute -bottom-24 left-4 md:left-24 h-[280px] w-[280px] md:h-[320px] md:w-[320px] overflow-hidden border-4 border-white shadow-xl bg-white"
+                                className="
+    relative mt-6
+    md:absolute md:mt-0 md:-bottom-24 md:left-12
+    h-[240px] w-full max-w-[280px]
+    md:h-[320px] md:w-[320px]
+    overflow-hidden border-4 border-white shadow-xl bg-white
+  "
                                 whileHover={{ scale: 1.03, y: -6 }}
                                 transition={{ duration: 0.3 }}
                             >
@@ -63,7 +68,7 @@ const AboutPage = () => {
                                     alt="Yıldız Otel - Detay"
                                     fill
                                     sizes="(max-width: 768px) 60vw, 260px"
-                                    className="object-cover"
+                                    className="object-cover max-w-[280px] mx-auto md:mx-0"
                                 />
                             </motion.div>
                         </div>

@@ -8,7 +8,7 @@ import { rooms } from '@/app/data/rooms';
 import { useState } from 'react';
 import Link from 'next/link';
 import { iconMap } from '@/app/constant/iconMap';
-import { Bed, ChevronUp, ChevronDown, Square } from 'lucide-react';
+import { Bed, ChevronUp, ChevronDown, Square, ChevronLeft, ChevronRight } from 'lucide-react';
 import PageHero from '@/app/components/PageHero';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -63,8 +63,12 @@ const RoomDetailPage = () => {
                     <div className="flex flex-col lg:flex-row gap-8">
                         <div className="w-full lg:w-[60%] space-y-8">
                             <div
-                                onClick={() => setFullscreenIndex(selectedImage)}
-                                className="relative w-full h-[500px] mb-4 overflow-hidden cursor-pointer group"
+                                onClick={() => {
+                                    if (typeof window !== "undefined" && window.innerWidth >= 1024) {
+                                        setFullscreenIndex(selectedImage);
+                                    }
+                                }}
+                                className="relative w-full h-[320px] sm:h-[420px] lg:h-[500px] mb-4 overflow-hidden cursor-pointer group"
                             >
                                 <Image
                                     key={selectedImage}
@@ -75,6 +79,37 @@ const RoomDetailPage = () => {
                                         } group-hover:scale-110`}
                                     onLoadingComplete={() => setIsImageLoading(false)}
                                 />
+                                {/* MOBIL OKLAR (sadece mobilde görünür) */}
+                                <div className="lg:hidden">
+                                    <button
+                                        type="button"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setSelectedImage((v) => (v - 1 + room.images.length) % room.images.length);
+                                        }}
+                                        className="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white/90 grid place-items-center shadow"
+                                        aria-label="Önceki görsel"
+                                    >
+                                        <ChevronLeft className="h-5 w-5" />
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setSelectedImage((v) => (v + 1) % room.images.length);
+                                        }}
+                                        className="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white/90 grid place-items-center shadow"
+                                        aria-label="Sonraki görsel"
+                                    >
+                                        <ChevronRight className="h-5 w-5" />
+                                    </button>
+
+                                    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-xs bg-black/40 text-white px-3 py-1 rounded-full">
+                                        {selectedImage + 1} / {room.images.length}
+                                    </div>
+                                </div>
+
                                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300"></div>
                                 <div className="absolute inset-0 flex items-center justify-center">
                                     <div className="flex items-center justify-center transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:-translate-y-2">
@@ -85,23 +120,21 @@ const RoomDetailPage = () => {
                                 </div>
                             </div>
 
-                            <div className="grid grid-cols-4 gap-4 mb-8">
-                                {room.images.slice(0, 4).map((img, index) => (
+                            <div className="mt-4 flex gap-3 overflow-x-auto pb-1 mb-8 scrollbar-hide overflow-x-hidden lg:grid lg:grid-cols-4 lg:gap-4">
+                                {room.images.map((img, index) => (
                                     <button
                                         key={index}
                                         onClick={() => {
                                             setIsImageLoading(true);
                                             setTimeout(() => setSelectedImage(index), 50);
                                         }}
-                                        className={`relative h-[120px] overflow-hidden cursor-pointer transition-all duration-300 ${selectedImage === index ? 'ring-1 ring-[#1f2d34] scale-105' : 'opacity-70 hover:opacity-100 hover:scale-105'
+                                        className={`relative h-[84px] w-[120px] lg:w-auto lg:h-[120px] flex-shrink-0 overflow-hidden cursor-pointer transition-all duration-300 ${selectedImage === index
+                                            ? 'ring-1 ring-[#1f2d34]'
+                                            : 'opacity-70 hover:opacity-100 hover:scale-105'
                                             }`}
+                                        aria-label={`Görsel ${index + 1}`}
                                     >
-                                        <Image
-                                            src={img}
-                                            alt={`${room.name} thumbnail ${index + 1}`}
-                                            fill
-                                            className="object-cover"
-                                        />
+                                        <Image src={img} alt={`${room.name} thumbnail ${index + 1}`} fill className="object-cover" />
                                     </button>
                                 ))}
                             </div>

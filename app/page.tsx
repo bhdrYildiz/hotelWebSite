@@ -1,4 +1,3 @@
-// app/page.tsx
 
 export const generateMetadata = () => ({
   title: "Yıldız Otel Ürgüp | Kapadokya Taş Odalar",

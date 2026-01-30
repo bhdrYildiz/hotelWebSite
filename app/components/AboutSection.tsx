@@ -49,7 +49,7 @@ const AboutSection = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.4 }}
                             viewport={{ once: true }}
-                            className="absolute -bottom-4 -left-8 w-52 h-48 lg:w-80 lg:h-56 z-20 overflow-hidden group shadow-2xl"
+                            className="absolute -bottom-4 left-4 sm:left-6 lg:-left-8 w-52 h-48 lg:w-80 lg:h-56 z-20 overflow-hidden group shadow-2xl"
                         >
                             <Image
                                 src="/images/otelBahce/resim4.jpg"

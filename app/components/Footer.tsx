@@ -14,7 +14,6 @@ export default function Footer() {
     return (
         <>
             <div aria-hidden className="h-[520px] md:h-[420px]" />
-
             <footer
                 className="fixed bottom-0 left-0 w-full z-0 text-white font-cormorant"
                 style={{ height: "520px" }}

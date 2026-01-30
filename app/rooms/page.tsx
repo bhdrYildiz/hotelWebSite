@@ -245,20 +245,24 @@ const RoomsPage = () => {
                                         className={`flex flex-col lg:flex-row gap-8 mb-8 ${isReversed ? 'lg:flex-row-reverse' : ''
                                             }`}
                                     >
-                                        <Reveal className="w-full lg:w-[45%] space-y-6" preset="fadeInLeft" inherit>
-                                            <div className="flex items-center gap-4">
-                                                <span className="w-12 h-[3px] bg-black flex-shrink-0"></span>
+                                        <Reveal
+                                            className="w-full lg:w-[45%] space-y-6 text-center lg:text-left flex flex-col items-center lg:items-start"
+                                            preset="fadeInLeft"
+                                            inherit
+                                        >
+                                            <div className="flex items-center justify-center lg:justify-start gap-4">
+                                                <span className="hidden sm:block w-12 h-[3px] bg-black flex-shrink-0"></span>
                                                 <h2 className="text-4xl md:text-5xl text-[#1c2c34] font-bold uppercase tracking-tight leading-tight">
                                                     {room.name}
                                                 </h2>
                                             </div>
 
-                                            <p className="text-base text-[#1c2c34] font-semibold leading-relaxed ml-16">
+                                            <p className="text-base text-[#1c2c34] font-semibold leading-relaxed ml-0 lg:ml-16 max-w-xl">
                                                 {room.description}
                                             </p>
 
-                                            <Link href={`/rooms/${room.id}`} prefetch={false}>
-                                                <button className="group relative overflow-hidden px-8 py-4 cursor-pointer ml-16 bg-[#1f2d34] text-white text-sm font-semibold tracking-wide uppercase transition-transform duration-700 ease-out hover:shadow-lg hover:shadow-black/10 group-hover:scale-105">
+                                            <Link href={`/rooms/${room.id}`} prefetch={false} className="w-full flex justify-center lg:justify-start">
+                                                <button className="group relative overflow-hidden px-8 py-4 ml-0 lg:ml-16 cursor-pointer bg-[#1f2d34] text-white text-sm font-semibold tracking-wide uppercase transition-transform duration-700 ease-out hover:shadow-lg hover:shadow-black/10 group-hover:scale-105">
                                                     <span className="absolute inset-0 bg-[#ab9a8b] scale-0 group-hover:scale-100 transition-transform duration-700 ease-out origin-center"></span>
                                                     <span className="relative z-10 transition-colors duration-700 ease-out group-hover:text-[#1c2c34]">
                                                         Odayı Keşfet
@@ -266,7 +270,6 @@ const RoomsPage = () => {
                                                 </button>
                                             </Link>
                                         </Reveal>
-
                                         <Reveal className="w-full lg:w-[55%] relative" preset="fadeInRight" inherit>
                                             <div
                                                 id={`scroll-${room.id}`}
@@ -276,7 +279,7 @@ const RoomsPage = () => {
                                                     {room.images.map((image, imageIndex) => (
                                                         <div
                                                             key={imageIndex}
-                                                            className="relative h-[360px] lg:h-[440px] w-[520px] lg:w-[620px] flex-shrink-0"
+                                                            className="relative h-[260px] sm:h-[320px] lg:h-[440px] w-[85vw] sm:w-[520px] lg:w-[620px] flex-shrink-0"
                                                         >
                                                             <Image
                                                                 src={image}
@@ -313,11 +316,19 @@ const RoomsPage = () => {
                                         </Reveal>
                                     </div>
 
-                                    <Reveal className="flex flex-wrap justify-center gap-12 lg:gap-8 mt-12" preset="fadeUp" inherit>
+                                    <Reveal
+                                        className="mt-10 grid grid-cols-4 sm:grid-cols-3 lg:flex lg:flex-wrap lg:justify-center gap-6 sm:gap-8 lg:gap-8"
+                                        preset="fadeUp"
+                                        inherit
+                                    >
                                         {room.features.map((feature, i) => (
                                             <Reveal key={i} className="text-center" inherit>
-                                                <div className="flex justify-center mb-4">{iconMap[feature]?.()}</div>
-                                                <p className="text-base font-semibold uppercase">{feature}</p>
+                                                <div className="flex justify-center mb-2 sm:mb-3 scale-90 sm:scale-100">
+                                                    {iconMap[feature]?.()}
+                                                </div>
+                                                <p className="text-xs sm:text-sm lg:text-base font-semibold uppercase tracking-wide">
+                                                    {feature}
+                                                </p>
                                             </Reveal>
                                         ))}
                                     </Reveal>

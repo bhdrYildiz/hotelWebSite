@@ -68,9 +68,13 @@ export default function Gallery() {
                         {galleryImages.map((image, index) => (
                             <div
                                 key={index}
-                                className={`group cursor-pointer relative overflow-hidden ${image.span ?? ''}`}
-                                style={image.area ? { gridArea: image.area } : undefined}
-                                onClick={() => setSelectedIndex(index)}
+                                className={`group cursor-pointer relative overflow-hidden ${image.span ?? ''} ${image.area ? 'md:[grid-area:var(--ga)]' : ''}`}
+                                style={image.area ? ({ ['--ga' as any]: image.area } as React.CSSProperties) : undefined}
+                                onClick={() => {
+                                    if (typeof window !== 'undefined' && window.innerWidth >= 768) {
+                                        setSelectedIndex(index);
+                                    }
+                                }}
                             >
                                 <Image
                                     src={image.src}
