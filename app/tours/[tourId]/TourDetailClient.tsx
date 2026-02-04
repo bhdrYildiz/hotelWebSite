@@ -9,11 +9,7 @@ import PhotoGallery from "../PhotoGallery";
 import { getTourById } from "@/app/data/tours";
 import PageHero from "@/app/components/PageHero";
 
-type Props = {
-    tourId: string;
-};
-
-export default function TourDetailClient({ tourId }: Props) {
+export default function TourDetailClient({ tourId }: { tourId: string }) {
     const [isSending, setIsSending] = useState(false);
     const [status, setStatus] = useState<null | { type: "ok" | "error"; msg: string }>(null);
 
@@ -99,11 +95,7 @@ export default function TourDetailClient({ tourId }: Props) {
     }
 
     if (!tour) {
-        return (
-            <main className="min-h-screen flex items-center justify-center">
-                <p className="text-xl font-bold text-[#1c2c34]">Tour not found.</p>
-            </main>
-        );
+        return <div className="text-center py-20 text-lg">Tour not found.</div>;
     }
 
     return (
