@@ -14,18 +14,11 @@ type Props = {
 };
 
 export default function TourDetailClient({ tourId }: Props) {
-    const tour = useMemo(() => getTourById(tourId), [tourId]);
-
     const [isSending, setIsSending] = useState(false);
     const [status, setStatus] = useState<null | { type: "ok" | "error"; msg: string }>(null);
 
-    if (!tour) {
-        return (
-            <main className="min-h-screen flex items-center justify-center">
-                <p className="text-xl font-bold text-[#1c2c34]">Tour not found.</p>
-            </main>
-        );
-    }
+    const tour = useMemo(() => getTourById(tourId), [tourId]);
+
     async function handleInfoSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
 
@@ -104,8 +97,6 @@ export default function TourDetailClient({ tourId }: Props) {
             setIsSending(false);
         }
     }
-
-
 
     if (!tour) {
         return (
