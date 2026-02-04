@@ -1,24 +1,31 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import Header from '@/app/components/Header';
-import Footer from '@/app/components/Footer';
-import { Accordion, AccordionItem } from '../../components/ui/accordion';
-import { BadgeCheck, Mail, MapPin, Phone } from 'lucide-react';
-import PhotoGallery from '../PhotoGallery';
-import { getTourById } from '@/app/data/tours';
-import PageHero from '@/app/components/PageHero';
+import React, { useMemo, useState } from "react";
+import Header from "@/app/components/Header";
+import Footer from "@/app/components/Footer";
+import { Accordion, AccordionItem } from "../../components/ui/accordion";
+import { BadgeCheck, Mail, MapPin, Phone } from "lucide-react";
+import PhotoGallery from "../PhotoGallery";
+import { getTourById } from "@/app/data/tours";
+import PageHero from "@/app/components/PageHero";
 
-export default function TourDetailClient({ tourId }: { tourId: string }) {
-    const tour = getTourById(tourId);
+type Props = {
+    tourId: string;
+};
 
-    if (!tour) {
-        return <div className="text-center py-20 text-lg">Tour bulunamadı.</div>;
-    }
+export default function TourDetailClient({ tourId }: Props) {
+    const tour = useMemo(() => getTourById(tourId), [tourId]);
 
     const [isSending, setIsSending] = useState(false);
     const [status, setStatus] = useState<null | { type: "ok" | "error"; msg: string }>(null);
 
+    if (!tour) {
+        return (
+            <main className="min-h-screen flex items-center justify-center">
+                <p className="text-xl font-bold text-[#1c2c34]">Tour not found.</p>
+            </main>
+        );
+    }
     async function handleInfoSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
 
