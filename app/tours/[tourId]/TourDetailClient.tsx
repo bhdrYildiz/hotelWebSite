@@ -1,6 +1,8 @@
 "use client";
 
-import React, { useMemo, useState } from "react";
+import React, {
+    useState
+} from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import { Accordion, AccordionItem } from "../../components/ui/accordion";
@@ -13,7 +15,7 @@ export default function TourDetailClient({ tourId }: { tourId: string }) {
     const [isSending, setIsSending] = useState(false);
     const [status, setStatus] = useState<null | { type: "ok" | "error"; msg: string }>(null);
 
-    const tour = useMemo(() => getTourById(tourId), [tourId]);
+    const tour = getTourById(tourId);
 
     async function handleInfoSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
