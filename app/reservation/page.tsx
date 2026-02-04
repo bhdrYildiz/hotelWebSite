@@ -1,46 +1,66 @@
-'use client';
+import type { Metadata } from "next";
+import ReservationClient from "./ReservationClient";
 
-import Header from '@/app/components/Header';
-import Footer from '@/app/components/Footer';
-import ReselivaWidget from './ReselivaWidget';
-import PageHero from '../components/PageHero';
+export const metadata: Metadata = {
+    title:
+        "Rezervasyon | Yıldız Otel Kapadokya - Ürgüp’te En İyi Fiyat Garantisi",
+    description:
+        "Yıldız Otel Kapadokya’da güvenli ve hızlı online rezervasyon yapın. Ürgüp’te taş odalar, jakuzili odalar ve en iyi fiyat garantisiyle anında onay.",
+    keywords: [
+        "kapadokya otel rezervasyon",
+        "ürgüp otel rezervasyon",
+        "online otel rezervasyonu",
+        "kapadokya balayı oteli rezervasyon",
+        "yıldız otel kapadokya rezervasyon",
+        "yıldız otel ürgüp",
+    ],
+
+    robots: {
+        index: true,
+        follow: true,
+        nocache: false,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-snippet": -1,
+            "max-image-preview": "large",
+            "max-video-preview": -1,
+        },
+    },
+
+    alternates: {
+        canonical: "https://www.yildizhotelcappadocia.com/reservation",
+    },
+
+    openGraph: {
+        title: "Rezervasyon | Yıldız Otel Kapadokya",
+        description:
+            "Yıldız Otel Kapadokya’da online rezervasyon: güvenli ödeme, anında onay ve en iyi fiyat garantisi.",
+        url: "https://www.yildizhotelcappadocia.com/reservation",
+        siteName: "Yıldız Otel Kapadokya",
+        images: [
+            {
+                url: "https://www.yildizhotelcappadocia.com/images/otelBahce/resim5.jpeg",
+                width: 1200,
+                height: 630,
+                alt: "Yıldız Otel Kapadokya Rezervasyon",
+            },
+        ],
+        locale: "tr_TR",
+        type: "website",
+    },
+
+    twitter: {
+        card: "summary_large_image",
+        title: "Rezervasyon | Yıldız Otel Kapadokya",
+        description:
+            "Ürgüp’te Yıldız Otel için online rezervasyon yapın. Güvenli, hızlı ve avantajlı.",
+        images: [
+            "https://www.yildizhotelcappadocia.com/images/otelBahce/resim5.jpeg",
+        ],
+    },
+};
 
 export default function ReservationPage() {
-    return (
-        <>
-            <Header />
-            <main className="font-cormorant bg-white">
-                <PageHero
-                    title="REZERVASYON"
-                    subtitle="- EN KISA ZAMANDA GÖRÜŞMEK ÜZERE -"
-                    backgroundImage="/images/otelBahce/resim5.jpeg"
-                    breadcrumbs={[
-                        { label: 'ANA SAYFA', href: '/' },
-                        { label: 'REZERVASYON' },
-                    ]}
-                />
-                <section className="py-24">
-                    <div className="max-w-[1200px] mx-auto px-6">
-                        <div className="border border-[#d7d2cc] shadow-sm bg-white">
-                            <div className="border-b border-[#d7d2cc] px-6 py-6 text-center">
-                                <h2 className="text-2xl md:text-3xl font-bold tracking-wide text-[#1c2c34]">
-                                    Online Rezervasyon
-                                </h2>
-                                <p className="mt-2 text-sm md:text-base font-bold text-[#ab9a8b]">
-                                    Güvenli • Anında Onay • En İyi Fiyat Garantisi
-                                </p>
-                                <p className="mt-2 text-sm md:text-base font-bold text-[#1c2c34]">
-                                    Rezervasyon yapmak için müsaitlik kontrolü yapabilir ve odanızı seçebilirsiniz.
-                                </p>
-                            </div>
-                            <div className="p-4 md:p-6">
-                                <ReselivaWidget />
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </main>
-            <Footer />
-        </>
-    );
+    return <ReservationClient />;
 }

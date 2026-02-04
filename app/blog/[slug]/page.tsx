@@ -37,21 +37,53 @@ export async function generateMetadata(
   if (!post) return {};
 
   const url = `${BASE_URL}/blog/${post.slug}`;
-  const ogImage =
-    post.coverImage.startsWith("http") ? post.coverImage : `${BASE_URL}${post.coverImage}`;
+  const ogImage = post.coverImage.startsWith("http")
+    ? post.coverImage
+    : `${BASE_URL}${post.coverImage}`;
+
+  const keywords = Array.from(
+    new Set([...(post.tags ?? []), ...(post.categories ?? [])])
+  );
 
   return {
-    title: `${post.title} | Yıldız Otel Ürgüp`,
+    title: `${post.title} | Yıldız Otel Kapadokya`,
     description: post.excerpt,
+    keywords,
+
+    robots: {
+      index: true,
+      follow: true,
+      nocache: false,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-snippet": -1,
+        "max-image-preview": "large",
+        "max-video-preview": -1,
+      },
+    },
+
     alternates: { canonical: url },
+
     openGraph: {
-      title: `${post.title} | Yıldız Otel Ürgüp`,
+      title: `${post.title} | Yıldız Otel Kapadokya`,
       description: post.excerpt,
       url,
       siteName: "Yıldız Otel Kapadokya",
       images: [{ url: ogImage, width: 1200, height: 630, alt: post.title }],
       locale: "tr_TR",
       type: "article",
+      publishedTime: post.publishedAt ? new Date(post.publishedAt).toISOString() : undefined,
+      authors: post.author ? [post.author] : ["Yıldız Otel Kapadokya"],
+      section: (post.categories && post.categories[0]) ? post.categories[0] : undefined,
+      tags: post.tags ?? undefined,
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: `${post.title} | Yıldız Otel Kapadokya`,
+      description: post.excerpt,
+      images: [ogImage],
     },
   };
 }
@@ -124,6 +156,7 @@ export default async function BlogPostPage(
                         src={post.coverImage}
                         alt={post.title}
                         fill
+                        priority
                         sizes="(max-width: 768px) 100vw, 900px"
                         className="object-cover"
                       />

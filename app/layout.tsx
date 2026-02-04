@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={playfairDisplay.variable}>
+    <html lang="tr" className={playfairDisplay.variable}>
       <body className="min-h-screen overflow-x-hidden">
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-SFGQLN589J"

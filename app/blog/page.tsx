@@ -6,6 +6,59 @@ import Footer from "@/app/components/Footer";
 import BlogSidebar from "@/app/blog/BlogSidebar";
 import PageHero from "../components/PageHero";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog | Yıldız Otel Kapadokya - Ürgüp ve Kapadokya Rehberi",
+  description:
+    "Kapadokya ve Ürgüp’te gezi önerileri, aktiviteler ve konaklama ipuçları. Yıldız Otel Kapadokya blog yazılarını keşfedin.",
+  keywords: [
+    "kapadokya blog",
+    "ürgüp gezi rehberi",
+    "kapadokya aktiviteler",
+    "kapadokya otel önerileri",
+    "yıldız otel blog",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://www.yildizhotelcappadocia.com/blog",
+  },
+  openGraph: {
+    title: "Blog | Yıldız Otel Kapadokya",
+    description:
+      "Kapadokya ve Ürgüp hakkında blog yazıları: gezi, aktiviteler ve konaklama önerileri.",
+    url: "https://www.yildizhotelcappadocia.com/blog",
+    siteName: "Yıldız Otel Kapadokya",
+    images: [
+      {
+        url: "https://www.yildizhotelcappadocia.com/images/turlar/balon3.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Yıldız Otel Kapadokya Blog",
+      },
+    ],
+    locale: "tr_TR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog | Yıldız Otel Kapadokya",
+    description: "Kapadokya ve Ürgüp blog yazıları.",
+    images: ["https://www.yildizhotelcappadocia.com/images/turlar/balon3.jpg"],
+  },
+};
+
 type SearchParams = {
   q?: string;
   tag?: string;
