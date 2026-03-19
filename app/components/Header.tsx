@@ -16,7 +16,8 @@ const Header = () => {
     }, []);
 
     useEffect(() => {
-        document.body.style.overflow = isMobileMenuOpen ? "hidden" : "auto";
+        document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
+        document.body.style.overflowX = "hidden";
     }, [isMobileMenuOpen]);
 
     const navLinks = [

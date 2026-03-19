@@ -164,6 +164,7 @@ export default async function BlogPage({
                                 src={post.coverImage}
                                 alt={post.title}
                                 fill
+                                priority
                                 sizes="(max-width: 768px) 100vw, 900px"
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                               />

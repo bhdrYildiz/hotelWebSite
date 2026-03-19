@@ -2,19 +2,17 @@ export const runtime = "nodejs";
 
 import nodemailer from "nodemailer";
 
-
 type Payload = {
   name?: string;
   email?: string;
   phone?: string;
   subject?: string;
   message?: string;
-  source?: string; // contact / tour / vs.
+  source?: string;
   tourTitle?: string;
   tourId?: string;
 };
 
-// Basit HTML escape (XSS vs. riskini azaltmak için)
 function escapeHtml(str: string) {
   return str
     .replaceAll("&", "&amp;")
@@ -34,7 +32,6 @@ export async function POST(req: Request) {
     const subject = (body.subject ?? "").trim();
     const message = (body.message ?? "").trim();
 
-    // ✅ Validasyon (en az bunlar olsun)
     if (!name || !email || !message) {
       return Response.json(
         { ok: false, error: "Lütfen ad, e-posta ve mesaj alanlarını doldurun." },
@@ -42,7 +39,6 @@ export async function POST(req: Request) {
       );
     }
 
-    // ✅ ENV kontrol
     const host = process.env.SMTP_HOST;
     const port = Number(process.env.SMTP_PORT || 587);
     const secure = process.env.SMTP_SECURE === "true";
@@ -77,12 +73,10 @@ export async function POST(req: Request) {
       body.tourTitle || body.tourId
         ? `Tur: ${escapeHtml(body.tourTitle ?? "-")} (ID: ${escapeHtml(body.tourId ?? "-")})`
         : "";
-
-    // ✅ Sana giden mail
     await transporter.sendMail({
       from: `Yildiz Hotel Website <${from}>`,
       to,
-      replyTo: email, // Sen "Yanıtla" deyince kullanıcıya gitsin
+      replyTo: email,
       subject:
         (body.source === "tour" ? "Tur Bilgi Formu" : "İletişim Formu") +
         (subject ? ` — ${subject}` : ""),

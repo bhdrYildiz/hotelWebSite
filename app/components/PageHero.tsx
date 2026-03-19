@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 export type BreadcrumbItem = {
   label: string;
@@ -23,10 +24,16 @@ export default function PageHero({
   const lastIndex = Math.max(0, breadcrumbs.length - 1);
 
   return (
-    <div
-      className="relative h-[475px] flex items-end justify-around bg-cover bg-center"
-      style={{ backgroundImage: `url('${backgroundImage}')` }}
-    >
+    <div className="relative h-[475px] flex items-end justify-center">
+      <Image
+        src={backgroundImage}
+        alt={title}
+        fill
+        priority
+        className="object-cover object-center"
+        sizes="100vw"
+      />
+
       <div className="absolute inset-0 bg-black/60" />
 
       <div className="relative z-10 text-center text-white mb-24">
@@ -65,4 +72,3 @@ export default function PageHero({
     </div>
   );
 }
-

@@ -45,14 +45,18 @@ export const rooms: Room[] = [
     id: "room-105",
     name: "Havuzlu King Suit",
     images: [
-      "/images/room-105/105-1.jpg",
-      "/images/room-105/105-2.jpg",
-      "/images/room-105/105-3.jpg",
-      "/images/room-105/105-4.jpg",
-      "/images/room-105/105-5.jpg",
-      "/images/room-105/105-6.jpg",
-      "/images/room-105/105-7.jpg",
-      "/images/room-105/105-8.jpg",
+      "/images/room-105/105-1.jpeg",
+      "/images/room-105/105-2.jpeg",
+      "/images/room-105/105-3.jpeg",
+      "/images/room-105/105-4.jpeg",
+      "/images/room-105/105-5.jpeg",
+      "/images/room-105/105-6.jpeg",
+      "/images/room-105/105-7.jpeg",
+      "/images/room-105/105-8.jpeg",
+      "/images/room-105/105-9.jpeg",
+      "/images/room-105/105-10.jpeg",
+      "/images/room-105/105-11.jpeg",
+      "/images/room-105/105-12.jpeg",
     ],
     description:
       "Odada bulunan havuz sayesinde günün yorgunluğunu atarken, Oda içerisinde sizi bekleyen ekstra bir konfor ve huzur ile tatilinizde keyifli vakitler geçirin. Hem geleneksel hem çağdaş detaylarla donatılmış bu odada, unutulmaz anılar biriktirin. Odaya özel olarak ütü ve ütü masası, akıllı tv oturma grubu, minibar, kahve ve çay ikramı ile sizi bekliyor.",
@@ -117,7 +121,8 @@ export const rooms: Room[] = [
       "/images/room-202/202-4.jpg",
       "/images/room-202/202-5.jpg",
     ],
-    description: "Odanın içerisinde bulunan jakuzi ile günün yorgunluğunu atabilirsiniz. Odada akıllı tv, minibar, ütü, ütü masası, kahve ve çay ikramı bulunmaktadır.",
+    description:
+      "Odanın içerisinde bulunan jakuzi ile günün yorgunluğunu atabilirsiniz. Odada akıllı tv, minibar, ütü, ütü masası, kahve ve çay ikramı bulunmaktadır.",
     features: [
       "Büyük Yatak",
       "WiFi",
@@ -143,7 +148,7 @@ export const rooms: Room[] = [
       "/images/room-203/203-5.jpg",
     ],
     description:
-    "Odanın içerisinde bulunan jakuzi ile günün yorgunluğunu atabilirsiniz. Odada akıllı tv, klima, ütü, ütü masası, kahve ve çay ikramı bulunmaktadır.",
+      "Odanın içerisinde bulunan jakuzi ile günün yorgunluğunu atabilirsiniz. Odada akıllı tv, klima, ütü, ütü masası, kahve ve çay ikramı bulunmaktadır.",
     features: [
       "Büyük Yatak",
       "WiFi",

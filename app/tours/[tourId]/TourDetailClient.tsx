@@ -10,12 +10,73 @@ import { BadgeCheck, Mail, MapPin, Phone } from "lucide-react";
 import PhotoGallery from "../PhotoGallery";
 import { getTourById } from "@/app/data/tours";
 import PageHero from "@/app/components/PageHero";
+import Link from 'next/link';
 
 export default function TourDetailClient({ tourId }: { tourId: string }) {
     const [isSending, setIsSending] = useState(false);
     const [status, setStatus] = useState<null | { type: "ok" | "error"; msg: string }>(null);
 
     const tour = getTourById(tourId);
+
+    const tourBlogMap: Record<string, { slug: string; title: string; excerpt: string }[]> = {
+        "ballon-tour": [
+            {
+                slug: "kapadokya-balon-turu-guvenli-mi-fiyatlar",
+                title: "Kapadokya Balon Turu – Güvenli mi? Fiyatlar ve Bilmeniz Gerekenler",
+                excerpt: "Balon turu güvenli mi, fiyatlar neye göre değişir? Merak edilen tüm soruların cevabı.",
+            },
+            {
+                slug: "kapadokyada-yapilacak-aktiviteler",
+                title: "Kapadokya'da Yapılacak Aktiviteler Rehberi",
+                excerpt: "Balon turundan ATV'ye, vadi yürüyüşünden jeep safari'ye Kapadokya aktiviteleri.",
+            },
+        ],
+        "atv-tour": [
+            {
+                slug: "kapadokyada-yapilacak-aktiviteler",
+                title: "Kapadokya'da Yapılacak Aktiviteler Rehberi",
+                excerpt: "ATV safari, at binme, balon turu ve daha fazlası — Kapadokya aktivite rehberi.",
+            },
+        ],
+        "at-tour": [
+            {
+                slug: "kapadokyada-yapilacak-aktiviteler",
+                title: "Kapadokya'da Yapılacak Aktiviteler Rehberi",
+                excerpt: "At binme, ATV safari, balon turu ve daha fazlası — Kapadokya aktivite rehberi.",
+            },
+        ],
+        "safari-tour": [
+            {
+                slug: "kapadokyada-yapilacak-aktiviteler",
+                title: "Kapadokya'da Yapılacak Aktiviteler Rehberi",
+                excerpt: "Jeep safari, ATV turu, at binme ve daha fazlası — Kapadokya aktivite rehberi.",
+            },
+        ],
+        "red-tour": [
+            {
+                slug: "kapadokya-gezilecek-yerler",
+                title: "Kapadokya'da Gezilecek Yerler: Vadiler, Müzeler ve Fotoğraf Noktaları",
+                excerpt: "Devrent, Paşabağları, Göreme, Uçhisar ve daha fazlası için kapsamlı rehber.",
+            },
+            {
+                slug: "kapadokyada-yapilacak-aktiviteler",
+                title: "Kapadokya'da Yapılacak Aktiviteler Rehberi",
+                excerpt: "Kırmızı tur, yeşil tur, balon turu ve daha fazlası — Kapadokya aktivite rehberi.",
+            },
+        ],
+        "green-tour": [
+            {
+                slug: "kapadokya-gezilecek-yerler",
+                title: "Kapadokya'da Gezilecek Yerler: Vadiler, Müzeler ve Fotoğraf Noktaları",
+                excerpt: "Ihlara Vadisi, Kaymaklı Yeraltı Şehri ve daha fazlası için kapsamlı rehber.",
+            },
+            {
+                slug: "kapadokyada-yapilacak-aktiviteler",
+                title: "Kapadokya'da Yapılacak Aktiviteler Rehberi",
+                excerpt: "Yeşil tur, kırmızı tur, balon turu ve daha fazlası — Kapadokya aktivite rehberi.",
+            },
+        ],
+    };
 
     async function handleInfoSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
@@ -100,8 +161,49 @@ export default function TourDetailClient({ tourId }: { tourId: string }) {
         return <div className="text-center py-20 text-lg">Tour not found.</div>;
     }
 
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "TouristTrip",
+        "name": tour.title,
+        "description": tour.description,
+        "url": `https://www.yildizhotelcappadocia.com/tours/${tour.id}`,
+        "image": `https://www.yildizhotelcappadocia.com${tour.gallery?.[0] ?? tour.image}`,
+        "offers": {
+            "@type": "Offer",
+            "price": tour.price.replace(/[^0-9.]/g, ""),
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "url": `https://www.yildizhotelcappadocia.com/tours/${tour.id}`,
+        },
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Yıldız Otel Kapadokya",
+            "url": "https://www.yildizhotelcappadocia.com",
+            "telephone": "+903843414610",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Kavaklıönü Mah., Atatürk Blv. No:61",
+                "addressLocality": "Ürgüp",
+                "addressRegion": "Nevşehir",
+                "postalCode": "50400",
+                "addressCountry": "TR"
+            }
+        },
+        "touristType": ["Aile", "Çift", "Arkadaş Grubu"],
+        "itinerary": tour.program.map((step, i) => ({
+            "@type": "TouristAttraction",
+            "name": step.title,
+            "description": step.description,
+            "position": i + 1,
+        })),
+    };
+
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <Header />
             <main className="bg-[#f7f4f1] font-cormorant">
                 <PageHero
@@ -246,6 +348,37 @@ export default function TourDetailClient({ tourId }: { tourId: string }) {
                     </div>
                 </section>
             </main>
+            {(tourBlogMap[tourId] ?? []).length > 0 && (
+                <section className="bg-white border-t border-[#e6e0da] py-16">
+                    <div className="max-w-[1400px] mx-auto px-6">
+                        <p className="text-sm tracking-widest text-[#ab9a8b] uppercase mb-2">
+                            Faydalı Bilgiler
+                        </p>
+                        <h3 className="text-2xl md:text-3xl text-[#1c2c34] mb-8">
+                            İlgili Blog Yazıları
+                        </h3>
+                        <div className="grid md:grid-cols-2 gap-6">
+                            {(tourBlogMap[tourId] ?? []).map((post) => (
+                                <Link
+                                    key={post.slug}
+                                    href={`/blog/${post.slug}`}
+                                    className="group p-6 border border-[#e6e0da] bg-[#f7f4f1] hover:border-[#ab9a8b] transition-colors duration-300"
+                                >
+                                    <h4 className="text-lg text-[#1c2c34] leading-snug group-hover:text-[#ab9a8b] transition-colors duration-300">
+                                        {post.title}
+                                    </h4>
+                                    <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+                                        {post.excerpt}
+                                    </p>
+                                    <span className="mt-4 inline-flex items-center gap-2 text-xs tracking-widest uppercase text-[#ab9a8b]">
+                                        Devamını Oku →
+                                    </span>
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
             <Footer />
         </>
     );

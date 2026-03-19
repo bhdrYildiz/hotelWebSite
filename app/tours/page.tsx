@@ -2,16 +2,19 @@ import type { Metadata } from "next";
 import ToursClient from "./ToursClient";
 
 export const metadata: Metadata = {
-    title: "Tur ve Aktiviteler | Yıldız Otel Kapadokya - Kapadokya Turları",
+    title: "Kapadokya Tur ve Aktiviteler 2026 | Balon, ATV, At, Jeep Safari - Yıldız Otel Ürgüp",
     description:
-        "Kapadokya’da unutulmaz tur ve aktiviteleri keşfedin: balon turu, ATV, at turu ve daha fazlası. Yıldız Otel Kapadokya ile güvenli ve planlı tur deneyimi.",
+        "Ürgüp Yıldız Otel'den Kapadokya'nın en iyi turları: balon turu, ATV safari, at binme turu, jeep safari, bölge turu ve yeşil tur. Otelden ücretsiz transfer, uygun fiyat garantisi. Hemen rezervasyon yapın!",
     keywords: [
-        "kapadokya turları",
-        "ürgüp turlar",
+        "kapadokya tur ve aktiviteler",
+        "kapadokya turları 2026",
+        "kapadokya balon turu",
+        "kapadokya atv turu",
+        "kapadokya at binme turu",
+        "kapadokya jeep safari",
+        "kapadokya yeşil tur",
+        "kapadokya kırmızı tur",
         "kapadokya aktiviteler",
-        "balon turu",
-        "atv turu kapadokya",
-        "yıldız otel kapadokya tur",
     ],
     robots: {
         index: true,
@@ -29,7 +32,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "Tur ve Aktiviteler | Yıldız Otel Kapadokya",
         description:
-            "Kapadokya tur ve aktiviteleri: detaylar, programlar ve fotoğraflar.",
+            "Balon turu, ATV safari, at binme, jeep safari ve daha fazlası. Ürgüp'ten otelden transfer dahil Kapadokya turları. Uygun fiyat ve güvenli tur garantisi.",
         url: "https://www.yildizhotelcappadocia.com/tours",
         siteName: "Yıldız Otel Kapadokya",
         images: [
@@ -37,7 +40,7 @@ export const metadata: Metadata = {
                 url: "https://www.yildizhotelcappadocia.com/images/turlar/red2.jpg",
                 width: 1200,
                 height: 630,
-                alt: "Kapadokya Tur ve Aktiviteler",
+                alt: "Kapadokya Tur ve Aktiviteler - Yıldız Otel Ürgüp",
             },
         ],
         locale: "tr_TR",
@@ -46,7 +49,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Tur ve Aktiviteler | Yıldız Otel Kapadokya",
-        description: "Kapadokya’da tur ve aktiviteler.",
+        description: "Balon turu, ATV safari, at binme, jeep safari — Ürgüp'ten otelden transfer dahil Kapadokya turları.",
         images: ["https://www.yildizhotelcappadocia.com/images/turlar/red2.jpg"],
     },
 };

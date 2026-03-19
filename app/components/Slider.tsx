@@ -34,9 +34,9 @@ const Slider = () => {
     return (
         <section
             aria-label="Tanıtım Slaytları"
-            className="relative h-screen w-full bg-white flex items-center justify-center py-4 px-4"
+            className="relative h-screen w-full bg-white flex items-center justify-center"
         >
-            <div className="relative w-full max-w-[1380px] h-[calc(100vh-5rem)] overflow-hidden">
+            <div className="relative w-full h-full overflow-hidden">
                 {slides.map((slide, index) => (
                     <div
                         key={index}
@@ -52,7 +52,7 @@ const Slider = () => {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
 
                         {index === current && (
-                            <div className="absolute -bottom-2 -left-2 px-4 md:px-8 lg:px-12 pb-8 md:pb-12">
+                            <div className="absolute bottom-0 left-0 px-4 md:px-8 lg:px-12 pb-8 md:pb-12">
                                 <div className="text-left text-white max-w-2xl">
                                     <h1 className="text-3xl md:text-5xl lg:text-6xl font-light tracking-wider mb-2 leading-tight font-cormorant">
                                         YILDIZ OTEL&apos;E

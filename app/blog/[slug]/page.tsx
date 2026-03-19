@@ -28,6 +28,45 @@ export function generateStaticParams() {
   return getAllBlogPosts().map((p) => ({ slug: p.slug }));
 }
 
+const blogTourMap: Record<string, { id: string; title: string; description: string }[]> = {
+  "kapadokya-balon-turu-guvenli-mi-fiyatlar": [
+    {
+      id: "ballon-tour",
+      title: "Kapadokya Balon Turu",
+      description: "Otelden transfer dahil gün doğumu balon turu. 1 saatlik uçuş, uçuş sertifikası hediye.",
+    },
+  ],
+  "kapadokyada-yapilacak-aktiviteler": [
+    {
+      id: "atv-tour",
+      title: "Kapadokya ATV Turu",
+      description: "Kızıl Vadi ve Aşk Vadisi'nde 2 saatlik ATV safari. Otelden transfer dahil.",
+    },
+    {
+      id: "ballon-tour",
+      title: "Kapadokya Balon Turu",
+      description: "Gün doğumunda peri bacaları üzerinde unutulmaz bir uçuş deneyimi.",
+    },
+    {
+      id: "at-tour",
+      title: "Kapadokya At Turu",
+      description: "Vadiler arasında rehber eşliğinde 1-2 saatlik at binme turu.",
+    },
+  ],
+  "kapadokya-gezilecek-yerler": [
+    {
+      id: "red-tour",
+      title: "Kapadokya Bölge Turu",
+      description: "Paşabağları, Uçhisar, Göreme ve daha fazlası. Öğle yemeği dahil.",
+    },
+    {
+      id: "green-tour",
+      title: "Kapadokya Yeşil Tur",
+      description: "Ihlara Vadisi ve Kaymaklı Yeraltı Şehri. Öğle yemeği ve müze dahil.",
+    },
+  ],
+};
+
 export async function generateMetadata(
   { params }: { params: Promise<PageParams> }
 ): Promise<Metadata> {
@@ -339,10 +378,40 @@ export default async function BlogPostPage(
                     </div>
                   </div>
                 </article>
-              </div>
 
+                {(blogTourMap[slug] ?? []).length > 0 && (
+                  <section className="mt-16 pt-10 border-t border-black/10">
+                    <p className="text-sm tracking-widest text-[#ab9a8b] uppercase mb-2">
+                      Bu Yazıyla İlgili
+                    </p>
+                    <h3 className="text-2xl text-[#1c2c34] mb-6">
+                      Turlarımıza Göz Atın
+                    </h3>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      {(blogTourMap[slug] ?? []).map((tour) => (
+                        <Link
+                          key={tour.id}
+                          href={`/tours/${tour.id}`}
+                          className="group p-5 border border-black/10 hover:border-[#ab9a8b] transition-colors duration-300"
+                        >
+                          <h4 className="text-lg text-[#1c2c34] group-hover:text-[#ab9a8b] transition-colors">
+                            {tour.title}
+                          </h4>
+                          <p className="mt-1 text-sm text-gray-600">
+                            {tour.description}
+                          </p>
+                          <span className="mt-3 inline-flex items-center gap-2 text-xs tracking-widest uppercase text-[#ab9a8b]">
+                            Tur Detayları →
+                          </span>
+                        </Link>
+                      ))}
+                    </div>
+                  </section>
+                )}
+              </div>
               <BlogSidebar categories={allCategories} tags={allTags} recentPosts={recentPosts} />
             </div>
+
           </div>
         </section>
       </main>
