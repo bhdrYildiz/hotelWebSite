@@ -6,7 +6,6 @@ import { tours, getTourById } from "@/app/data/tours";
 const BASE_URL = "https://www.yildizhotelcappadocia.com";
 type PageParams = { tourId: string };
 
-// Her tura özel SEO verisi
 const tourSeoMap: Record<string, {
     title: string;
     description: string;

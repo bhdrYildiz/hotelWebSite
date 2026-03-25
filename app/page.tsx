@@ -1,11 +1,10 @@
 
 export const generateMetadata = () => ({
-  title: "Yıldız Otel Ürgüp | Kapadokya Taş Odalar",
-  description:
-    "Kapadokya'nın kalbinde, jakuzili taş odalar ve huzur dolu atmosferiyle Yıldız Otel Ürgüp sizi bekliyor. Balayı çiftleri ve tatilciler için ideal konaklama!",
+  title: "Yıldız Otel Ürgüp | Ürgüp Taş Otel, Jakuzili & Havuzlu Odalar",
+  description: "Kapadokya Ürgüp'te jakuzili & havuzlu taş odalarda konaklayın. Balon manzaralı teras, merkezi konum ve uygun fiyatlarla Yıldız Otel'de unutulmaz bir deneyim sizi bekliyor. Hemen rezervasyon yapın!",
   keywords: [
     "kapadokya otel", "kapadokya jakuzili oda", "ürgüp otelleri", "ürgüp balayı oteli",
-    "kapadokya taş odalar", "kapadokya otelleri", "yıldız otel kapadokya", "kapadokya tatil"
+    "kapadokya havuzlu odalar", "kapadokya havuzlu otelleri", "yıldız otel kapadokya", "kapadokya ürgüp"
   ],
   alternates: {
     canonical: "https://www.yildizhotelcappadocia.com",

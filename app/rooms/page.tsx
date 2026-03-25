@@ -3,7 +3,7 @@ import RoomsClient from "./RoomsClient";
 
 export const metadata: Metadata = {
     title:
-        "Odalar | Yıldız Otel Kapadokya - Ürgüp’te Taş Oda ve Jakuzili Oda Seçenekleri",
+        "Odalar | Yıldız Otel Kapadokya - Ürgüp’te Havuzlu ve Jakuzili Taş Oda Seçenekleri",
     description:
         "Yıldız Otel Kapadokya odalarını keşfedin: taş odalar, jakuzili seçenekler, kahvaltı dahil konaklama. Ürgüp merkezde en iyi fiyat garantisiyle doğrudan rezervasyon.",
     keywords: [

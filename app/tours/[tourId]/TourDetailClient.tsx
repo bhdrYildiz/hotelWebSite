@@ -11,11 +11,13 @@ import PhotoGallery from "../PhotoGallery";
 import { getTourById } from "@/app/data/tours";
 import PageHero from "@/app/components/PageHero";
 import Link from 'next/link';
+import Image from "next/image";
+import { tours } from "@/app/data/tours";
 
 export default function TourDetailClient({ tourId }: { tourId: string }) {
     const [isSending, setIsSending] = useState(false);
     const [status, setStatus] = useState<null | { type: "ok" | "error"; msg: string }>(null);
-
+    const otherTours = tours.filter(t => t.id !== tourId).slice(0, 3);
     const tour = getTourById(tourId);
 
     const tourBlogMap: Record<string, { slug: string; title: string; excerpt: string }[]> = {
@@ -344,6 +346,61 @@ export default function TourDetailClient({ tourId }: { tourId: string }) {
                                     <a href="mailto:info@yildizhotelcappadocia.com" className="hover:underline">info@yildizhotelcappadocia.com</a>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="bg-[#f7f4f1] border-t border-[#e6e0da] py-16">
+                    <div className="max-w-[1400px] mx-auto px-6">
+
+                        <p className="text-sm tracking-widest text-[#ab9a8b] uppercase mb-2">
+                            Diğer Aktiviteler
+                        </p>
+                        <h3 className="text-2xl md:text-3xl text-[#1c2c34] mb-10">
+                            Bunlara da göz atabilirsiniz
+                        </h3>
+
+                        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {otherTours.map((item) => (
+                                <Link
+                                    key={item.id}
+                                    href={`/tours/${item.id}`}
+                                    className="group bg-white border border-[#e6e0da] overflow-hidden hover:shadow-md transition-all duration-300"
+                                >
+                                    <div className="relative w-full h-56 overflow-hidden">
+                                        <span className="absolute top-3 left-3 z-10 bg-[#ab9a8b] text-white text-xs px-2 py-1">
+                                            Popüler
+                                        </span>
+
+                                        <Image
+                                            src={item.image}
+                                            alt={item.title}
+                                            fill
+                                            className="object-cover group-hover:scale-105 transition duration-500"
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+                                    </div>
+                                    <div className="p-5 space-y-3">
+                                        <h4 className="text-lg font-semibold text-[#1c2c34] group-hover:text-[#ab9a8b] transition">
+                                            {item.title}
+                                        </h4>
+
+                                        <p className="text-sm text-gray-600 line-clamp-2">
+                                            {item.description}
+                                        </p>
+
+                                        <div className="flex items-center justify-between pt-3">
+                                            <span className="text-[#ab9a8b] font-semibold">
+                                                {item.price}
+                                            </span>
+
+                                            <span className="text-xs uppercase tracking-widest text-[#1c2c34] group-hover:text-[#ab9a8b]">
+                                                İncele →
+                                            </span>
+                                        </div>
+                                    </div>
+                                </Link>
+                            ))}
                         </div>
                     </div>
                 </section>

@@ -419,10 +419,8 @@ export default function RoomDetailClient({ roomId }: { roomId: string }) {
                         </div>
                     </div>
                 </section>
-
             </main>
             <Footer />
-
             {fullscreenIndex !== null && (
                 <div
                     className="fixed inset-0 bg-black/70 z-[9999] flex items-center justify-center p-8 md:p-12"

@@ -1,5 +1,3 @@
-// app/data/tours.ts
-
 export type Tour = {
   id: string;
   title: string;
@@ -17,7 +15,7 @@ export const tours: Tour[] = [
     id: "ballon-tour",
     title: "Kapadokya Balon Turu",
     description:
-      "Kapadokya’da Balon Turu , 80’li yıllardan bu yana dünyanın dört bir yanından ziyaretçilerin büyük bir heyecan içinde katıldıkları, onlarca fotoğraf çektikleri, sevdikleriyle anılarına çok daha güzel anılar kattıkları en özel ve güzel aktivitelerden birisi olarak bilinir.80’li yılların sonlarına doğru bölgenin yatırımcıları tarafından başlatılan ve sonralarda hızla artan balon firmalarının sayısı günümüzde hala artmaya devam etmektedir.",
+      "Kapadokya balon turu artık sadece bir aktivite değil, bölgeye gelmenin en önemli sebebi haline geldi. Dünyanın dört bir yanından insanlar sadece bu deneyim için Kapadokya'ya geliyor. Gün doğumunda havalanıp peri bacalarının üzerinde süzülmek, o anı yaşamadan tarif etmek gerçekten zor. Uçuşlar sabah 05.45 gibi başlıyor, ortalama 1 saat sürüyor ve sonunda adınıza özel uçuş sertifikanız hazır. Hava şartları uygun olduğu her gün yıl boyunca uçuyoruz.",
     price: "€100.00",
     image: "/images/turlar/tur5.jpg",
     gallery: [
@@ -57,7 +55,8 @@ export const tours: Tour[] = [
   {
     id: "red-tour",
     title: "Kapadokya Bölge Turu",
-    description: `Kapadokya'ya ziyaret edenlerin ilk olarak tercih ettikleri, en popüler olarak gösterilen ve bölgede kısa zamanı olanların kesinlikle tercih etmeleri gereken tur olarak göz atmanızı tavsiye ederiz !`,
+    description:
+      "Kapadokya'ya ilk kez geliyorsanız ya da az zamanınız varsa bu tur tam size göre. Devrent Vadisi'ndeki hayvan figürlü kayalardan başlayıp Avanos'ta çanak çömlek atölyesine, oradan Zelve Açık Hava Müzesi ve Paşabağları'na uzanan bir güne sığdırıyoruz bölgenin en önemli noktalarını. Aşk Vadisi'nden Göreme'nin panoramik manzarasına bakıp son olarak Uçhisar Kalesi'nde tarihin içinde kayboluyorsunuz. Öğle yemeği ve müze biletleri dahil, düşünmenize gerek yok.",
     price: "€42.00",
     image: "/images/turlar/tur22.jpg",
     gallery: [
@@ -113,7 +112,7 @@ export const tours: Tour[] = [
     id: "atv-tour",
     title: "Kapadokya Atv Turu",
     description:
-      "Kendinizi genç ve enerjik hissediyorsanız Kapadokya’yı Atv ile karış karış etmek istiyorsanız bu tura katıldıktan sonra macera seviyeniz artacaktır. Ayrıca Kapadokya’ya arkadaş grubunuz ile geldiğinizde birlikte katılmanız gereken turların başında geleceğini düşünüyoruz ! Son zamanlarda trend aktiviterlerin başında gelen Atv Turu , genelde balayı çiftleri , arkadaş grupları tarafından tercih edilmekte olup günün her saatinde yapılabilmektedir.",
+      "Kapadokya'yı ATV ile keşfetmek isteyenler için harika bir seçenek! Kızıl Vadi, Aşk Vadisi ve Zemi Vadisi gibi Kapadokya'nın en etkileyici noktalarından geçen 2 saatlik rotamızda rehberiniz sizi hiç yalnız bırakmıyor. Fotoğraf molalarında peri bacalarının tam ortasında kendinizi bulacaksınız. Balayı çiftleri ve arkadaş gruplarının favorisi olan bu tur, gün doğumu veya gün batımında yapıldığında bambaşka bir deneyime dönüşüyor.",
     price: "€20.00",
     image: "/images/turlar/atv2.jpg",
     gallery: [
@@ -152,7 +151,7 @@ export const tours: Tour[] = [
     id: "green-tour",
     title: "Kapadokya Yeşil Tur",
     description:
-      "Kapadokya Yeşil Tur (Ihlara Vadisi & Kaymaklı Yeraltı Şehri) ile birlikte ; Bölgenin en yeşil vadisi olan Ihlara Vadisi’nin muhteşem atmosferine tanık olurken,rehberinizin anlatımlarıyla süslenecek olan yürüyüşünüz de size keyif verecektir. Ihlara Vadisi Nevşehir’in ilçelerine yaklaşık olarak 1.5 saatlik uzaklıktadır. ",
+      "Kapadokya denince akla hep peri bacaları gelir ama bölgenin en yeşil ve en sakin köşesi Ihlara Vadisi'dir. Sabah otelinizden alındıktan sonra önce Hititler döneminden kalma Kaymaklı Yeraltı Şehri'ne iniyorsunuz, binlerce insanın yaşadığı bu dev labirenti rehberinizle gezmek inanılmaz bir deneyim. Sonrasında Ihlara Vadisi'nde Melendiz Nehri boyunca yürüyüş yapıp Belisırma Köyü'ndeki nehir kenarı restoranda öğle yemeği yiyorsunuz. Güvercinlik Vadisi ve Göreme Panorama noktası ile tur tamamlanıyor.",
     price: "€42.00",
     image: "/images/turlar/tur32.jpg",
     gallery: [
@@ -203,7 +202,7 @@ export const tours: Tour[] = [
     id: "at-tour",
     title: "Kapadokya At Turu",
     description:
-      "At Turu ; Kapadokya’nın tarihine baktığımız zaman Atlar çok önemli bir yer kaplamaktadır. Persler zamanında bölgede yetiştirilen ve ticaret insanlarına satılan atlar, bölgeyi ünlü kılmış ve zamanında Pers dilinde Güzel Atlar Diyarı anlamına gelen Kapadokya’ya isim vermekte öncü olmuştur.",
+      "Kapadokya'nın adı zaten Pers dilinde Güzel Atlar Diyarı anlamına geliyor, yani at turu burada ayrı bir anlam taşıyor. Rehberiniz eşliğinde Kızıl Vadi ve Aşk Vadisi'nden geçen 1-2 saatlik rotada hem bölgenin eşsiz manzarasını hem de bu toprakların tarihini bambaşka bir perspektiften yaşıyorsunuz. Gün doğumunda ya da gün batımında katılmanızı özellikle tavsiye ederiz, güneşin vadilere vurduğu o anlar gerçekten unutulmaz oluyor.",
     price: "€25.00",
     image: "/images/at1.jpg",
     gallery: [
@@ -243,7 +242,7 @@ export const tours: Tour[] = [
     id: "safari-tour",
     title: "Kapadokya Jeep Safari Turu",
     description:
-      "Kapadokya'da Jeep Safari turu , eğlenceyi ve adrenalini seven ziyaretçilerimizin en çok tercih ettiği turlar arasında gelir. Kapadokya'da yapabileceğiniz aktiviteler arasında en hareketli aktivite olarak sayabileceğimiz Jeep Safari turu hem heyecan seviyenizi yukarıya taşıyacak hem de Kapadokya'yı yakından tanımanızı sağlayacaktır.",
+      "Kapadokya'yı çoğu turist yürüyerek ya da araçtan bakarak görür, Jeep Safari'de ise vadilerin içine giriyorsunuz. Göreme Görçeli Vadisi, Güvercinlik Vadisi, Hospital Manastırı, Ortahisar Panorama ve Güllü Dere Vadisi'nden geçen 2 saatlik rotada her durakta 10-15 dakika fotoğraf molası veriyoruz. Tur bitiminde şampanya açıyoruz, küçük ama güzel bir gelenek oldu bizim için. Heyecan arayanlar için Kapadokya'nın en keyifli aktivitelerinden biri.",
     price: "€60.00",
     image: "/images/atv.jpg",
     gallery: [
